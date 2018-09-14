@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RegisterUI" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="modal" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Group height="1054" y="1716" left="0" right="0" width="1080">
+		<e:Image source="yltq_ditu_png" horizontalCenter="0" bottom="0"/>
+		<e:Image source="yltq_title_png" y="-92" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<e:Image id="close" source="icon_close_png" x="900" y="-25" scaleX="1" scaleY="1" visible="false"/>
+		<e:Image id="langTitleImg" source="title_text_tjrzc_zh_png" y="-86" horizontalCenter="0"/>
+		<e:Image source="tjrzc_ditu_png" y="50" horizontalCenter="0" anchorOffsetY="0" height="555.97"/>
+		<e:Group width="904" height="782" x="87" y="178" anchorOffsetY="0" anchorOffsetX="0">
+			<e:Group width="820" height="380" x="79" y="-82" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Label text="{langData.register_info_2}" size="34" left="0" right="-76" top="16"/>
+				<e:Label text="{langData.register_info_3}" size="34" top="82" x="0" anchorOffsetX="0" width="780.25" anchorOffsetY="0" lineSpacing="12"/>
+				<e:Label text="{langData.register_info_4}" size="34" top="177" x="0" anchorOffsetX="0" width="780.37" lineSpacing="8"/>
+				<e:Label text="{langData.register_info_5}" size="34" top="306" x="0" anchorOffsetX="0" width="775.82" lineSpacing="8"/>
+				<e:Label text="{langData.register_info_6}" size="34" top="270" x="0" visible="false"/>
+				<e:Label text="{langData.register_info_7}" size="34" top="332" x="0" visible="false"/>
+			</e:Group>
+			<e:Group id="registerBtn" width="478" height="131" horizontalCenter="0" bottom="166">
+				<e:Image source="btn_tjrzc_register_png" horizontalCenter="0" verticalCenter="0"/>
+				<e:Image id="langRegisterBtn" source="btn_text_zc_zh_png" horizontalCenter="0.5" verticalCenter="-5.5"/>
+				<e:Label text="0.02 ETH" y="159" horizontalCenter="0" size="44" textColor="0xfffd68"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

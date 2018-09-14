@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameStatisticsUI" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="modal" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Group height="1169.16" anchorOffsetY="0" horizontalCenter="0" y="1716">
+		<e:Image source="yltq_ditu_png" verticalCenter="0" horizontalCenter="0"/>
+		<e:Image id="close" source="icon_close_png" x="900" y="-25" scaleX="1" scaleY="1" visible="false"/>
+		<e:Group id="roundTab" width="1030" height="836" anchorOffsetX="0" x="25" y="255" anchorOffsetY="0">
+			<e:Scroller width="1012.12" height="850" y="1.61" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" scrollPolicyH="off" scrollPolicyV="on">
+				<e:Group anchorOffsetY="0" height="207.58">
+					<e:Group width="1030" height="257" y="-7" scaleX="1" scaleY="1" horizontalCenter="-0.060000000000002274">
+						<e:Image source="statistics_ditu_green_png" scaleX="1" scaleY="1" verticalCenter="0" horizontalCenter="0"/>
+						<e:Image id="langRoundTime" y="28" source="statistics_text_cwdi_zh_png" horizontalCenter="0"/>
+						<e:Group height="60" y="124" left="0" right="0">
+						<e:BitmapLabel height="60" y="8.08" font="game_modal_num_100_fnt" text="{data.round.drainTime}" scaleX="1" scaleY="1" horizontalCenter="0"/>
+						</e:Group>
+					</e:Group>
+					<e:Group width="1030" height="204" y="281" scaleX="1" scaleY="1" horizontalCenter="-0.060000000000002274">
+						<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" source="statistics_ditu_green_png"/>
+						<e:Image id="langJackPot" y="12.56" source="activepot_zh_png" horizontalCenter="0"/>
+						<e:BitmapLabel text="{data.round.activePot}" font="game_modal_num_100_fnt" scaleX="1" scaleY="1" verticalCenter="36" anchorOffsetX="0" width="608" textAlign="center" horizontalCenter="0"/>
+						<e:Label x="317" y="150" width="400" verticalAlign="middle" textAlign="center" size="38" text="{data.round.usdt}" visible="false"/>
+					</e:Group>
+					<e:Group width="1030" height="204" y="546" scaleX="1" scaleY="1" horizontalCenter="-0.060000000000002274" visible="false">
+						<e:Image verticalCenter="2" source="statistics_ditu_green_png" horizontalCenter="0"/>
+						<e:BitmapLabel font="game_modal_num_100_fnt" scaleX="1" scaleY="1" textAlign="center" y="106" horizontalCenter="0" text="{data.round.firstBonus}"/>
+						<e:Image source="statistics_text_1_zh_png" y="9" horizontalCenter="0.5"/>
+					</e:Group>
+					<e:Group width="1030" height="204" y="812" scaleX="1" scaleY="1" horizontalCenter="-0.060000000000002274" visible="false">
+						<e:Image verticalCenter="2" horizontalCenter="0" source="statistics_ditu_green_png"/>
+						<e:Image id="langMyKeys0" y="8.5" source="statistics_text_2_zh_png" horizontalCenter="0"/>
+						<e:BitmapLabel font="game_modal_num_100_fnt" scaleX="1" scaleY="1" textAlign="center" y="106" horizontalCenter="0" text="{data.round.secondBonus}"/>
+					</e:Group>
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Group id="statsTab" width="1030" height="794" anchorOffsetX="0" x="25" y="255" anchorOffsetY="0" visible="false">
+			<e:Group width="1030" height="204" y="24" horizontalCenter="0" x="0" scaleX="1" scaleY="1">
+			<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" source="statistics_ditu_green_png"/>
+				<e:Image id="totalInvestment" y="11" source="statistics_stats_text_ti_zh_png" horizontalCenter="0"/>
+			<e:Group width="758" height="60" y="92" anchorOffsetX="0" horizontalCenter="0">
+				<e:BitmapLabel font="game_modal_num_100_fnt" scaleX="1" scaleY="1" verticalCenter="20" text="{data.stats.totalInvested}" anchorOffsetX="0" width="742" textAlign="center" horizontalCenter="0"/>
+			</e:Group>
+			<e:Label y="150" width="584" verticalAlign="middle" textAlign="center" size="38" text="{data.stats.totalUSTD}" anchorOffsetY="0" height="44" anchorOffsetX="0" horizontalCenter="0" visible="false"/>
+			</e:Group>
+			<e:Group width="1030" height="204" y="278.42" horizontalCenter="0" x="0" scaleX="1" scaleY="1">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="statistics_ditu_green_png"/>
+				<e:Image id="totalInvestment0" y="9" horizontalCenter="0.5" source="statistics_stats_text_dr_zh_png"/>
+			<e:Group width="770" height="60" y="88" anchorOffsetX="0" horizontalCenter="0">
+				<e:BitmapLabel font="game_modal_num_100_fnt" scaleX="1" scaleY="1" right="0" verticalCenter="20" text="{data.stats.rewards}" anchorOffsetX="0" width="770" textAlign="center"/>
+			</e:Group>
+			<e:Label y="156" width="564" verticalAlign="middle" textAlign="center" size="38" text="{data.stats.rewardsUSTD}" anchorOffsetX="0" horizontalCenter="0" visible="false"/>
+			</e:Group>
+			<e:Group width="1030" height="204" y="538.06" horizontalCenter="0" x="0" scaleX="1" scaleY="1" visible="false">
+				<e:Image horizontalCenter="0" verticalCenter="0" source="statistics_ditu_green_png"/>
+				<e:Image id="totalTime" y="-17" source="statistics_stats_text_tp_zh_png" horizontalCenter="0"/>
+				<e:Group width="790" height="60" y="86" anchorOffsetX="0" horizontalCenter="0">
+				<e:BitmapLabel font="game_modal_num_100_fnt" scaleX="1" scaleY="1" right="0" verticalCenter="0" text="{data.stats.purchased}" anchorOffsetX="0" width="792" textAlign="center"/>
+				</e:Group>
+				<e:Label y="154" width="534" verticalAlign="middle" textAlign="center" size="38" text="{data.stats.purchasedSecond}" anchorOffsetX="0" horizontalCenter="0"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="teamsTab" width="1030" height="846" anchorOffsetX="0" x="25" y="255" anchorOffsetY="0" visible="false">
+			<e:Scroller width="970" height="838" y="7" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" scrollPolicyH="off" scrollPolicyV="on">
+				<e:Group id="teamTabScr" anchorOffsetX="0" width="992" anchorOffsetY="0" height="838">
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Group width="1014" height="108" y="130" horizontalCenter="0">
+			<e:Group id="tab1" width="342" height="95" x="9" y="10" scaleX="1" scaleY="1">
+			<e:Image id="tabBg1" source="btn_statistics_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="tabAct1" scaleX="1" scaleY="1" y="20" x="68.16" source="statistics_text_round1_zh_png"/>
+			<e:Image id="tabActEn1" scaleX="1" scaleY="1" y="20" source="statistics_text_round_en_png" x="90" visible="false"/>
+			<e:Label text="{data.currentRound}" x="235.89" size="40" verticalAlign="middle" textAlign="left" y="23" textColor="0xd4fef7"/>
+			</e:Group>
+			<e:Group id="tab2" width="342" height="95" x="336" y="10">
+			<e:Image id="tabBg2" scaleX="1" scaleY="1" horizontalCenter="-21.5" verticalCenter="-1.5" source="btn_statistics_png" visible="false"/>
+			<e:Image id="tabAct2" y="20" x="46.48" source="statistics_text_stats1_zh_png"/>
+			<e:Image id="tabActEn2" y="20" x="82.4" source="statistics_text_stats_en_png" visible="false"/>
+			<e:Label text="{data.currentRound}" x="213.66" size="40" verticalAlign="middle" textAlign="left" y="24.33" textColor="0xd4fef7"/>
+			</e:Group>
+			<e:Group id="tab3" width="342" height="95" x="663" y="10" scaleX="1" scaleY="1">
+			<e:Image id="tabBg3" scaleX="1" scaleY="1" horizontalCenter="-45.5" verticalCenter="-3.5" source="btn_statistics_png" visible="false"/>
+			<e:Image id="tabAct3" y="21.52" x="20.72" source="statistics_text_teams1_zh_png"/>
+			<e:Image id="tabActEn3" y="20" x="71.76" source="statistics_text_teams_en_png" visible="false"/>
+			<e:Label text="{data.currentRound}" x="206.85" size="40" verticalAlign="middle" textAlign="left" y="23" scaleX="1" scaleY="1" textColor="0xd4fef7"/>
+			</e:Group>
+		</e:Group>
+		<e:Image source="yltq_title_png" y="25.44" horizontalCenter="0"/>
+		<e:Image id="langTitleImg" y="30.88" source="title_text_statistics_zh_png" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

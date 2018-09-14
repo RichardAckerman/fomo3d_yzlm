@@ -1,0 +1,1092 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,gameEui_json,animal_bear_png,btn_gmys_png,close2_png,gm_bg_png,icon_ft_png,icon_gl_png,icon_tj_png,icon_tjzc_png,jiantou_png,game_modal_num_100_png,game_modal_num_100_fnt,time_num_font_fnt,time_num_font_png,activepot_bg_png,activepot_en_png,activepot_zh_png,btn_text_gmyc_en_png,btn_text_gmyc_zh_png,title_text_strategy_zh_png,title_text_tjdz_zh_png,title_text_tjrzc_en_png,title_text_tjrzc_zh_png,title_text_yltq_en_png,title_text_yltq_zh_png,tjdz_text_iddz_en_png,tjdz_text_iddz_zh_png,tjdz_text_mcdz1_en_png,tjdz_text_mcdz1_zh_png,tjdz_text_qbdz_en_png,tjdz_text_qbdz_zh_png,tjrzc_ditu_png,tjrzc_ditu_chang_png,yltq_ditu_png,yltq_ditu_blue1_png,yltq_ditu_green_png,yltq_text_en_bb_png,yltq_text_en_ra_png,yltq_text_en_tg_png,yltq_text_zh_bb_png,yltq_text_zh_ra_png,yltq_text_zh_tg_png,yuyan_text_chin_png,yuyan_text_en_png,yuyan_text_eng_png,yuyan_text_zh_png,animal_bears_png,animal_sneks_png,btn_text_fz_en_png,btn_text_fz_zh_png,btn_text_sj_en_png,btn_text_sj_zh_png,btn_text_zc_en_png,btn_text_zc_zh_png,btn_tjdz_copy_png,btn_tjrzc_random_png,btn_tjrzc_register_png,icon_close_png,icon_ok_png,statistics_ditu_blue1_png,statistics_ditu_blue2_png,statistics_ditu_blue3_png,statistics_ditu_brown_png,statistics_ditu_green_png,statistics_teams_ditu_png,statistics_teams_snake_png,statistics_teams_the_bear_png,statistics_text_ap_zh_png,statistics_text_cwdi_en_png,statistics_text_cwdi_zh_png,statistics_text_mk_en_png,statistics_text_mk_zh_png,statistics_text_round_en_png,statistics_text_round_zh_png,statistics_text_stats_en_png,statistics_text_stats_zh_png,statistics_text_teams_en_png,statistics_text_teams_zh_png,Strategy_ditu_png,tips_text_en_png,tips_text_ok_en_png,tips_text_ok_zh_png,tips_text_zh_png,title_text_statistics_en_png,title_text_statistics_zh_png,title_text_strategy_en_png,yltq_ditu_green1_png,statistics_text_ap_en_png,yltq_text_en_sa_png,yltq_text_zh_sa_png,icon_key1_png,zys_bg_png,qipao_1_png,animal_bears_en_png,animal_bulls_en_png,animal_whales_en_png,animal_sneks_en_png,statistics_stats_text_tp_zh_png,statistics_stats_text_dr_en_png,statistics_stats_text_dr_zh_png,statistics_stats_text_ti_en_png,statistics_stats_text_ti_zh_png,statistics_stats_text_tp_en_png,yx_text_djyc_zh_png,yx_lc_png,yx_text_djyc_en_png,yx_text_wdzc_en_png,yx_text_wdzc_zh_png,yx_text_1_zh_png,yx_text_2_en_png,yx_text_2_zh_png,yx_text_sy_zh_png,btn_tips_png,yx_lc2_png,gmys_ditu_png,gmys_text_yys_zh_png,blue_key_num_fnt,blue_key_num_png,icon_tjzc_en_png,icon_gl_en_png,icon_tj_en_png,gmys_text_en_png,gmys_text_yys_en_png,pmd_png,yx_lc2_en_png,yx_text_sy_en_png,yx_text_1_en_png,game_bg_jpg,totalInvested_zh_png,totalInvested_en_png,statistics_teams_cattle_png,statistics_teams_whale_png,game_bg2_jpg,yx_ditu_title2_png,yx_ditu1_png,yx_ditu2_png,yx_ditu3_png,yx_ditu_title_png,yx_ditu_title1_png,round_text_fnt,round_text_png,yx_text_ys_en_png,yx_text_ys_zh_png,yx_text_dqsy_en_png,yx_text_dqsy_zh_png,yx_text_dqtr_en_png,yx_text_dqtr_zh_png,yx_text_syxh_en_png,yx_text_syxh_zh_png,yuyan_text_chin1_png,yuyan_text_eng1_png,btn_add_png,btn_sub_png,gmys_text_zh_png,icon_key_png,tips_ditu_png,animal_snaeks_en_png,yltq_title_png,animal_whales_png,animal_bulls_png,btn_statistics_png,input_png,yltq_ditu_green2_png,btn_text_tq_en_png,btn_text_tq_zh_png,yx_btn_png,yx_text_tq_en_png,yx_text_tq_zh_png,special_effects_light_png,special_effects_text_png,special_effects_text_en_png,statistics_text_2_zh_png,statistics_text_1_en_png,statistics_text_2_en_png,statistics_text_1_zh_png,statistics_text_teams_en2_png,statistics_text_teams_zh2_png,statistics_text_teams1_en_png,statistics_text_round_en2_png,statistics_text_round_zh2_png,statistics_text_round1_en_png,statistics_text_round1_zh_png,statistics_text_stats_en2_png,statistics_text_stats_zh2_png,statistics_text_stats1_en_png,statistics_text_stats1_zh_png,statistics_text_teams1_zh_png,statistics_text_syxh_png,statistics_text_syje_png,btn_text_gmyc_zh2_png,gmys_text_yys_zh2_png,icon_gl2_png,statistics_stats_text_ti_zh2_png,statistics_text_hs_png,statistics_text_hs_en_png,statistics_text_xh_png,statistics_text_xh_en_png,yx_text_cjxh_en_png,yx_text_cjxh_zh_png,yx_text_dqtf_zh_png,yx_text_lmj_en_png,gmys_text_zh2_png,yx_text_dqsy_zh2_png,yx_text_dqtf_zh2_png,yx_text_lmj_en2_png,yx_text_syxh_en2_png,yx_text_syxh_zh2_png,yx_text_ys_zh2_png,game_modal_num_big_fnt,game_modal_num_big_png,load_Interface_jpg,load_text_title_en_png,yx_text_hjsy_zh_png,yx_text_ljtf_zh_png,yx_text_lmjl_zh_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "gameEui.json",
+			"type": "json",
+			"name": "gameEui_json"
+		},
+		{
+			"url": "assets/game/animal_bear.png",
+			"type": "image",
+			"name": "animal_bear_png"
+		},
+		{
+			"url": "assets/game/btn_gmys.png",
+			"type": "image",
+			"name": "btn_gmys_png"
+		},
+		{
+			"url": "assets/game/close.png",
+			"type": "image",
+			"name": "close2_png"
+		},
+		{
+			"url": "assets/game/gm_bg.png",
+			"type": "image",
+			"name": "gm_bg_png"
+		},
+		{
+			"url": "assets/game/icon_ft.png",
+			"type": "image",
+			"name": "icon_ft_png"
+		},
+		{
+			"url": "assets/game/icon_gl.png",
+			"type": "image",
+			"name": "icon_gl_png"
+		},
+		{
+			"url": "assets/game/icon_tj.png",
+			"type": "image",
+			"name": "icon_tj_png"
+		},
+		{
+			"url": "assets/game/icon_tjzc.png",
+			"type": "image",
+			"name": "icon_tjzc_png"
+		},
+		{
+			"url": "assets/game/jiantou.png",
+			"type": "image",
+			"name": "jiantou_png"
+		},
+		{
+			"url": "assets/game/modal/game_modal_num_100.png",
+			"type": "image",
+			"name": "game_modal_num_100_png"
+		},
+		{
+			"url": "assets/game/modal/game_modal_num_100.fnt",
+			"type": "font",
+			"name": "game_modal_num_100_fnt"
+		},
+		{
+			"url": "assets/game/time_num_font.fnt",
+			"type": "font",
+			"name": "time_num_font_fnt"
+		},
+		{
+			"url": "assets/game/time_num_font.png",
+			"type": "image",
+			"name": "time_num_font_png"
+		},
+		{
+			"url": "assets/game/activepot_bg.png",
+			"type": "image",
+			"name": "activepot_bg_png"
+		},
+		{
+			"url": "assets/game/activepot_en.png",
+			"type": "image",
+			"name": "activepot_en_png"
+		},
+		{
+			"url": "assets/game/activepot_zh.png",
+			"type": "image",
+			"name": "activepot_zh_png"
+		},
+		{
+			"url": "assets/game/btn_text_gmyc_en.png",
+			"type": "image",
+			"name": "btn_text_gmyc_en_png"
+		},
+		{
+			"url": "assets/game/btn_text_gmyc_zh.png",
+			"type": "image",
+			"name": "btn_text_gmyc_zh_png"
+		},
+		{
+			"url": "assets/game/modal/title_text_strategy_zh.png",
+			"type": "image",
+			"name": "title_text_strategy_zh_png"
+		},
+		{
+			"url": "assets/game/modal/title_text_tjdz_zh.png",
+			"type": "image",
+			"name": "title_text_tjdz_zh_png"
+		},
+		{
+			"url": "assets/game/modal/title_text_tjrzc_en.png",
+			"type": "image",
+			"name": "title_text_tjrzc_en_png"
+		},
+		{
+			"url": "assets/game/modal/title_text_tjrzc_zh.png",
+			"type": "image",
+			"name": "title_text_tjrzc_zh_png"
+		},
+		{
+			"url": "assets/game/modal/title_text_yltq_en.png",
+			"type": "image",
+			"name": "title_text_yltq_en_png"
+		},
+		{
+			"url": "assets/game/modal/title_text_yltq_zh.png",
+			"type": "image",
+			"name": "title_text_yltq_zh_png"
+		},
+		{
+			"url": "assets/game/modal/tjdz_text_iddz_en.png",
+			"type": "image",
+			"name": "tjdz_text_iddz_en_png"
+		},
+		{
+			"url": "assets/game/modal/tjdz_text_iddz_zh.png",
+			"type": "image",
+			"name": "tjdz_text_iddz_zh_png"
+		},
+		{
+			"url": "assets/game/modal/tjdz_text_mcdz1_en.png",
+			"type": "image",
+			"name": "tjdz_text_mcdz1_en_png"
+		},
+		{
+			"url": "assets/game/modal/tjdz_text_mcdz1_zh.png",
+			"type": "image",
+			"name": "tjdz_text_mcdz1_zh_png"
+		},
+		{
+			"url": "assets/game/modal/tjdz_text_qbdz_en.png",
+			"type": "image",
+			"name": "tjdz_text_qbdz_en_png"
+		},
+		{
+			"url": "assets/game/modal/tjdz_text_qbdz_zh.png",
+			"type": "image",
+			"name": "tjdz_text_qbdz_zh_png"
+		},
+		{
+			"url": "assets/game/modal/tjrzc_ditu.png",
+			"type": "image",
+			"name": "tjrzc_ditu_png"
+		},
+		{
+			"url": "assets/game/modal/tjrzc_ditu_chang.png",
+			"type": "image",
+			"name": "tjrzc_ditu_chang_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_ditu.png",
+			"type": "image",
+			"name": "yltq_ditu_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_ditu_blue1.png",
+			"type": "image",
+			"name": "yltq_ditu_blue1_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_ditu_green.png",
+			"type": "image",
+			"name": "yltq_ditu_green_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_text_en_bb.png",
+			"type": "image",
+			"name": "yltq_text_en_bb_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_text_en_ra.png",
+			"type": "image",
+			"name": "yltq_text_en_ra_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_text_en_tg.png",
+			"type": "image",
+			"name": "yltq_text_en_tg_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_text_zh_bb.png",
+			"type": "image",
+			"name": "yltq_text_zh_bb_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_text_zh_ra.png",
+			"type": "image",
+			"name": "yltq_text_zh_ra_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_text_zh_tg.png",
+			"type": "image",
+			"name": "yltq_text_zh_tg_png"
+		},
+		{
+			"url": "assets/game/modal/yuyan_text_chin.png",
+			"type": "image",
+			"name": "yuyan_text_chin_png"
+		},
+		{
+			"url": "assets/game/modal/yuyan_text_en.png",
+			"type": "image",
+			"name": "yuyan_text_en_png"
+		},
+		{
+			"url": "assets/game/modal/yuyan_text_eng.png",
+			"type": "image",
+			"name": "yuyan_text_eng_png"
+		},
+		{
+			"url": "assets/game/modal/yuyan_text_zh.png",
+			"type": "image",
+			"name": "yuyan_text_zh_png"
+		},
+		{
+			"url": "assets/game/modal/animal_bears.png",
+			"type": "image",
+			"name": "animal_bears_png"
+		},
+		{
+			"url": "assets/game/modal/animal_sneks.png",
+			"type": "image",
+			"name": "animal_sneks_png"
+		},
+		{
+			"url": "assets/game/modal/btn_text_fz_en.png",
+			"type": "image",
+			"name": "btn_text_fz_en_png"
+		},
+		{
+			"url": "assets/game/modal/btn_text_fz_zh.png",
+			"type": "image",
+			"name": "btn_text_fz_zh_png"
+		},
+		{
+			"url": "assets/game/modal/btn_text_sj_en.png",
+			"type": "image",
+			"name": "btn_text_sj_en_png"
+		},
+		{
+			"url": "assets/game/modal/btn_text_sj_zh.png",
+			"type": "image",
+			"name": "btn_text_sj_zh_png"
+		},
+		{
+			"url": "assets/game/modal/btn_text_zc_en.png",
+			"type": "image",
+			"name": "btn_text_zc_en_png"
+		},
+		{
+			"url": "assets/game/modal/btn_text_zc_zh.png",
+			"type": "image",
+			"name": "btn_text_zc_zh_png"
+		},
+		{
+			"url": "assets/game/modal/btn_tjdz_copy.png",
+			"type": "image",
+			"name": "btn_tjdz_copy_png"
+		},
+		{
+			"url": "assets/game/modal/btn_tjrzc_random.png",
+			"type": "image",
+			"name": "btn_tjrzc_random_png"
+		},
+		{
+			"url": "assets/game/modal/btn_tjrzc_register.png",
+			"type": "image",
+			"name": "btn_tjrzc_register_png"
+		},
+		{
+			"url": "assets/game/modal/icon_close.png",
+			"type": "image",
+			"name": "icon_close_png"
+		},
+		{
+			"url": "assets/game/modal/icon_ok.png",
+			"type": "image",
+			"name": "icon_ok_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_ditu_blue1.png",
+			"type": "image",
+			"name": "statistics_ditu_blue1_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_ditu_blue2.png",
+			"type": "image",
+			"name": "statistics_ditu_blue2_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_ditu_blue3.png",
+			"type": "image",
+			"name": "statistics_ditu_blue3_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_ditu_brown.png",
+			"type": "image",
+			"name": "statistics_ditu_brown_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_ditu_green.png",
+			"type": "image",
+			"name": "statistics_ditu_green_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_teams_ditu.png",
+			"type": "image",
+			"name": "statistics_teams_ditu_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_teams_snake.png",
+			"type": "image",
+			"name": "statistics_teams_snake_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_teams_the_bear.png",
+			"type": "image",
+			"name": "statistics_teams_the_bear_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_text_ap_zh.png",
+			"type": "image",
+			"name": "statistics_text_ap_zh_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_text_cwdi_en.png",
+			"type": "image",
+			"name": "statistics_text_cwdi_en_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_text_cwdi_zh.png",
+			"type": "image",
+			"name": "statistics_text_cwdi_zh_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_text_mk_en.png",
+			"type": "image",
+			"name": "statistics_text_mk_en_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_text_mk_zh.png",
+			"type": "image",
+			"name": "statistics_text_mk_zh_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_text_round_en.png",
+			"type": "image",
+			"name": "statistics_text_round_en_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_text_round_zh.png",
+			"type": "image",
+			"name": "statistics_text_round_zh_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_text_stats_en.png",
+			"type": "image",
+			"name": "statistics_text_stats_en_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_text_stats_zh.png",
+			"type": "image",
+			"name": "statistics_text_stats_zh_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_text_teams_en.png",
+			"type": "image",
+			"name": "statistics_text_teams_en_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_text_teams_zh.png",
+			"type": "image",
+			"name": "statistics_text_teams_zh_png"
+		},
+		{
+			"url": "assets/game/modal/Strategy_ditu.png",
+			"type": "image",
+			"name": "Strategy_ditu_png"
+		},
+		{
+			"url": "assets/game/modal/tips_text_en.png",
+			"type": "image",
+			"name": "tips_text_en_png"
+		},
+		{
+			"url": "assets/game/modal/tips_text_ok_en.png",
+			"type": "image",
+			"name": "tips_text_ok_en_png"
+		},
+		{
+			"url": "assets/game/modal/tips_text_ok_zh.png",
+			"type": "image",
+			"name": "tips_text_ok_zh_png"
+		},
+		{
+			"url": "assets/game/modal/tips_text_zh.png",
+			"type": "image",
+			"name": "tips_text_zh_png"
+		},
+		{
+			"url": "assets/game/modal/title_text_statistics_en.png",
+			"type": "image",
+			"name": "title_text_statistics_en_png"
+		},
+		{
+			"url": "assets/game/modal/title_text_statistics_zh.png",
+			"type": "image",
+			"name": "title_text_statistics_zh_png"
+		},
+		{
+			"url": "assets/game/modal/title_text_strategy_en.png",
+			"type": "image",
+			"name": "title_text_strategy_en_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_ditu_green1.png",
+			"type": "image",
+			"name": "yltq_ditu_green1_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_text_ap_en.png",
+			"type": "image",
+			"name": "statistics_text_ap_en_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_text_en_sa.png",
+			"type": "image",
+			"name": "yltq_text_en_sa_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_text_zh_sa.png",
+			"type": "image",
+			"name": "yltq_text_zh_sa_png"
+		},
+		{
+			"url": "assets/game/icon_key1.png",
+			"type": "image",
+			"name": "icon_key1_png"
+		},
+		{
+			"url": "assets/game/zys_bg.png",
+			"type": "image",
+			"name": "zys_bg_png",
+			"scale9grid": "30,30,25,2"
+		},
+		{
+			"url": "assets/game/qipao_1.png",
+			"type": "image",
+			"name": "qipao_1_png",
+			"scale9grid": "76,0,491,112"
+		},
+		{
+			"url": "assets/game/modal/animal_bears_en.png",
+			"type": "image",
+			"name": "animal_bears_en_png"
+		},
+		{
+			"url": "assets/game/modal/animal_bulls_en.png",
+			"type": "image",
+			"name": "animal_bulls_en_png"
+		},
+		{
+			"url": "assets/game/modal/animal_whales_en.png",
+			"type": "image",
+			"name": "animal_whales_en_png"
+		},
+		{
+			"url": "assets/game/modal/animal_sneks_en.png",
+			"type": "image",
+			"name": "animal_sneks_en_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_stats_text_tp_zh.png",
+			"type": "image",
+			"name": "statistics_stats_text_tp_zh_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_stats_text_dr_en.png",
+			"type": "image",
+			"name": "statistics_stats_text_dr_en_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_stats_text_dr_zh.png",
+			"type": "image",
+			"name": "statistics_stats_text_dr_zh_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_stats_text_ti_en.png",
+			"type": "image",
+			"name": "statistics_stats_text_ti_en_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_stats_text_ti_zh.png",
+			"type": "image",
+			"name": "statistics_stats_text_ti_zh_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_stats_text_tp_en.png",
+			"type": "image",
+			"name": "statistics_stats_text_tp_en_png"
+		},
+		{
+			"url": "assets/game/yx_text_djyc_zh.png",
+			"type": "image",
+			"name": "yx_text_djyc_zh_png"
+		},
+		{
+			"url": "assets/game/yx_lc.png",
+			"type": "image",
+			"name": "yx_lc_png"
+		},
+		{
+			"url": "assets/game/yx_text_djyc_en.png",
+			"type": "image",
+			"name": "yx_text_djyc_en_png"
+		},
+		{
+			"url": "assets/game/yx_text_wdzc_en.png",
+			"type": "image",
+			"name": "yx_text_wdzc_en_png"
+		},
+		{
+			"url": "assets/game/yx_text_wdzc_zh.png",
+			"type": "image",
+			"name": "yx_text_wdzc_zh_png"
+		},
+		{
+			"url": "assets/game/yx_text_1_zh.png",
+			"type": "image",
+			"name": "yx_text_1_zh_png"
+		},
+		{
+			"url": "assets/game/yx_text_2_en.png",
+			"type": "image",
+			"name": "yx_text_2_en_png"
+		},
+		{
+			"url": "assets/game/yx_text_2_zh.png",
+			"type": "image",
+			"name": "yx_text_2_zh_png"
+		},
+		{
+			"url": "assets/game/yx_text_sy_zh.png",
+			"type": "image",
+			"name": "yx_text_sy_zh_png"
+		},
+		{
+			"url": "assets/game/btn_tips.png",
+			"type": "image",
+			"name": "btn_tips_png"
+		},
+		{
+			"url": "assets/game/yx_lc2.png",
+			"type": "image",
+			"name": "yx_lc2_png"
+		},
+		{
+			"url": "assets/game/modal/gmys_ditu.png",
+			"type": "image",
+			"name": "gmys_ditu_png"
+		},
+		{
+			"url": "assets/game/modal/gmys_text_yys_zh.png",
+			"type": "image",
+			"name": "gmys_text_yys_zh_png"
+		},
+		{
+			"url": "assets/game/modal/blue_key_num.fnt",
+			"type": "font",
+			"name": "blue_key_num_fnt"
+		},
+		{
+			"url": "assets/game/modal/blue_key_num.png",
+			"type": "image",
+			"name": "blue_key_num_png"
+		},
+		{
+			"url": "assets/game/icon_tjzc_en.png",
+			"type": "image",
+			"name": "icon_tjzc_en_png"
+		},
+		{
+			"url": "assets/game/icon_gl_en.png",
+			"type": "image",
+			"name": "icon_gl_en_png"
+		},
+		{
+			"url": "assets/game/icon_tj_en.png",
+			"type": "image",
+			"name": "icon_tj_en_png"
+		},
+		{
+			"url": "assets/game/modal/gmys_text_en.png",
+			"type": "image",
+			"name": "gmys_text_en_png"
+		},
+		{
+			"url": "assets/game/modal/gmys_text_yys_en.png",
+			"type": "image",
+			"name": "gmys_text_yys_en_png"
+		},
+		{
+			"url": "assets/game/pmd.png",
+			"type": "image",
+			"name": "pmd_png"
+		},
+		{
+			"url": "assets/game/yx_lc2_en.png",
+			"type": "image",
+			"name": "yx_lc2_en_png"
+		},
+		{
+			"url": "assets/game/yx_text_sy_en.png",
+			"type": "image",
+			"name": "yx_text_sy_en_png"
+		},
+		{
+			"url": "assets/game/yx_text_1_en.png",
+			"type": "image",
+			"name": "yx_text_1_en_png"
+		},
+		{
+			"url": "assets/game/game_bg.jpg",
+			"type": "image",
+			"name": "game_bg_jpg"
+		},
+		{
+			"url": "assets/game/totalInvested_zh.png",
+			"type": "image",
+			"name": "totalInvested_zh_png"
+		},
+		{
+			"url": "assets/game/totalInvested_en.png",
+			"type": "image",
+			"name": "totalInvested_en_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_teams_cattle.png",
+			"type": "image",
+			"name": "statistics_teams_cattle_png"
+		},
+		{
+			"url": "assets/game/modal/statistics_teams_whale.png",
+			"type": "image",
+			"name": "statistics_teams_whale_png"
+		},
+		{
+			"url": "assets/game_bg.jpg",
+			"type": "image",
+			"name": "game_bg2_jpg"
+		},
+		{
+			"url": "assets/game/yx_ditu_title2.png",
+			"type": "image",
+			"name": "yx_ditu_title2_png"
+		},
+		{
+			"url": "assets/game/yx_ditu1.png",
+			"type": "image",
+			"name": "yx_ditu1_png"
+		},
+		{
+			"url": "assets/game/yx_ditu2.png",
+			"type": "image",
+			"name": "yx_ditu2_png"
+		},
+		{
+			"url": "assets/game/yx_ditu3.png",
+			"type": "image",
+			"name": "yx_ditu3_png"
+		},
+		{
+			"url": "assets/game/yx_ditu_title.png",
+			"type": "image",
+			"name": "yx_ditu_title_png"
+		},
+		{
+			"url": "assets/game/yx_ditu_title1.png",
+			"type": "image",
+			"name": "yx_ditu_title1_png"
+		},
+		{
+			"url": "assets/game/round_text.fnt",
+			"type": "font",
+			"name": "round_text_fnt"
+		},
+		{
+			"url": "assets/game/round_text.png",
+			"type": "image",
+			"name": "round_text_png"
+		},
+		{
+			"url": "assets/game/yx_text_ys_en.png",
+			"type": "image",
+			"name": "yx_text_ys_en_png"
+		},
+		{
+			"url": "assets/game/yx_text_ys_zh.png",
+			"type": "image",
+			"name": "yx_text_ys_zh_png"
+		},
+		{
+			"url": "assets/game/yx_text_dqsy_en.png",
+			"type": "image",
+			"name": "yx_text_dqsy_en_png"
+		},
+		{
+			"url": "assets/game/yx_text_dqsy_zh.png",
+			"type": "image",
+			"name": "yx_text_dqsy_zh_png"
+		},
+		{
+			"url": "assets/game/yx_text_dqtr_en.png",
+			"type": "image",
+			"name": "yx_text_dqtr_en_png"
+		},
+		{
+			"url": "assets/game/yx_text_dqtr_zh.png",
+			"type": "image",
+			"name": "yx_text_dqtr_zh_png"
+		},
+		{
+			"url": "assets/game/yx_text_syxh_en.png",
+			"type": "image",
+			"name": "yx_text_syxh_en_png"
+		},
+		{
+			"url": "assets/game/yx_text_syxh_zh.png",
+			"type": "image",
+			"name": "yx_text_syxh_zh_png"
+		},
+		{
+			"url": "assets/game/modal/yuyan_text_chin1.png",
+			"type": "image",
+			"name": "yuyan_text_chin1_png"
+		},
+		{
+			"url": "assets/game/modal/yuyan_text_eng1.png",
+			"type": "image",
+			"name": "yuyan_text_eng1_png"
+		},
+		{
+			"url": "assets/game/modal/btn_add.png",
+			"type": "image",
+			"name": "btn_add_png"
+		},
+		{
+			"url": "assets/game/modal/btn_sub.png",
+			"type": "image",
+			"name": "btn_sub_png"
+		},
+		{
+			"url": "assets/game/modal/gmys_text_zh.png",
+			"type": "image",
+			"name": "gmys_text_zh_png"
+		},
+		{
+			"url": "assets/game/modal/icon_key.png",
+			"type": "image",
+			"name": "icon_key_png"
+		},
+		{
+			"url": "assets/game/modal/tips_ditu.png",
+			"type": "image",
+			"name": "tips_ditu_png"
+		},
+		{
+			"url": "assets/game/modal/animal_snaeks_en.png",
+			"type": "image",
+			"name": "animal_snaeks_en_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_title.png",
+			"type": "image",
+			"name": "yltq_title_png"
+		},
+		{
+			"url": "assets/game/modal/animal_whales.png",
+			"type": "image",
+			"name": "animal_whales_png"
+		},
+		{
+			"url": "assets/game/modal/animal_bulls.png",
+			"type": "image",
+			"name": "animal_bulls_png"
+		},
+		{
+			"url": "assets/game/modal/statis/btn_statistics.png",
+			"type": "image",
+			"name": "btn_statistics_png"
+		},
+		{
+			"url": "assets/game/modal/input.png",
+			"type": "image",
+			"name": "input_png"
+		},
+		{
+			"url": "assets/game/modal/yltq_ditu_green2.png",
+			"type": "image",
+			"name": "yltq_ditu_green2_png"
+		},
+		{
+			"url": "assets/game/modal/btn_text_tq_en.png",
+			"type": "image",
+			"name": "btn_text_tq_en_png"
+		},
+		{
+			"url": "assets/game/modal/btn_text_tq_zh.png",
+			"type": "image",
+			"name": "btn_text_tq_zh_png"
+		},
+		{
+			"url": "assets/game/yx_btn.png",
+			"type": "image",
+			"name": "yx_btn_png"
+		},
+		{
+			"url": "assets/game/yx_text_tq_en.png",
+			"type": "image",
+			"name": "yx_text_tq_en_png"
+		},
+		{
+			"url": "assets/game/yx_text_tq_zh.png",
+			"type": "image",
+			"name": "yx_text_tq_zh_png"
+		},
+		{
+			"url": "assets/game/special_effects_light.png",
+			"type": "image",
+			"name": "special_effects_light_png"
+		},
+		{
+			"url": "assets/game/special_effects_text.png",
+			"type": "image",
+			"name": "special_effects_text_png"
+		},
+		{
+			"url": "assets/game/special_effects_text_en.png",
+			"type": "image",
+			"name": "special_effects_text_en_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_2_zh.png",
+			"type": "image",
+			"name": "statistics_text_2_zh_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_1_en.png",
+			"type": "image",
+			"name": "statistics_text_1_en_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_2_en.png",
+			"type": "image",
+			"name": "statistics_text_2_en_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_1_zh.png",
+			"type": "image",
+			"name": "statistics_text_1_zh_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_teams_en.png",
+			"type": "image",
+			"name": "statistics_text_teams_en2_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_teams_zh.png",
+			"type": "image",
+			"name": "statistics_text_teams_zh2_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_teams1_en.png",
+			"type": "image",
+			"name": "statistics_text_teams1_en_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_round_en.png",
+			"type": "image",
+			"name": "statistics_text_round_en2_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_round_zh.png",
+			"type": "image",
+			"name": "statistics_text_round_zh2_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_round1_en.png",
+			"type": "image",
+			"name": "statistics_text_round1_en_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_round1_zh.png",
+			"type": "image",
+			"name": "statistics_text_round1_zh_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_stats_en.png",
+			"type": "image",
+			"name": "statistics_text_stats_en2_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_stats_zh.png",
+			"type": "image",
+			"name": "statistics_text_stats_zh2_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_stats1_en.png",
+			"type": "image",
+			"name": "statistics_text_stats1_en_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_stats1_zh.png",
+			"type": "image",
+			"name": "statistics_text_stats1_zh_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_teams1_zh.png",
+			"type": "image",
+			"name": "statistics_text_teams1_zh_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_syxh.png",
+			"type": "image",
+			"name": "statistics_text_syxh_png"
+		},
+		{
+			"url": "assets/game/modal/statis/statistics_text_syje.png",
+			"type": "image",
+			"name": "statistics_text_syje_png"
+		},
+		{
+			"name": "btn_text_gmyc_zh2_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/btn_text_gmyc_zh.png"
+		},
+		{
+			"name": "gmys_text_yys_zh2_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/gmys_text_yys_zh.png"
+		},
+		{
+			"name": "icon_gl2_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/icon_gl.png"
+		},
+		{
+			"name": "statistics_stats_text_ti_zh2_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/statistics_stats_text_ti_zh.png"
+		},
+		{
+			"name": "statistics_text_hs_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/statistics_text_hs.png"
+		},
+		{
+			"name": "statistics_text_hs_en_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/statistics_text_hs_en.png"
+		},
+		{
+			"name": "statistics_text_xh_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/statistics_text_xh.png"
+		},
+		{
+			"name": "statistics_text_xh_en_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/statistics_text_xh_en.png"
+		},
+		{
+			"name": "yx_text_cjxh_en_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/yx_text_cjxh_en.png"
+		},
+		{
+			"name": "yx_text_cjxh_zh_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/yx_text_cjxh_zh.png"
+		},
+		{
+			"name": "yx_text_dqtf_zh_png",
+			"type": "image",
+			"url": "assets/game/yx_text_dqtf_zh.png"
+		},
+		{
+			"name": "yx_text_lmj_en_png",
+			"type": "image",
+			"url": "assets/game/yx_text_lmj_en.png"
+		},
+		{
+			"name": "gmys_text_zh2_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/gmys_text_zh.png"
+		},
+		{
+			"name": "yx_text_dqsy_zh2_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/yx_text_dqsy_zh.png"
+		},
+		{
+			"name": "yx_text_dqtf_zh2_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/yx_text_dqtf_zh.png"
+		},
+		{
+			"name": "yx_text_lmj_en2_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/yx_text_lmj_en.png"
+		},
+		{
+			"name": "yx_text_syxh_en2_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/yx_text_syxh_en.png"
+		},
+		{
+			"name": "yx_text_syxh_zh2_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/yx_text_syxh_zh.png"
+		},
+		{
+			"name": "yx_text_ys_zh2_png",
+			"type": "image",
+			"url": "assets/game/modal/statis/yx_text_ys_zh.png"
+		},
+		{
+			"name": "game_modal_num_big_fnt",
+			"type": "font",
+			"url": "assets/game/modal/game_modal_num_big.fnt"
+		},
+		{
+			"name": "game_modal_num_big_png",
+			"type": "image",
+			"url": "assets/game/modal/game_modal_num_big.png"
+		},
+		{
+			"name": "load_Interface_jpg",
+			"type": "image",
+			"url": "assets/load_Interface.jpg"
+		},
+		{
+			"name": "load_text_title_en_png",
+			"type": "image",
+			"url": "assets/load_text_title_en.png"
+		},
+		{
+			"name": "yx_text_hjsy_zh_png",
+			"type": "image",
+			"url": "assets/game/yx_text_hjsy_zh.png"
+		},
+		{
+			"name": "yx_text_ljtf_zh_png",
+			"type": "image",
+			"url": "assets/game/yx_text_ljtf_zh.png"
+		},
+		{
+			"name": "yx_text_lmjl_zh_png",
+			"type": "image",
+			"url": "assets/game/yx_text_lmjl_zh.png"
+		}
+	]
+}

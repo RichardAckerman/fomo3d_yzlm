@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ExtractUnit" width="970" height="280" xmlns:e="http://ns.egret.com/eui">
+	<e:Image scaleX="1" scaleY="1" horizontalCenter="6" verticalCenter="0" source="statistics_ditu_green_png"/>
+	<e:BitmapLabel scaleX="1" scaleY="1" verticalCenter="34" anchorOffsetX="0" width="223.57" textAlign="left" horizontalCenter="-126" anchorOffsetY="0" height="86.06" font="game_modal_num_100_fnt" text="{data.extractNum}"/>
+	<e:Image source="statistics_text_syxh_png" x="50.78" y="140.53"/>
+	<e:Image source="statistics_text_syje_png" x="491.97" y="145.6"/>
+	<e:BitmapLabel scaleX="1" scaleY="1" anchorOffsetX="0" width="249.33" textAlign="left" anchorOffsetY="0" height="89.09" x="688.51" y="133.74" font="game_modal_num_100_fnt" text="{data.extractCoin1}"/>
+</e:Skin>
