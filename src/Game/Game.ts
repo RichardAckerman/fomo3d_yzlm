@@ -101,7 +101,16 @@ class Game extends eui.Component {
             this.overTime = parseInt(time + "");
         }); // 设置游戏结束倒计时
         getTotalPot().then((keys) => {
-            this.data.jackpot = "e" + Number(Number(keys).toFixed(3));
+            this.data.jackpot = "e" + Number(Number(keys).toFixed(2));
+            this.totalPot = Number(Number(keys).toFixed(2)) + "";
+        });
+        $gameContractInstance.nCurrentGainId((err, id) => {
+            if (err) {
+                console.log(err)
+            } else {
+                this.data.totalInvest = id.toString();
+                this.gainId = id.toString();
+            }
         });
         this.updateData.addEventListener(egret.TimerEvent.TIMER, this.getData, this);
         this.updateData.start();
@@ -150,6 +159,9 @@ class Game extends eui.Component {
         }
     }
 
+    private gainId = "0";
+    private totalPot = "0";
+
     private intervalStart() {
         this.overTime--;
         if (this.overTime % 3 == 0) {
@@ -178,14 +190,23 @@ class Game extends eui.Component {
                 }
             });
             getTotalPot().then((keys) => {
-                this.data.jackpot = "e" + Number(Number(keys).toFixed(2));
+                if (Number(keys) < Number(this.totalPot)) {
+                    this.data.jackpot = "e" + this.totalPot;
+                    //更新统计界面奖池金额
+                    if ($Modal.gameStatistics.visible) {
+                        $Modal.gameStatistics.data.round.activePot = "e" + parseFloat(this.totalPot).toFixed(6) + "";
+                    }
+                } else {
+                    this.data.jackpot = "e" + Number(Number(keys).toFixed(2));
+                    //更新统计界面奖池金额
+                    if ($Modal.gameStatistics.visible) {
+                        $Modal.gameStatistics.data.round.activePot = "e" + parseFloat(keys + "").toFixed(6) + "";
+                    }
+                    this.totalPot = Number(Number(keys).toFixed(2)) + "";
+                }
+                // console.log("+++++++++++++",this.totalPot);
                 let myRate = parseFloat(this.rateUSD + "");
                 this.data.jackpotUs = parseFloat(Number(keys) * myRate + "").toFixed(4) + "";
-                //更新统计界面奖池金额
-                if ($Modal.gameStatistics.visible) {
-                    $Modal.gameStatistics.data.round.activePot = "e" + parseFloat(keys + "").toFixed(6) + "";
-                    $Modal.gameStatistics.data.round.usdt = (parseFloat(this.rateUSD + "") * parseFloat(keys + "")).toFixed(4) + "";
-                }
             });
 
             /**当前分红序列 */
@@ -193,8 +214,15 @@ class Game extends eui.Component {
                 if (err) {
                     console.log(err)
                 } else {
-                    this.data.totalInvest = id.toString();
-                    $Modal.gameStatistics.data.stats.totalInvested = id.toString();
+                    if (parseInt(id.toString()) < parseInt(this.gainId)) {
+                        this.data.totalInvest = this.gainId;
+                        $Modal.gameStatistics.data.stats.totalInvested = this.gainId;
+                    } else {
+                        this.data.totalInvest = id.toString();
+                        $Modal.gameStatistics.data.stats.totalInvested = id.toString();
+                        this.gainId = id.toString();
+                    }
+                    // console.log("-------------",this.gainId);
                     $gameContractInstance.getRollInArrayLen((err2, len) => {
                         if (err2) {
                             console.log(err2);
@@ -234,6 +262,8 @@ class Game extends eui.Component {
                 this.data.moduleData.myBonus = parseFloat(web3js.fromWei(data[4].toString())).toFixed(2);
                 if (parseFloat(this.data.moduleData.myBonus) + parseFloat(this.data.moduleData.currentBon) >= 3) {
                     $Modal.buyKey.data.input = "0";
+                } else {
+                    $Modal.buyKey.data.input = "3";
                 }
                 let myRate = parseFloat(this.rateUSD + "");
                 this.data.moduleData.allBuyUs = parseFloat(Number(this.data.moduleData.myAllBuy) * myRate + "").toFixed(4) + "";

@@ -1,113 +1,116 @@
-let web3Obj = new Web3("https://mainnet.infura.io/")
+let web3Obj = new Web3("https://mainnet.infura.io/");
 
-let ContractAddr = "0x607acab3b6ecaa1bc34e1ff16c4d706faba85405"
+let ContractAddr = "0x607acab3b6ecaa1bc34e1ff16c4d706faba85405";
 
-let ContractInstance = null
+let ContractInstance = null;
 
-let btn = $("#btn")
+let btn = $("#btn");
+let btnAddr = $("#btnAddr");
 let luckyArr = [];
+
 function getData(id) {
-    $(".luckyer-box").find(".Luckyer").html("")
+    $(".luckyer-box").find(".Luckyer").html("");
     luckyArr.length = 0;
-    showTips(true)
-    clearContent()
-    getPlayerNum()
-    getLuckyer(0)
+    showTips(true);
+    clearContent();
+    getPlayerNum();
+    getLuckyer(0);
     ContractInstance.methods.playerxID_(id).call().then((data) => {
-        let thisId = id
-        let addr = data.addr
-        let referees = data.referees
-        let allBuy = web3Obj.utils.fromWei(data.allBuy)
-        let turnBuy = web3Obj.utils.fromWei(data.turnBuy)
-        let turnBonus = web3Obj.utils.fromWei(data.turnBonus)
-        let currentBonus = web3Obj.utils.fromWei(data.currentBonus)
-        let reinvest = data.reinvest
-        let unionBonus = web3Obj.utils.fromWei(data.unionBonus)
+        let thisId = id;
+        let addr = data.addr;
+        let referees = data.referees;
+        let allBuy = web3Obj.utils.fromWei(data.allBuy);
+        let turnBuy = web3Obj.utils.fromWei(data.turnBuy);
+        let turnBonus = web3Obj.utils.fromWei(data.turnBonus);
+        let currentBonus = web3Obj.utils.fromWei(data.currentBonus);
+        let reinvest = data.reinvest;
+        let unionBonus = web3Obj.utils.fromWei(data.unionBonus);
         if (addr === "0x0000000000000000000000000000000000000000") {
-            showTips(false)
-            return
+            showTips(false);
+            return;
         }
         ContractInstance.methods.playerEtraxAddr_(addr).call().then((etra) => {
-            let performance = web3Obj.utils.fromWei(etra.performance)
-            let level = etra.level
-            let currentRound = etra.currentRound
-            let allEarning = web3Obj.utils.fromWei(etra.allEarning)
-            let lostTimes = etra.lostTimes
+            let performance = web3Obj.utils.fromWei(etra.performance);
+            let level = etra.level;
+            let currentRound = etra.currentRound;
+            let allEarning = web3Obj.utils.fromWei(etra.allEarning);
+            let lostTimes = etra.lostTimes;
 
             ContractInstance.methods.returnAgent(addr).call().then((agent) => {
-                let agents = agent
+                let agents = agent;
                 ContractInstance.methods.getRollInArrayDetail(addr).call().then((array) => {
-                    showTips(false)
+                    showTips(false);
                     console.log(thisId, ";" + addr, ";" + referees, ";" + allBuy, ";" + turnBuy,
                         ";" + turnBonus, ";" + currentBonus, ";" + reinvest,
-                        ";" + unionBonus, ";" + performance, ";" + level, ";" + currentRound, ";" + allEarning, ";" + lostTimes, ";" + agents, ";" + array)
-                    let list = $("#list")
-                    list.find(".id").html(thisId)
-                    list.find(".addr").html(addr)
-                    list.find(".referees").html(referees)
-                    list.find(".allBuy").html(allBuy)
-                    list.find(".turnBuy").html(turnBuy)
-                    list.find(".turnBonus").html(turnBonus)
-                    list.find(".currentBonus").html(currentBonus)
-                    list.find(".reinvest").html(reinvest)
-                    list.find(".unionBonus").html(unionBonus)
-                    list.find(".performance").html(performance)
-                    list.find(".level").html(level)
-                    list.find(".currentRound").html(currentRound)
-                    list.find(".allEarning").html(allEarning)
-                    list.find(".lostTimes").html(lostTimes)
-                    list.find(".agents").html(agents.toString())
-                    list.find(".rollInArray").html(array.toString())
+                        ";" + unionBonus, ";" + performance, ";" + level, ";" + currentRound, ";" + allEarning, ";" + lostTimes, ";" + agents, ";" + array);
+                    let list = $("#list");
+                    list.find(".id").html(thisId);
+                    list.find(".addr").html(addr);
+                    list.find(".referees").html(referees);
+                    list.find(".allBuy").html(allBuy);
+                    list.find(".turnBuy").html(turnBuy);
+                    list.find(".turnBonus").html(turnBonus);
+                    list.find(".currentBonus").html(currentBonus);
+                    list.find(".reinvest").html(reinvest);
+                    list.find(".unionBonus").html(unionBonus);
+                    list.find(".performance").html(performance);
+                    list.find(".level").html(level);
+                    list.find(".currentRound").html(currentRound);
+                    list.find(".allEarning").html(allEarning);
+                    list.find(".lostTimes").html(lostTimes);
+                    list.find(".agents").html(agents.toString());
+                    list.find(".rollInArray").html(array.toString());
                 }, (err) => {
                     //console.log("__________________",err)
-                })
+                });
 
             }, (err) => {
                 //console.log("__________________",err)
-            })
+            });
         }, (err) => {
             //console.log("__________________",err)
-        })
+        });
 
     }, (err) => {
         //console.log("++++++++++++++++++++",err)
-    })
+    });
 }
 
 function showTips(bool) {
-    $('#tips').css("display", bool ? "inline-block" : "none")
-    btn.attr("disabled", bool)
+    $("#tips").css("display", bool ? "inline-block" : "none");
+    btn.attr("disabled", bool);
+    btnAddr.attr("disabled", bool);
 }
 
 function getPlayerNum() {
     ContractInstance.methods.nPlayerNum().call().then((num) => {
-        $("#nPlayerNum").html(num)
-    })
+        $("#nPlayerNum").html(num);
+    });
 }
 
 function getLuckyer(i) {
     ContractInstance.methods.Luckyer(i).call().then((addr) => {
         // $("#nPlayerNum").html(num)
-        luckyArr.push(addr)
-        i++
+        luckyArr.push(addr);
+        i++;
         if (i < 10) {
-            getLuckyer(i)
+            getLuckyer(i);
         } else {
-            let str = luckyArr.join("<br>")
-            $(".luckyer-box").find(".Luckyer").html(str)
+            let str = luckyArr.join("<br>");
+            $(".luckyer-box").find(".Luckyer").html(str);
         }
-    })
+    });
 }
 
 function clearContent() {
-    let list = $("#list")
-    list.find("li span:last-child").html("")
+    let list = $("#list");
+    list.find("li span:last-child").html("");
 }
 
 function begin(val) {
     console.log("id;addr;referees;allBuy;turnBuy;turnBonus;currentBonus;reinvest;unionBonus;" +
-        "performance;level;currentRound;allEarning;lostTimes;agents;rollInArray")
-    getData(val)
+        "performance;level;currentRound;allEarning;lostTimes;agents;rollInArray");
+    getData(val);
 }
 
 function getJson() {
@@ -115,37 +118,62 @@ function getJson() {
         fetch("../contract/XMan.json", {
             method: "GET",
             headers: new Headers({
-                'Content-Type': 'application/json'
+                "Content-Type": "application/json"
             })
         }).then((response) => {
-            return response.json()
+            return response.json();
         }, (error) => {
-            reject(error)
+            reject(error);
         }).then((json) => {
-            ContractInstance = new web3Obj.eth.Contract(json.abi)
-            ContractInstance.options.address = ContractAddr
-            resolve(ContractInstance)
-        })
-    })
+            ContractInstance = new web3Obj.eth.Contract(json.abi);
+            ContractInstance.options.address = ContractAddr;
+            resolve(ContractInstance);
+        });
+    });
 }
 
 
 btn.on("click", () => {
-    let val = $("#input").val()
+    $("#inputAddr").val("");
+    let val = $("#input").val();
     if (val === "") {
-        return
+        return;
     }
     getJson().then(() => {
-        begin(val)
-    })
-})
+        begin(val);
+    });
+});
+
+btnAddr.on("click", () => {
+    let addr = $("#inputAddr").val();
+    $("#input").val("");
+
+    if (addr === "") {
+        return;
+    }
+    if (!web3Obj.utils.isAddress(addr)) {
+        alert("地址格式不对");
+        return;
+    }
+    getJson().then(() => {
+        beginAddr(addr);
+    });
+});
+
 
 $("#input").on("blur", () => {
-    let input = $("#input")
-    input.val(input.val().replace(/[^\d]/g, ""))
-})
+    let input = $("#input");
+    input.val(input.val().replace(/[^\d]/g, ""));
+});
 
 getJson().then(() => {
-    getPlayerNum()
-    getLuckyer(0)
-})
+    getPlayerNum();
+    getLuckyer(0);
+});
+
+function beginAddr(addr) {
+    ContractInstance.methods.pIDxAddr_(addr).call().then((id) => {
+        console.log(id);
+        getData(id);
+    });
+}

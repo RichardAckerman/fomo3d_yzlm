@@ -57,6 +57,8 @@ var Game = (function (_super) {
         _this.roundError = false;
         _this.tempKeyNum = "0";
         _this.rateUSD = 0;
+        _this.gainId = "0";
+        _this.totalPot = "0";
         /**load Container skin */
         _this.skinName = "resource/eui_modules/Game/GameUI.exml";
         return _this;
@@ -74,7 +76,17 @@ var Game = (function (_super) {
             _this.overTime = parseInt(time + "");
         }); // 设置游戏结束倒计时
         getTotalPot().then(function (keys) {
-            _this.data.jackpot = "e" + Number(Number(keys).toFixed(3));
+            _this.data.jackpot = "e" + Number(Number(keys).toFixed(2));
+            _this.totalPot = Number(Number(keys).toFixed(2)) + "";
+        });
+        $gameContractInstance.nCurrentGainId(function (err, id) {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                _this.data.totalInvest = id.toString();
+                _this.gainId = id.toString();
+            }
         });
         this.updateData.addEventListener(egret.TimerEvent.TIMER, this.getData, this);
         this.updateData.start();
@@ -151,14 +163,24 @@ var Game = (function (_super) {
                 }
             });
             getTotalPot().then(function (keys) {
-                _this.data.jackpot = "e" + Number(Number(keys).toFixed(2));
+                if (Number(keys) < Number(_this.totalPot)) {
+                    _this.data.jackpot = "e" + _this.totalPot;
+                    //更新统计界面奖池金额
+                    if ($Modal.gameStatistics.visible) {
+                        $Modal.gameStatistics.data.round.activePot = "e" + parseFloat(_this.totalPot).toFixed(6) + "";
+                    }
+                }
+                else {
+                    _this.data.jackpot = "e" + Number(Number(keys).toFixed(2));
+                    //更新统计界面奖池金额
+                    if ($Modal.gameStatistics.visible) {
+                        $Modal.gameStatistics.data.round.activePot = "e" + parseFloat(keys + "").toFixed(6) + "";
+                    }
+                    _this.totalPot = Number(Number(keys).toFixed(2)) + "";
+                }
+                // console.log("+++++++++++++",this.totalPot);
                 var myRate = parseFloat(_this.rateUSD + "");
                 _this.data.jackpotUs = parseFloat(Number(keys) * myRate + "").toFixed(4) + "";
-                //更新统计界面奖池金额
-                if ($Modal.gameStatistics.visible) {
-                    $Modal.gameStatistics.data.round.activePot = "e" + parseFloat(keys + "").toFixed(6) + "";
-                    $Modal.gameStatistics.data.round.usdt = (parseFloat(_this.rateUSD + "") * parseFloat(keys + "")).toFixed(4) + "";
-                }
             });
             /**当前分红序列 */
             $gameContractInstance.nCurrentGainId(function (err, id) {
@@ -166,8 +188,16 @@ var Game = (function (_super) {
                     console.log(err);
                 }
                 else {
-                    _this.data.totalInvest = id.toString();
-                    $Modal.gameStatistics.data.stats.totalInvested = id.toString();
+                    if (parseInt(id.toString()) < parseInt(_this.gainId)) {
+                        _this.data.totalInvest = _this.gainId;
+                        $Modal.gameStatistics.data.stats.totalInvested = _this.gainId;
+                    }
+                    else {
+                        _this.data.totalInvest = id.toString();
+                        $Modal.gameStatistics.data.stats.totalInvested = id.toString();
+                        _this.gainId = id.toString();
+                    }
+                    // console.log("-------------",this.gainId);
                     $gameContractInstance.getRollInArrayLen(function (err2, len) {
                         if (err2) {
                             console.log(err2);
@@ -208,6 +238,9 @@ var Game = (function (_super) {
                 _this.data.moduleData.myBonus = parseFloat(web3js.fromWei(data[4].toString())).toFixed(2);
                 if (parseFloat(_this.data.moduleData.myBonus) + parseFloat(_this.data.moduleData.currentBon) >= 3) {
                     $Modal.buyKey.data.input = "0";
+                }
+                else {
+                    $Modal.buyKey.data.input = "3";
                 }
                 var myRate = parseFloat(_this.rateUSD + "");
                 _this.data.moduleData.allBuyUs = parseFloat(Number(_this.data.moduleData.myAllBuy) * myRate + "").toFixed(4) + "";

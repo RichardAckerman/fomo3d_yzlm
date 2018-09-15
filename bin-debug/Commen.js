@@ -81,8 +81,6 @@ function getJson() {
             reject(error);
         }).then(function (json) {
             $gameContract = web3js.eth.contract(json.abi);
-            // $gameContractInstance = $gameContract.at("0xb821470ccc7b0bd2ee45214a15b02a6395d2253f");
-            // $gameContractInstance = $gameContract.at("0x101fbae009a704ab93d56a299068a5cd533c4918");
             $gameContractInstance = $gameContract.at("0x607acab3b6ecaa1bc34e1ff16c4d706faba85405");
             resolve($tokenContractInstance);
         });
