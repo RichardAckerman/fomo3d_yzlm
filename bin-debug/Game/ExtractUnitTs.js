@@ -77,6 +77,7 @@ var ExtractUnitTs = (function (_super) {
                 "\t<e:Image source=\"statistics_text_syje_png\" x=\"491.97\" y=\"145.6\"/>\n" +
                 "\t<e:BitmapLabel scaleX=\"1\" scaleY=\"1\" anchorOffsetX=\"0\" width=\"249.33\" textAlign=\"left\" anchorOffsetY=\"0\" height=\"89.09\" x=\"688.51\" y=\"133.74\" font=\"game_modal_num_100_fnt\" text=\"{data.extractCoin1}\"/>\n" +
                 "</e:Skin>";
+            _this.$children.length = 0;
             _this.addChild(dataGroup);
         });
     };

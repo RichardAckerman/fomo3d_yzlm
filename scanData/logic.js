@@ -33,13 +33,15 @@ function getData(id) {
             let performance = web3Obj.utils.fromWei(etra.performance);
             let level = etra.level;
             let currentRound = etra.currentRound;
-            let allEarning = web3Obj.utils.fromWei(etra.allEarning);
+            // let allEarning = web3Obj.utils.fromWei(etra.allEarning);
             let lostTimes = etra.lostTimes;
 
             ContractInstance.methods.returnAgent(addr).call().then((agent) => {
                 let agents = agent;
                 ContractInstance.methods.getRollInArrayDetail(addr).call().then((array) => {
                     showTips(false);
+                    let allEarning = (reinvest - array.length) * 3.3;
+                    allEarning = allEarning.toFixed(2);
                     console.log(thisId, ";" + addr, ";" + referees, ";" + allBuy, ";" + turnBuy,
                         ";" + turnBonus, ";" + currentBonus, ";" + reinvest,
                         ";" + unionBonus, ";" + performance, ";" + level, ";" + currentRound, ";" + allEarning, ";" + lostTimes, ";" + agents, ";" + array);
