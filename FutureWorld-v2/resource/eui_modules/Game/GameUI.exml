@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameUI" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="alertBgBling">
+			<tween:TweenItem target="{alertBg}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="750">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="750">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="gameoverBling">
+			<tween:TweenItem target="{goBg}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{0.7}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{gourd1}">
+				<tween:Wait duration="500"/>
+				<tween:Set>
+					<tween:props>
+						<e:Object y="{-1000}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object y="{356}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{gourd2}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="1000">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="250">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="750">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+			<tween:TweenItem target="{kjBg}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="750">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="750">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="goTextBling">
+			<tween:TweenItem target="{kjBg}">
+				<tween:Set/>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="menuShow">
+			<tween:TweenItem target="{headContent}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="buyBling">
+			<tween:TweenItem target="{image}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0.2}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{0.2}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+		<tween:TweenGroup id="eyeBling">
+			<tween:TweenItem target="{eyeLight}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="500">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Image source="game_bg_jpg" left="0" right="0" top="0" bottom="0"/>
+	<e:Group id="stela" width="1029.33" height="534.97" y="130.2" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+		<e:Group width="487.88" anchorOffsetX="0" left="12" top="8" bottom="7.970000000000027" anchorOffsetY="0">
+			<e:Image scaleX="1" scaleY="1" verticalCenter="0" y="-13" horizontalCenter="0" source="cjxh"/>
+			<e:Image id="stelaTitle" y="36.99999999999997" scaleX="1" scaleY="1" horizontalCenter="0" source="yx_text_cjxh_zh"/>
+			<e:Group id="roundEn" width="402.48" height="82" x="41.14999999999999" y="427.2699999999999" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" visible="false">
+				<e:Image x="-0.27" scaleX="1" scaleY="1" verticalCenter="0" source="yx_lc2_en"/>
+				<e:BitmapLabel width="133.82" height="50" x="291.21" y="1.92" anchorOffsetX="0" anchorOffsetY="0" font="time_num_fnt" text="{data.round}" verticalAlign="center" textAlign="left" scaleX="1" scaleY="1"/>
+			</e:Group>
+			<e:BitmapLabel id="currentNum" width="474.58" height="108" anchorOffsetX="0" anchorOffsetY="0" font="pot_num_fnt" verticalAlign="middle" verticalCenter="-9.5" y="204.99999999999994" scaleX="1" scaleY="1" horizontalCenter="-19.439999999999998" textAlign="center" text="{data.currentNum}"/>
+			<e:Group id="roundZh" width="354" height="82" x="65.4" y="427.2699999999999" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" visible="false">
+				<e:Image scaleX="1" scaleY="1" horizontalCenter="-14" verticalCenter="0" source="yx_lc2"/>
+				<e:BitmapLabel width="102" height="50" anchorOffsetX="0" anchorOffsetY="0" font="time_num_fnt" verticalAlign="center" textAlign="center" scaleX="1" scaleY="1" verticalCenter="-14" horizontalCenter="0" text="{data.round}"/>
+			</e:Group>
+		</e:Group>
+		<e:Group width="487.88" top="8" bottom="7.970000000000027" anchorOffsetX="0" anchorOffsetY="0" right="13.329999999999927">
+			<e:Image scaleX="1" scaleY="1" verticalCenter="0" y="-13" horizontalCenter="0" source="jc"/>
+			<e:Image id="stelaTitle2" y="36.99999999999997" scaleX="1" scaleY="1" horizontalCenter="0" source="yx_text_jc_zh"/>
+			<e:BitmapLabel id="potLabel" width="485" height="108" anchorOffsetX="0" anchorOffsetY="0" font="pot_num_fnt" verticalAlign="middle" verticalCenter="-9.5" y="204.99999999999994" scaleX="1" scaleY="1" horizontalCenter="-18.439999999999998" textAlign="center" text="{data.pot}"/>
+			<e:Image id="readyTime" y="234.71" scaleX="1" scaleY="1" horizontalCenter="-0.4399999999999977" source="yx_text_zbsj_zh" visible="false"/>
+			<e:BitmapLabel width="471.69" height="67.33" y="427.48" anchorOffsetX="0" anchorOffsetY="0" font="time_num_fnt" verticalAlign="center" textAlign="center" text="{data.leftTime}" scaleX="1" scaleY="1" horizontalCenter="0.060000000000002274"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="middle" width="1030" height="359.24" y="684.05" horizontalCenter="0" anchorOffsetY="0" scaleX="1" scrollEnabled="true">
+		<e:Image top="0" horizontalCenter="0" source="send_eth_bg"/>
+		<e:Image id="eyeLight" x="263" y="80" source="eye_light"/>
+		<e:Group width="996" height="337.33" x="16.67" y="11.67" anchorOffsetX="0" anchorOffsetY="0" scrollEnabled="true">
+		<e:Image id="rainImg" x="-438" y="0" scaleX="1" scaleY="1" source="tx_rain_png"/>
+		</e:Group>
+		<e:Image right="18" bottom="18.24000000000001" source="trxh_bg"/>
+		<e:Label text="{langData.approve}" x="589.17" size="40" scaleX="1" scaleY="1" top="229" textColor="0xffffff" anchorOffsetX="0" width="236.95" textAlign="right" fontFamily="NSimSun"/>
+		<e:Label text="{data.approveNum}" size="40" scaleX="1" scaleY="1" y="229" anchorOffsetX="0" width="205.82" textColor="0xffffff" right="-5" textAlign="left" fontFamily="NSimSun"/>
+		<e:Label text="{langData.mainTips1}" y="185" anchorOffsetY="0" height="50" scaleX="1" scaleY="1" anchorOffsetX="0" width="242.48" size="32" horizontalCenter="186" x="285.00000000000006" textColor="0xffffff" textAlign="right" fontFamily="NSimSun" visible="false"/>
+		<e:Label text="{data.residueTimes}" x="639.47" y="185" size="40" height="48" anchorOffsetX="0" width="186" scaleX="1" scaleY="1" textColor="0xffffff" textAlign="right" fontFamily="NSimSun"/>
+		<e:Label text="/" x="827.64" y="190.7"/>
+		<e:Label text="{data.totalBuyTimes}" y="185" size="40" width="225.33" height="48" anchorOffsetX="0" scaleX="1" scaleY="1" textColor="0xffffff" right="-33" textAlign="left" fontFamily="NSimSun"/>
+		<e:Label text="{langData.mainTips2}" y="289.96" anchorOffsetY="0" height="35.33" anchorOffsetX="0" width="907.09" textAlign="right" size="40" horizontalCenter="-9.5" x="62" scaleX="1" scaleY="1" textColor="0xffffff" fontFamily="NSimSun"/>
+		<e:Group id="buyBtnG" width="427.27" height="154.55" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" top="45" right="-12">
+		<e:Image horizontalCenter="0" verticalCenter="0" source="send_eth_zh"/>
+		<e:Image id="image" horizontalCenter="0" verticalCenter="0" scaleX="1" source="send_eth_zh_light"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="footContent" width="1022" height="410" y="1068.03" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+		<e:Group id="ownGroup1" width="340" height="200" x="0" y="0" scrollEnabled="true">
+			<e:Image left="0" top="0" x="0" y="0" scaleX="1" scaleY="1" source="reward_bg"/>
+			<e:Image verticalCenter="0" x="160" source="reward_icon1"/>
+			<e:Image id="myNumImg" scaleX="1" scaleY="1" x="12" y="36" source="yx_text_wdxh_zh"/>
+			<e:BitmapLabel width="273.03" height="50.3" x="-31.92" y="90" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" font="own_num_fnt" text="{data.myNum}"/>
+		</e:Group>
+		<e:Group id="ownGroup2" width="340" height="200" x="341" y="0" scrollEnabled="true">
+			<e:Image left="0" top="0" x="0" y="0" scaleX="1" scaleY="1" source="reward_bg"/>
+			<e:Image verticalCenter="0" x="160" source="reward_icon2"/>
+			<e:Image id="timesImg" scaleX="1" scaleY="1" x="12" y="36" source="yx_text_ljcs_zh"/>
+			<e:BitmapLabel width="273.03" height="50.3" x="-31.92" y="90" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" font="own_num_fnt" text="{data.buyTimes}" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="ownGroup3" width="340" height="200" y="0" x="682" scrollEnabled="true">
+			<e:Image left="0" top="0" x="0" y="0" scaleX="1" scaleY="1" source="reward_bg"/>
+			<e:Image id="allBuyImg" scaleX="1" scaleY="1" y="36" x="12" source="yx_text_ljtr"/>
+			<e:Image verticalCenter="0" x="160" source="reward_icon3"/>
+			<e:BitmapLabel width="273.03" height="50.3" x="-22.8" y="90" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" font="own_num_fnt" scaleX="1" scaleY="1" text="{data.turnBonus}"/>
+		</e:Group>
+		<e:Group id="ownGroup4" width="340" height="200" x="0" y="210" scrollEnabled="true">
+			<e:Image top="0" y="0" scaleX="1" scaleY="1" x="0" source="reward_bg"/>
+			<e:Image verticalCenter="0" x="160" source="reward_icon4"/>
+			<e:Image id="inviteImg" scaleX="1" scaleY="1" x="12" y="36" source="yx_text_dqsy_zh"/>
+			<e:BitmapLabel width="273.03" height="50.3" x="-28.88" y="90" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" font="own_num_fnt" text="{data.inviteBonus}" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="ownGroup5" width="340" height="200" x="341" y="210" scrollEnabled="true">
+			<e:Image left="0" top="0" x="0" y="0" scaleX="1" scaleY="1" source="reward_bg"/>
+			<e:Image verticalCenter="0" x="160" source="reward_icon5"/>
+			<e:Image id="bonusImg" scaleX="1" scaleY="1" x="12" y="36" source="yx_text_fhsy_zh"/>
+			<e:BitmapLabel width="273.03" height="50.3" x="-27.36" y="90" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" font="own_num_fnt" text="{data.linkBonus}" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="ownGroup6" width="340" height="200" y="210" x="682" scrollEnabled="true">
+			<e:Image left="0" top="0" x="0" y="0" scaleX="1" scaleY="1" source="reward_bg"/>
+			<e:Image id="winImg" scaleX="1" scaleY="1" x="12" y="36" source="yx_text_ktsy_zh"/>
+			<e:Image verticalCenter="0" x="160" source="reward_icon6"/>
+			<e:BitmapLabel width="273.03" height="50.3" x="-22.8" y="90" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" font="own_num_fnt" scaleX="1" scaleY="1" text="{data.bonusWithdraw}"/>
+		</e:Group>
+	</e:Group>
+	<e:Group id="withdrawG" width="996.67" height="187.4" y="1493.95" anchorOffsetY="0" anchorOffsetX="0" scaleX="1" scaleY="1" horizontalCenter="0.5" scrollEnabled="true">
+		<e:Image verticalCenter="-0.3649999999999949" horizontalCenter="0" source="tips_bg"/>
+		<e:Image id="withLight" verticalCenter="0" x="-492" source="tx_tips_light"/>
+		<e:Image id="withdrawTxt" horizontalCenter="-295.835" verticalCenter="0.29999999999999716" source="tips_zh"/>
+		<e:BitmapLabel height="75.7" x="395.86" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" font="own_num_fnt" scaleX="1" scaleY="1" text="{data.canWithdraw}" verticalCenter="0"/>
+	</e:Group>
+	<e:Group id="alertModal" left="0" right="0" top="0" bottom="0" visible="false">
+		<e:Rect left="0" right="0" top="0" bottom="0" fillAlpha="0.5"/>
+		<e:Image top="0" horizontalCenter="0" source="special_effects_text"/>
+		<e:Image id="alertBg" left="0" right="0" top="0" bottom="0" source="border_out"/>
+	</e:Group>
+	<e:Group id="headContent" width="1080" height="130.12" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" top="0">
+		<e:Image horizontalCenter="0" top="0" source="nav_light"/>
+		<e:Image id="statistics" x="40.96" y="25" source="icon_tj"/>
+		<e:Image id="invite" x="310" y="25" source="icon_tjzc"/>
+		<e:Image id="faq" x="850" y="25" source="icon_gl"/>
+		<e:Image id="lang" x="580" y="25" source="icon_ft"/>
+	</e:Group>
+	<e:Rect id="buyBtn" width="995.75" height="332.11" y="695.55" anchorOffsetX="0" anchorOffsetY="0" fillAlpha="0" horizontalCenter="0"/>
+	<e:Rect id="withdrawBtn" width="995.75" height="168.11" y="1503.03" anchorOffsetX="0" anchorOffsetY="0" fillAlpha="0" horizontalCenter="0"/>
+</e:Skin>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LanguageUI" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="closeBg" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Image scale9Grid="0,294,0,573" horizontalCenter="-11.5" verticalCenter="-93" height="630" source="bg1"/>
+	<e:Group height="1145" y="210" left="0" right="0" width="1080" anchorOffsetY="0">
+		<e:Image horizontalCenter="0" anchorOffsetY="0" top="0" source="bg"/>
+		<e:Group width="763.34" height="177" y="336" anchorOffsetX="0" horizontalCenter="-0.5">
+			<e:Image id="langTitle" y="-128" horizontalCenter="0.3299999999999841" source="title_text_yy"/>
+			<e:Image horizontalCenter="0" verticalCenter="0" source="list_item_bg"/>
+			<e:Group id="langZHTW" width="836" height="94" y="-20" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0.3299999999999841">
+				<e:Image x="76.22" verticalCenter="0" y="70" scaleX="1" scaleY="1" source="yuyan_text_chin"/>
+				<e:Image id="langZHTW_choosed" x="663.27" verticalCenter="0" y="67" scaleX="1" scaleY="1" source="icon_ok"/>
+			</e:Group>
+			<e:Group id="langEN" width="836" height="82" y="90" anchorOffsetX="0" horizontalCenter="0.3299999999999841" anchorOffsetY="0">
+				<e:Image x="76.22" rotation="0" verticalCenter="0" y="321.95000000000005" scaleX="1" scaleY="1" source="yuyan_text_eng"/>
+				<e:Image id="langEN_choosed" x="663.27" verticalCenter="0" y="318.95000000000005" scaleX="1" scaleY="1" source="icon_ok" visible="false"/>
+			</e:Group>
+		</e:Group>
+		<e:Group width="763.34" height="177" y="703.95" anchorOffsetX="0" horizontalCenter="-0.5" visible="false">
+			<e:Image id="soundTitle" y="-124" horizontalCenter="0.3299999999999841" source="title_text_yx"/>
+			<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" source="list_item1_bg"/>
+			<e:Image id="soundTitle1" x="4.22" y="-8" source="yinyue_text"/>
+			<e:Image id="soundTitle2" x="4.22" y="96" source="yinxiao_text"/>
+			<e:Group width="532" height="53.03" x="237.45" y="3" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Image scaleX="1" scaleY="1" verticalCenter="0" horizontalCenter="0" source="load_pb1"/>
+				<e:Image verticalCenter="0" x="16" source="load_pb0"/>
+				<e:Image verticalCenter="0" x="100" source="icon_on"/>
+			</e:Group>
+			<e:Group width="532" height="53.03" x="237.45" y="107.6" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Image scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" source="load_pb1"/>
+				<e:Image verticalCenter="0" x="16" source="load_pb0"/>
+				<e:Image x="100" scaleX="1" scaleY="1" verticalCenter="-0.015000000000000568" source="icon_on"/>
+			</e:Group>
+		</e:Group>
+		<e:Image id="title" y="41" x="100" source="yuyan_text_zh"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,33 @@
+{
+	"initial": [
+		"libs/modules/egret/egret.js",
+		"libs/modules/egret/egret.web.js",
+		"libs/modules/eui/eui.js",
+		"libs/modules/assetsmanager/assetsmanager.js",
+		"libs/modules/tween/tween.js",
+		"libs/modules/promise/promise.js",
+		"libs/modules/dragonBones/dragonBones.js"
+	],
+	"game": [
+		"bin-debug/Modal/ApproveTs.js",
+		"bin-debug/AssetAdapter.js",
+		"bin-debug/Container.js",
+		"bin-debug/LanguageData.js",
+		"bin-debug/Loading.js",
+		"bin-debug/Main.js",
+		"bin-debug/Platform.js",
+		"bin-debug/ThemeAdapter.js",
+		"bin-debug/Game/Game.js",
+		"bin-debug/Modal/AinimeBgTs.js",
+		"bin-debug/Commen.js",
+		"bin-debug/Modal/BuyingTs.js",
+		"bin-debug/Modal/ExtractUnitTs.js",
+		"bin-debug/Modal/GameAlert.js",
+		"bin-debug/Modal/GameHelp.js",
+		"bin-debug/Modal/GameStatistics.js",
+		"bin-debug/Modal/LanguageTs.js",
+		"bin-debug/Modal/LuckyUnitTs.js",
+		"bin-debug/Modal/MainIntroTs.js",
+		"bin-debug/Modal/Register.js"
+	]
+}

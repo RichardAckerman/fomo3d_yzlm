@@ -1,0 +1,157 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,gameEui_json,game_bg_jpg,pot_num_fnt,time_num_fnt,bg_png,statistics_bold_fnt,static_round_fnt,static_round_gold_fnt,border_kj_png,border_out_png,lottery_gods_en_png,lottery_gods_zh_png,lottery_unopened_png,special_effects_text_png,special_effects_text_en_png,load_Interface_jpg,load_pb_png,load_ditu_png,load_text_title_zh_png,load_text_title_en_png,pc_bg_en_jpg,buyingCircle_png,light_png,godEffect_ske_json,godEffect_tex_json,godEffect_tex_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "gameEui_json",
+			"type": "json",
+			"url": "gameEui.json"
+		},
+		{
+			"name": "game_bg_jpg",
+			"type": "image",
+			"url": "assets/main/game_bg.jpg"
+		},
+		{
+			"name": "pot_num_fnt",
+			"type": "font",
+			"url": "assets/number/pot_num.fnt"
+		},
+		{
+			"name": "time_num_fnt",
+			"type": "font",
+			"url": "assets/number/time_num.fnt"
+		},
+		{
+			"name": "bg_png",
+			"type": "image",
+			"url": "assets/common/bg.png"
+		},
+		{
+			"name": "statistics_bold_fnt",
+			"type": "font",
+			"url": "assets/number/statistics_bold.fnt"
+		},
+		{
+			"name": "static_round_fnt",
+			"type": "font",
+			"url": "assets/number/static_round.fnt"
+		},
+		{
+			"name": "static_round_gold_fnt",
+			"type": "font",
+			"url": "assets/number/static_round_gold.fnt"
+		},
+		{
+			"name": "border_kj_png",
+			"type": "image",
+			"url": "assets/effect/border_kj.png"
+		},
+		{
+			"name": "border_out_png",
+			"type": "image",
+			"url": "assets/effect/border_out.png"
+		},
+		{
+			"name": "lottery_gods_en_png",
+			"type": "image",
+			"url": "assets/effect/lottery_gods_en.png"
+		},
+		{
+			"name": "lottery_gods_zh_png",
+			"type": "image",
+			"url": "assets/effect/lottery_gods_zh.png"
+		},
+		{
+			"name": "lottery_unopened_png",
+			"type": "image",
+			"url": "assets/effect/lottery_unopened.png"
+		},
+		{
+			"name": "special_effects_text_png",
+			"type": "image",
+			"url": "assets/effect/special_effects_text.png"
+		},
+		{
+			"name": "special_effects_text_en_png",
+			"type": "image",
+			"url": "assets/effect/special_effects_text_en.png"
+		},
+		{
+			"name": "load_Interface_jpg",
+			"type": "image",
+			"url": "assets/load_Interface.jpg"
+		},
+		{
+			"name": "load_pb_png",
+			"type": "image",
+			"url": "assets/load_pb.png"
+		},
+		{
+			"name": "load_ditu_png",
+			"type": "image",
+			"url": "assets/load_ditu.png"
+		},
+		{
+			"name": "load_text_title_zh_png",
+			"type": "image",
+			"url": "assets/load_text_title_zh.png"
+		},
+		{
+			"name": "load_text_title_en_png",
+			"type": "image",
+			"url": "assets/load_text_title_en.png"
+		},
+		{
+			"name": "pc_bg_en_jpg",
+			"type": "image",
+			"url": "assets/pc_bg_en.jpg"
+		},
+		{
+			"name": "buyingCircle_png",
+			"type": "image",
+			"url": "assets/buyingCircle.png"
+		},
+		{
+			"name": "light_png",
+			"type": "image",
+			"url": "assets/effect/light.png"
+		},
+		{
+			"name": "img_1_json",
+			"subkeys": "btn,btn1,btn_cancel_en,btn_cancel_zh,btn_gmys,btn_statistics,btn_statistics_teams,btn_sure_en,btn_sure_zh,btn_text_fz_1_en,btn_text_fz_1_zh,btn_text_fz_en,btn_text_fz_zh,btn_text_gmyc_en,btn_text_gmyc_zh,btn_text_yqdy_en,btn_text_yqdy_zh,close,icon_ft,icon_ft_en,icon_gl,icon_gl_en,icon_ok,icon_tj,icon_tj_en,icon_tjzc,icon_tjzc_en,ldz_bg,line,statistics_stats_text_dc_en,statistics_stats_text_dc_zh,statistics_stats_text_djs_en,statistics_stats_text_djs_zh,statistics_stats_text_dr_en,statistics_stats_text_dr_zh,statistics_stats_text_ti_en,statistics_stats_text_ti_zh,statistics_text_rank1_en,statistics_text_rank1_zh,statistics_text_rank_en,statistics_text_rank_zh,statistics_text_round1_en,statistics_text_round1_zh,statistics_text_round_en,statistics_text_round_zh,statistics_text_stats1_en,statistics_text_stats1_zh,statistics_text_stats_en,statistics_text_stats_zh,statistics_text_teams1_en,statistics_text_teams1_zh,statistics_text_teams_en,statistics_text_teams_zh,statistics_text_wdxh,statistics_text_wdxh_en,title_text_faq_en,title_text_faq_zh,title_text_referee_en,title_text_referee_zh,title_text_strategy_en,title_text_strategy_zh,title_text_ts,title_text_ts_en,title_text_yqlj_en,title_text_yqlj_zh,yuyan_text_chin,yuyan_text_en,yuyan_text_eng,yuyan_text_zh,yx_btn,yx_lc2,yx_lc2_en,yx_text_cjxh_en,yx_text_cjxh_zh,yx_text_dqsy_en,yx_text_dqsy_zh,yx_text_fhqy_zh,yx_text_fhsy_en,yx_text_fhsy_zh,yx_text_jc_en,yx_text_jc_zh,yx_text_ktsy_en,yx_text_ktsy_zh,yx_text_ldz_en,yx_text_ldz_zh,yx_text_ljcs_en,yx_text_ljcs_zh,yx_text_ljtr_en,yx_text_ljtr_zh,yx_text_tq_en,yx_text_tq_zh,yx_text_wdxh_en,yx_text_wdxh_zh,yx_text_zbld_en,yx_text_zbld_zh,yx_text_zbsj_en,yx_text_zbsj_zh",
+			"type": "sheet",
+			"url": "assets/img_1.json"
+		},
+		{
+			"name": "img_2_json",
+			"subkeys": "bg_2,icon_dp_bottom,icon_dp_top,jc,statistics_bg,yuyan_bg,yx_ditu2",
+			"type": "sheet",
+			"url": "assets/img_2.json"
+		},
+		{
+			"name": "godEffect_ske_json",
+			"type": "json",
+			"url": "assets/effect/godEffect_ske.json"
+		},
+		{
+			"name": "godEffect_tex_json",
+			"type": "json",
+			"url": "assets/effect/godEffect_tex.json"
+		},
+		{
+			"name": "godEffect_tex_png",
+			"type": "image",
+			"url": "assets/effect/godEffect_tex.png"
+		}
+	]
+}

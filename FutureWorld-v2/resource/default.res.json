@@ -1,0 +1,175 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,gameEui_json,game_bg_jpg,pot_num_fnt,pot_num_png,time_num_fnt,time_num_png,static_round_fnt,static_round_png,static_round_gold_fnt,static_round_gold_png,load_Interface_jpg,load_pb_png,load_ditu_png,load_text_title_zh_png,load_text_title_en_png,own_num_fnt,own_num_png,tx_rain_png,out_mp3,Win_mp3,pc_bg_zh_jpg,fw_tex_png,fw_ske_json,fw_tex_json,newParticle_json,newParticle_png,img_4_json,img_5_json,img_1_json,img_2_json,img_3_json",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "gameEui.json",
+			"type": "json",
+			"name": "gameEui_json"
+		},
+		{
+			"url": "assets/main/game_bg.jpg",
+			"type": "image",
+			"name": "game_bg_jpg"
+		},
+		{
+			"url": "assets/number/pot_num.fnt",
+			"type": "font",
+			"name": "pot_num_fnt"
+		},
+		{
+			"url": "assets/number/pot_num.png",
+			"type": "image",
+			"name": "pot_num_png"
+		},
+		{
+			"url": "assets/number/time_num.fnt",
+			"type": "font",
+			"name": "time_num_fnt"
+		},
+		{
+			"url": "assets/number/time_num.png",
+			"type": "image",
+			"name": "time_num_png"
+		},
+		{
+			"url": "assets/number/static_round.fnt",
+			"type": "font",
+			"name": "static_round_fnt"
+		},
+		{
+			"url": "assets/number/static_round.png",
+			"type": "image",
+			"name": "static_round_png"
+		},
+		{
+			"url": "assets/number/static_round_gold.fnt",
+			"type": "font",
+			"name": "static_round_gold_fnt"
+		},
+		{
+			"url": "assets/number/static_round_gold.png",
+			"type": "image",
+			"name": "static_round_gold_png"
+		},
+		{
+			"url": "assets/load_Interface.jpg",
+			"type": "image",
+			"name": "load_Interface_jpg"
+		},
+		{
+			"url": "assets/load_pb.png",
+			"type": "image",
+			"name": "load_pb_png"
+		},
+		{
+			"url": "assets/load_ditu.png",
+			"type": "image",
+			"name": "load_ditu_png"
+		},
+		{
+			"url": "assets/load_text_title_zh.png",
+			"type": "image",
+			"name": "load_text_title_zh_png"
+		},
+		{
+			"url": "assets/load_text_title_en.png",
+			"type": "image",
+			"name": "load_text_title_en_png"
+		},
+		{
+			"url": "assets/number/own_num.fnt",
+			"type": "font",
+			"name": "own_num_fnt"
+		},
+		{
+			"url": "assets/number/own_num.png",
+			"type": "image",
+			"name": "own_num_png"
+		},
+		{
+			"url": "assets/effect/tx_rain.png",
+			"type": "image",
+			"name": "tx_rain_png"
+		},
+		{
+			"url": "assets/music/out.mp3",
+			"type": "sound",
+			"name": "out_mp3"
+		},
+		{
+			"url": "assets/music/Win.mp3",
+			"type": "sound",
+			"name": "Win_mp3"
+		},
+		{
+			"url": "assets/pc_bg_zh.jpg",
+			"type": "image",
+			"name": "pc_bg_zh_jpg"
+		},
+		{
+			"url": "assets/effectJson/fw_tex.png",
+			"type": "image",
+			"name": "fw_tex_png"
+		},
+		{
+			"url": "assets/effectJson/fw_ske.json",
+			"type": "json",
+			"name": "fw_ske_json"
+		},
+		{
+			"url": "assets/effectJson/fw_tex.json",
+			"type": "json",
+			"name": "fw_tex_json"
+		},
+		{
+			"url": "assets/effectJson/newParticle.json",
+			"type": "json",
+			"name": "newParticle_json"
+		},
+		{
+			"url": "assets/effectJson/newParticle.png",
+			"type": "image",
+			"name": "newParticle_png"
+		},
+		{
+			"url": "assets/img_4.json",
+			"type": "sheet",
+			"name": "img_4_json",
+			"subkeys": "special_effects_text,special_effects_text_en"
+		},
+		{
+			"url": "assets/img_5.json",
+			"type": "sheet",
+			"name": "img_5_json",
+			"subkeys": "Circle,border_out,buyingCircle,eye_light,tx_tips_light"
+		},
+		{
+			"url": "assets/img_1.json",
+			"type": "sheet",
+			"name": "img_1_json",
+			"subkeys": "btn_cancel_en,btn_cancel_zh,btn_green,btn_statistics,btn_statistics_xz,btn_sure_en,btn_sure_zh,btn_text_fz_en,btn_text_fz_zh,btn_text_qd_en,btn_text_qd_zh,btn_text_yqdy_en,btn_text_yqdy_zh,btn_yellow,icon_ft,icon_ft_en,icon_gl,icon_gl_en,icon_ok,icon_on,icon_tj,icon_tj_en,icon_tjzc,icon_tjzc_en,line,load_pb0,load_pb1,reward_icon1,send_eth_en,send_eth_en_light,send_eth_zh,send_eth_zh_light,statistics_stats_text_djs_en,statistics_stats_text_djs_zh,statistics_stats_text_dr_en,statistics_stats_text_dr_zh,statistics_stats_text_jc_en,statistics_stats_text_jc_zh,statistics_stats_text_ti_en,statistics_stats_text_ti_zh,statistics_text_rank1_en,statistics_text_rank1_zh,statistics_text_rank_en,statistics_text_rank_zh,statistics_text_round1_en,statistics_text_round1_zh,statistics_text_round_en,statistics_text_round_zh,statistics_text_stats1_en,statistics_text_stats1_zh,statistics_text_stats_en,statistics_text_stats_zh,statistics_text_teams1_en,statistics_text_teams1_zh,statistics_text_teams_en,statistics_text_teams_zh,statistics_text_wdxh,statistics_text_wdxh_en,statistics_text_wsb,statistics_text_ysb,statistics_text_ysb_en,tips_en,tips_zh,title_text_faq_en,title_text_faq_zh,title_text_referee_en,title_text_referee_zh,title_text_strategy_en,title_text_strategy_zh,title_text_ts,title_text_ts_en,title_text_yqlj_en,title_text_yqlj_zh,title_text_yx,title_text_yx_en,title_text_yy,title_text_yy_en,trxh_bg,yinxiao_text,yinxiao_text_en,yinyue_text,yinyue_text_en,yuyan_text_chin,yuyan_text_en,yuyan_text_eng,yuyan_text_zh,yx_lc2,yx_lc2_en,yx_text_cjxh_en,yx_text_cjxh_zh,yx_text_dqsy_en,yx_text_dqsy_zh,yx_text_fhsy_en,yx_text_fhsy_zh,yx_text_jc_en,yx_text_jc_zh,yx_text_ktsy_en,yx_text_ktsy_zh,yx_text_ljcs_en,yx_text_ljcs_zh,yx_text_ljtr,yx_text_ljtr_en,yx_text_wdxh_en,yx_text_wdxh_zh,yx_text_zbsj_en,yx_text_zbsj_zh"
+		},
+		{
+			"url": "assets/img_2.json",
+			"type": "sheet",
+			"name": "img_2_json",
+			"subkeys": "bg,bg1,cjxh,jc,send_eth_bg,sm_bg"
+		},
+		{
+			"url": "assets/img_3.json",
+			"type": "sheet",
+			"name": "img_3_json",
+			"subkeys": "bg_dialog,list_item1_bg,list_item1_bg_statistics,list_item_bg,list_item_bg_statistics,nav_light,reward_bg,reward_icon2,reward_icon3,reward_icon4,reward_icon5,reward_icon6,tips_bg"
+		}
+	]
+}

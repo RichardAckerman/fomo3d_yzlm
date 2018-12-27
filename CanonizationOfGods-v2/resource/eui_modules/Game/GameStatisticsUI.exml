@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameStatisticsUI" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="closeBg" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Group height="1238" anchorOffsetY="0" horizontalCenter="1" y="-1238">
+		<e:Image verticalCenter="0" horizontalCenter="0" source="bg_png"/>
+		<e:Image id="title" y="11.84" horizontalCenter="0.5" source="title_text_strategy_zh"/>
+		<e:Image id="close" x="908" y="-44.28" scaleX="1" scaleY="1" source="close"/>
+		<e:Group id="roundTab" width="836" height="924" anchorOffsetX="0" y="251" anchorOffsetY="0" horizontalCenter="0">
+			<e:Group width="1030" height="204" y="36" scaleX="1" scaleY="1" anchorOffsetX="0" horizontalCenter="0">
+				<e:Image horizontalCenter="0" y="33" source="statistics_bg"/>
+				<e:BitmapLabel height="60" text="{data.round.drainTime}" scaleX="1" scaleY="1" horizontalCenter="0" x="475" verticalCenter="32" font="statistics_bold_fnt"/>
+				<e:Image id="overtimeImg" y="11" horizontalCenter="0" source="statistics_stats_text_djs_zh"/>
+			</e:Group>
+			<e:Group width="1030" height="204" y="284.42" scaleX="1" scaleY="1" anchorOffsetX="0" horizontalCenter="0">
+				<e:Image horizontalCenter="0" y="35" source="statistics_bg"/>
+				<e:BitmapLabel height="60" scaleX="1" scaleY="1" horizontalCenter="0.5" x="475" verticalCenter="36" text="{data.round.activePot}" font="statistics_bold_fnt"/>
+				<e:Image id="potImg" y="9" horizontalCenter="0" source="statistics_stats_text_dc_zh"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="statsTab" width="836" height="924" anchorOffsetX="0" y="251" anchorOffsetY="0" horizontalCenter="0" visible="false">
+			<e:Group width="1030" height="204" y="36" scaleX="1" scaleY="1" horizontalCenter="0">
+				<e:Image y="33" horizontalCenter="0" source="statistics_bg"/>
+				<e:Image id="listNum" y="9.67" horizontalCenter="0" source="statistics_stats_text_dr_zh"/>
+				<e:BitmapLabel scaleX="1" scaleY="1" verticalCenter="28" anchorOffsetX="0" width="742" textAlign="center" text="{data.stats.currentNum}" height="50" font="statistics_bold_fnt" horizontalCenter="0"/>
+			</e:Group>
+			<e:Group width="1030" height="204" y="284.42" scaleX="1" scaleY="1" horizontalCenter="0">
+				<e:Image y="35" horizontalCenter="0" source="statistics_bg"/>
+				<e:Image id="totalInvestment" y="7.67" horizontalCenter="0" source="statistics_stats_text_ti_zh"/>
+				<e:BitmapLabel scaleX="1" scaleY="1" verticalCenter="34" text="{data.stats.rewards}" anchorOffsetX="0" width="770" textAlign="center" height="50" horizontalCenter="0" font="statistics_bold_fnt"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="teamsTab" width="900" height="924" anchorOffsetX="0" y="251" anchorOffsetY="0" horizontalCenter="0" visible="false">
+			<e:Scroller scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="on" left="0" right="0" top="0" bottom="0">
+				<e:Group id="teamTabScr" anchorOffsetX="0" width="868" anchorOffsetY="0" height="852" x="38" y="0">
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Group id="luckyTab" width="900" height="924" anchorOffsetX="0" y="251" anchorOffsetY="0" horizontalCenter="0" visible="false">
+			<e:Scroller scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="on" left="0" right="0" top="0" bottom="0">
+			<e:Group id="luckyTabScr" anchorOffsetX="0" width="868" anchorOffsetY="0" height="852" x="38" y="0"/>
+			</e:Scroller>
+		</e:Group>
+		<e:Group width="878" height="108" y="128" anchorOffsetX="0" horizontalCenter="0">
+			<e:Group id="tab1" width="250" height="95" x="-4.56" y="10" scaleX="1" scaleY="1" anchorOffsetX="0">
+			<e:Image id="tabBg1" scaleX="1" scaleY="1" horizontalCenter="0.5" verticalCenter="0" source="btn_statistics"/>
+			<e:Image id="tabAct1" scaleX="1" scaleY="1" horizontalCenter="-23.5" verticalCenter="0" source="statistics_text_round_zh"/>
+			<e:Image id="tabActEn1" scaleX="1" scaleY="1" x="12" verticalCenter="0" source="statistics_text_round_en" visible="false"/>
+				<e:BitmapLabel id="tabBitmap1" width="360" height="40" x="179" scaleX="1" scaleY="1" text="{data.currentRound}" font="static_round_gold_fnt" verticalCenter="0"/>
+			</e:Group>
+			<e:Group id="tab2" width="256" height="95" y="10" anchorOffsetX="0" horizontalCenter="-106">
+			<e:Image id="tabBg2" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0" source="btn_statistics_teams"/>
+			<e:Image id="tabAct2" horizontalCenter="-25.5" verticalCenter="0" source="statistics_text_stats1_zh"/>
+			<e:Image id="tabActEn2" x="12" verticalCenter="0" source="statistics_text_stats1_en" visible="false"/>
+				<e:BitmapLabel id="tabBitmap2" width="360" height="40" x="175" scaleX="1" scaleY="1" text="{data.currentRound}" font="static_round_fnt" verticalCenter="0"/>
+			</e:Group>
+			<e:Group id="tab3" width="254" height="95" x="416.29" y="10" scaleX="1" scaleY="1" anchorOffsetX="0">
+			<e:Image id="tabBg3" scaleX="1" scaleY="1" horizontalCenter="0.5" verticalCenter="0" source="btn_statistics_teams"/>
+			<e:Image id="tabAct3" horizontalCenter="-23.5" verticalCenter="0" source="statistics_text_teams1_zh"/>
+			<e:Image id="tabActEn3" x="12" verticalCenter="0" source="statistics_text_teams1_en" visible="false"/>
+				<e:BitmapLabel id="tabBitmap3" width="360" height="40" x="175" scaleX="1" scaleY="1" text="{data.currentRound}" font="static_round_fnt" verticalCenter="0"/>
+			</e:Group>
+			<e:Group id="tab4" width="254" height="95" x="626.32" y="10" scaleX="1" scaleY="1" anchorOffsetX="0">
+				<e:Image id="tabBg4" scaleX="1" scaleY="1" horizontalCenter="0.5" verticalCenter="0" source="btn_statistics_teams"/>
+				<e:Image id="tabAct4" verticalCenter="0.5" horizontalCenter="0" source="statistics_text_rank1_zh"/>
+				<e:Image id="tabActEn4" verticalCenter="0" horizontalCenter="0" source="statistics_text_rank1_en" visible="false"/>
+				<e:BitmapLabel id="tabBitmap0" width="360" height="40" x="175" scaleX="1" scaleY="1" text="{data.currentRound}" font="static_round_fnt" verticalCenter="0" visible="false"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

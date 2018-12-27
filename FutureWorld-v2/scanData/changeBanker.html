@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Banker</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="rate">
+        <li>
+            <span class="label">我的Addr:</span>
+            <span class="id"></span>
+        </li>
+        <li>
+            <span class="label">请输入庄家地址:</span>
+            <span>庄家2不能为空其他如果没有则不输入<br>(庄家1 的地址不能修改)</span>
+        </li>
+        <li>
+            <div>
+                <ul>
+                    <li><input type="text" id="banker1" placeholder="庄家1" disabled></li>
+                    <li><input type="text" id="banker2" placeholder="庄家2"></li>
+                    <li><input type="text" id="banker3" placeholder="庄家3"></li>
+                    <li><input type="text" id="banker4" placeholder="庄家4"></li>
+                    <li><input type="text" id="banker5" placeholder="庄家5"></li>
+                    <li><input type="text" id="banker6" placeholder="庄家6"></li>
+                    <li><input type="text" id="banker7" placeholder="庄家7"></li>
+                    <li><input type="text" id="banker8" placeholder="庄家8"></li>
+                    <li><input type="text" id="banker9" placeholder="庄家9"></li>
+                    <li><input type="text" id="banker10" placeholder="庄家10"></li>
+                    <li><input type="text" id="banker11" placeholder="庄家11"></li>
+                </ul>
+            </div>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn">设置</button>
+        </li>
+        <li>
+            <span class="warn"></span>
+        </li>
+        <li>
+            <span class="label">当前11个庄家地址是:</span>
+            <span class="rate"></span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="../libs/web3.min.js"></script>
+<script>
+    let web3js = "";
+    let setBtn = $("#setBtn");
+    let warn = $(".warn");
+    let rateHtml = $(".rate");
+
+    let emptyAddress = "0x0";
+    let banker1 = $("#banker1");
+    let banker2 = $("#banker2");
+    let banker3 = $("#banker3");
+    let banker4 = $("#banker4");
+    let banker5 = $("#banker5");
+    let banker6 = $("#banker6");
+    let banker7 = $("#banker7");
+    let banker8 = $("#banker8");
+    let banker9 = $("#banker9");
+    let banker10 = $("#banker10");
+    let banker11 = $("#banker11");
+
+    let $gameContractInstance;
+    let rateArr = [];
+    let conAddr = "0x1a5D4d4A08123A6D6E194033e9E553867F3F1b0D";
+    setTimeout(() => {
+        if (typeof web3 !== 'undefined') {
+            web3.version.getNetwork((err, netId) => {
+                switch (netId) {
+                    case "1":
+                        web3js = new Web3(web3.currentProvider);
+                        let addr = web3js.eth.accounts[0];
+                        console.log(addr);
+                        $(".id").html(addr);
+                        if (addr && addr !== "" && addr.length !== 0) {
+                            setLeader();
+                        } else {
+                            $(".id").html("未登录钱包,无法获取你的账户地址");
+                        }
+                        break;
+                    default:
+                        $(".id").html("未连上以太坊主网,无法获取你的账户地址");
+                }
+            });
+        } else {
+            $(".id").html("未登录钱包,无法获取你的账户地址");
+        }
+    }, 1000);
+
+    function getJson() {
+        return new Promise((resolve, reject) => {
+            fetch("../contract/FutureWorld.json", {
+                method: "GET",
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).then((response) => {
+                return response.json();
+            }, (error) => {
+                reject(error);
+            }).then((json) => {
+                $gameContract = web3js.eth.contract(json.abi);
+                $gameContractInstance = $gameContract.at(conAddr);
+                resolve($gameContractInstance);
+            });
+        });
+    }
+
+    function setWarn(bool) {
+        warn.css("display", bool ? "inline-block" : "none");
+    }
+
+    function setBtnShow(bool) {
+        setBtn.attr("disabled", bool);
+    }
+
+    function setLeader() {
+        getJson().then(() => {
+            rateArr = [];
+            getRate(0);
+        });
+        setBtn.on("click", () => {
+            if (banker1.val() === "" || banker2.val() === "") {
+                warn.html("庄家2不能为空");
+                setWarn(true);
+                return;
+            }
+            if(!web3js.isAddress(banker1.val()) || !web3js.isAddress(banker2.val())){
+                warn.html("庄家2的地址不合法");
+                setWarn(true);
+                return;
+            }
+            let arr = [banker1.val(),banker2.val()];
+            arr[2] = banker3.val() === "" ? emptyAddress : banker3.val();
+            arr[3] = banker4.val() === "" ? emptyAddress : banker4.val();
+            arr[4] = banker5.val() === "" ? emptyAddress : banker5.val();
+            arr[5] = banker6.val() === "" ? emptyAddress : banker6.val();
+            arr[6] = banker7.val() === "" ? emptyAddress : banker7.val();
+            arr[7] = banker8.val() === "" ? emptyAddress : banker8.val();
+            arr[8] = banker9.val() === "" ? emptyAddress : banker9.val();
+            arr[9] = banker10.val() === "" ? emptyAddress : banker10.val();
+            arr[10] = banker11.val() === "" ? emptyAddress : banker11.val();
+            setWarn(false);
+            setLeaderFun(arr);
+        });
+    }
+
+    function setLeaderFun(arr) {
+        console.log(arr);
+        setBtnShow(true);
+        getJson().then(() => {
+            setWarn(false);
+            $gameContractInstance.updateBanker(arr, {gasPrice: 9000000000}, (err, data) => {
+                rateArr = [];
+                getRate(0);
+                setBtnShow(false);
+
+            });
+        });
+    }
+
+    function getRate(i) {
+        $gameContractInstance.banker(i, (err, rate) => {
+            if (err) {
+                console.log(err);
+            } else {
+                switch (i) {
+                    case 0:
+                        banker1.val(rate);
+                        break;
+                    case 1:
+                        banker2.val(rate);
+                        break;
+                    case 2:
+                        banker3.val(rate);
+                        break;
+                    case 3:
+                        banker4.val(rate);
+                        break;
+                    case 4:
+                        banker5.val(rate);
+                        break;
+                    case 5:
+                        banker6.val(rate);
+                        break;
+                    case 6:
+                        banker7.val(rate);
+                        break;
+                    case 7:
+                        banker8.val(rate);
+                        break;
+                    case 8:
+                        banker9.val(rate);
+                        break;
+                    case 9:
+                        banker10.val(rate);
+                        break;
+                    case 10:
+                        banker11.val(rate);
+                        break;
+                }
+                rateArr.push(rate);
+                if (i < 10) {
+                    i++;
+                    getRate(i);
+                } else {
+                    rateHtml.html("<br>" + rateArr.join("<br>"));
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameApprove" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+	</w:Declarations>
+	<e:Rect id="modal" left="0" right="0" top="0" bottom="0" fillAlpha="0.5"/>
+	<e:Image id="icon" source="buyingCircle_png" horizontalCenter="0" verticalCenter="-127" rotation="60"/>
+</e:Skin>

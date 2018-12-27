@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="NewFile" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="closeBg" left="0" right="0" top="0" bottom="0" strokeAlpha="0.5" fillAlpha="0.5"/>
+	<e:Group width="1080" height="1232" y="-1232" anchorOffsetY="0" horizontalCenter="0">
+		<e:Image horizontalCenter="0" verticalCenter="16.289999999999964" x="0" y="-3.089999999999975" scaleX="1" scaleY="1" source="bg_png"/>
+		<e:Image id="title" y="26.25" horizontalCenter="0.5" x="401.00000000000006" scaleX="1" scaleY="1" source="title_text_referee_zh"/>
+		<e:Image id="close" x="907.2" y="-26.37" scaleX="1" scaleY="1" source="close"/>
+		<e:Group id="registerGroup" width="882" height="1104" x="98.00000000000001" y="93.54" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1">
+			<e:Group id="registerBtn" width="300" height="104" y="904" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" x="292" scaleX="1" scaleY="1">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="btn"/>
+			<e:Image y="8" horizontalCenter="0" source="btn_text_yqdy_zh"/>
+			<e:Label text="2 ODF" y="60" anchorOffsetX="0" width="144.67" anchorOffsetY="0" height="35.33" verticalAlign="middle" textAlign="center" horizontalCenter="0" textColor="0xf9f48f" size="26"/>
+			</e:Group>
+			<e:Label size="30" top="177" anchorOffsetX="0" width="780.37" lineSpacing="8" horizontalCenter="0" textColor="0x21081c" text="{langData.register_info_2}" x="52" y="141" scaleX="1" scaleY="1"/>
+			<e:Label size="30" top="237" anchorOffsetX="0" width="780.37" lineSpacing="8" horizontalCenter="0" textColor="0x21081C" text="{langData.register_info_3}" x="52" y="201" scaleX="1" scaleY="1"/>
+			<e:Label text="{langData.register_info_4}" size="30" top="341" anchorOffsetX="0" width="780.37" lineSpacing="8" horizontalCenter="0" textColor="0x21081C" x="52" y="305" scaleX="1" scaleY="1"/>
+			<e:Label size="30" top="439" anchorOffsetX="0" width="780.37" lineSpacing="8" horizontalCenter="0" textColor="0x21081C" text="{langData.register_info_5}" x="52" y="403" scaleX="1" scaleY="1"/>
+		</e:Group>
+		<e:Group id="linkGroup" width="882" height="1104" x="98.00000000000001" y="96.63" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" visible="false">
+			<e:Image y="158.5" horizontalCenter="0" source="title_text_yqlj_zh"/>
+			<e:Label text="{langData.link}" x="111" y="330" textColor="0x21081c" fontFamily="MicrosoftYaHei-Bold" bold="true"/>
+			<e:Label size="30" anchorOffsetX="0" width="589.37" lineSpacing="8" horizontalCenter="123.5" textColor="0x21081C" x="52" y="330" scaleX="1" scaleY="1" bold="true" text="{data.idUrl}"/>
+			<e:Group id="copyBtn" width="300" height="104" y="466" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="btn"/>
+			<e:Image horizontalCenter="0" verticalCenter="0" source="btn_text_fz_1_zh"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

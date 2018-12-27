@@ -1,0 +1,11 @@
+{"file":"static_round_gold.png","frames":{
+"0":{"x":1,"y":71,"w":61,"h":68,"offX":3,"offY":2,"sourceW":40,"sourceH":74},
+"1":{"x":1,"y":141,"w":45,"h":69,"offX":11,"offY":2,"sourceW":30,"sourceH":74},
+"2":{"x":193,"y":1,"w":61,"h":68,"offX":3,"offY":2,"sourceW":40,"sourceH":74},
+"3":{"x":130,"y":71,"w":60,"h":69,"offX":4,"offY":2,"sourceW":40,"sourceH":74},
+"4":{"x":1,"y":1,"w":64,"h":68,"offX":1,"offY":3,"sourceW":40,"sourceH":74},
+"5":{"x":64,"y":72,"w":60,"h":67,"offX":4,"offY":4,"sourceW":40,"sourceH":74},
+"6":{"x":192,"y":71,"w":61,"h":67,"offX":3,"offY":4,"sourceW":40,"sourceH":74},
+"7":{"x":192,"y":140,"w":58,"h":68,"offX":5,"offY":2,"sourceW":40,"sourceH":74},
+"8":{"x":130,"y":1,"w":61,"h":68,"offX":3,"offY":2,"sourceW":40,"sourceH":74},
+"9":{"x":67,"y":1,"w":61,"h":69,"offX":3,"offY":2,"sourceW":40,"sourceH":74}}}

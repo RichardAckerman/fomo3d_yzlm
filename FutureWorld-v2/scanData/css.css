@@ -1,0 +1,38 @@
+* {
+    font-size: 24px;
+}
+
+.btn-class, .nPlayerNum, .luckyer-box {
+    padding-left: 40px;
+}
+
+#list, #rate {
+    list-style: none;
+}
+
+#list li, #rate li {
+    border-bottom: 1px solid #ddd;
+}
+
+#list li span, #rate li span {
+    font-size: 24px;
+}
+
+.luckyer-box span {
+    font-size: 24px;
+}
+
+#list .label, #rate .label {
+    display: inline-block;
+    width: 190px;
+    border-right: 1px solid #ddd;
+}
+
+#tips,.warn {
+    color: red;
+    display: none;
+}
+
+#rateId{
+    width: 100%;
+}

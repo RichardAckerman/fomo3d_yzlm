@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameHelpUi" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="modal" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Image scale9Grid="0,294,0,573" horizontalCenter="-11.5" verticalCenter="-95.5" height="630" source="bg1"/>
+	<e:Group height="1145" y="210" width="1080" anchorOffsetY="0" x="0">
+		<e:Image horizontalCenter="0" verticalCenter="0" source="bg"/>
+		<e:Image id="langTitleImg" y="45" x="100" source="title_text_faq_zh"/>
+		<e:Scroller width="838" height="907.46" y="160.53" anchorOffsetY="0" anchorOffsetX="0" horizontalCenter="0" scrollPolicyV="on" scrollPolicyH="off">
+			<e:Group id="layoutGroup" anchorOffsetY="0" height="1002" x="0" y="-152">
+				<e:Label text="{langData.help_text_1}" left="0" right="0" size="44" maxWidth="880" y="50" bold="true" textColor="0x6efae1"/>
+				<e:Label text="{langData.help_text_2}" size="40" anchorOffsetX="0" maxWidth="900" lineSpacing="10" y="100" left="0" right="0" width="838" textColor="0x51aca7"/>
+				<e:Label text="{langData.help_text_3}" left="0" right="0" size="44" maxWidth="880" y="150" bold="true" textColor="0x6efae1"/>
+				<e:Label text="{langData.help_text_4}" size="40" anchorOffsetX="0" maxWidth="900" y="250" lineSpacing="10" left="0" right="0" width="838" textColor="0x51aca7"/>
+				<e:Label text="{langData.help_text_5}" left="0" right="0" size="44" maxWidth="880" y="350" bold="true" textColor="0x6efae1"/>
+				<e:Label text="{langData.help_text_6}" size="40" anchorOffsetX="0" maxWidth="900" y="450" lineSpacing="10" left="0" right="0" width="838" textColor="0x51aca7"/>
+				<e:Label text="{langData.help_text_7}" left="0" right="0" size="44" maxWidth="880" y="550" bold="true" textColor="0x6efae1"/>
+				<e:Label text="{langData.help_text_8}" size="40" anchorOffsetX="0" maxWidth="900" y="650" lineSpacing="10" left="0" right="0" width="838" textColor="0x51aca7"/>
+				<e:Label text="{langData.help_text_9}" left="0" right="0" size="44" maxWidth="880" y="750" bold="true" textColor="0x6efae1"/>
+				<e:Label text="{langData.help_text_10}" size="40" anchorOffsetX="0" maxWidth="900" y="850" lineSpacing="10" left="0" right="0" width="838" textColor="0x51aca7"/>
+			</e:Group>
+		</e:Scroller>
+	</e:Group>
+</e:Skin>

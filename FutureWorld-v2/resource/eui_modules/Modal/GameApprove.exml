@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameApprove" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="modal" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Group horizontalCenter="0" verticalCenter="0" width="894" height="491">
+		<e:Image verticalCenter="0" horizontalCenter="0" source="bg_dialog"/>
+		<e:Image id="title" y="35" horizontalCenter="0" source="title_text_ts"/>
+		<e:Label text="{msg}" size="35" anchorOffsetX="0" horizontalCenter="-5.5" width="765" textAlign="center" minHeight="100" verticalCenter="-19.5" bold="true" lineSpacing="20" textColor="0x6debfa"/>
+		<e:Group id="submitBtn" width="300" height="104" y="366.18" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="-211">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="btn_green"/>
+			<e:Image horizontalCenter="0" verticalCenter="0" source="btn_sure_zh"/>
+		</e:Group>
+		<e:Group id="cancelBtn" width="300" height="104" y="366.18" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="195">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="btn_yellow"/>
+			<e:Image horizontalCenter="0" verticalCenter="0" source="btn_cancel_zh"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

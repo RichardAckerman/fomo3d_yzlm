@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ExtractUnit" width="900" height="266" xmlns:e="http://ns.egret.com/eui">
+	<e:Image verticalCenter="31" horizontalCenter="0" anchorOffsetY="0" height="246" source="statistics_bg"/>
+	<e:BitmapLabel scaleX="1" scaleY="1" anchorOffsetX="0" textAlign="right" anchorOffsetY="0" height="89.09" verticalAlign="middle" text="{data.extractCoin1}" horizontalCenter="0.5" font="statistics_bold_fnt" verticalCenter="31.5"/>
+	<e:Label text="{data.address}" y="31.35" anchorOffsetX="0" horizontalCenter="1.5" textColor="0x4b281f" bold="true"/>
+</e:Skin>

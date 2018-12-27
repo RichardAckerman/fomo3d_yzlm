@@ -1,0 +1,31 @@
+{
+	"initial": [
+		"libs/modules/egret/egret.min.js",
+		"libs/modules/egret/egret.web.min.js",
+		"libs/modules/eui/eui.min.js",
+		"libs/modules/assetsmanager/assetsmanager.min.js",
+		"libs/modules/tween/tween.min.js",
+		"libs/modules/promise/promise.min.js"
+	],
+	"game": [
+		"bin-debug/Modal/ApproveTs.min.js",
+		"bin-debug/AssetAdapter.min.js",
+		"bin-debug/Container.min.js",
+		"bin-debug/LanguageData.min.js",
+		"bin-debug/Loading.min.js",
+		"bin-debug/Main.min.js",
+		"bin-debug/Platform.min.js",
+		"bin-debug/ThemeAdapter.min.js",
+		"bin-debug/Game/Game.min.js",
+		"bin-debug/Commen.min.js",
+		"bin-debug/Modal/BuyingTs.min.js",
+		"bin-debug/Modal/ExtractUnitTs.min.js",
+		"bin-debug/Modal/GameAlert.min.js",
+		"bin-debug/Modal/GameHelp.min.js",
+		"bin-debug/Modal/GameStatistics.min.js",
+		"bin-debug/Modal/LanguageTs.min.js",
+		"bin-debug/Modal/LuckyUnitTs.min.js",
+		"bin-debug/Modal/MainIntroTs.min.js",
+		"bin-debug/Modal/Register.min.js"
+	]
+}
