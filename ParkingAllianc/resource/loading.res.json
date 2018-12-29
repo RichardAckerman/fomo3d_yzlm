@@ -1,0 +1,37 @@
+{
+	"groups": [
+		{
+			"keys": "load_pb_png,load_ditu_png,load_text_title_en_png,load_text_title_zh_png,load_Interface_jpg",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/load_pb.png",
+			"type": "image",
+			"name": "load_pb_png",
+			"scale9grid": "28,0,19,0"
+		},
+		{
+			"url": "assets/load_ditu.png",
+			"type": "image",
+			"name": "load_ditu_png",
+			"scale9grid": "34,0,57,63"
+		},
+		{
+			"url": "assets/load_text_title_en.png",
+			"type": "image",
+			"name": "load_text_title_en_png"
+		},
+		{
+			"url": "assets/load_text_title_zh.png",
+			"type": "image",
+			"name": "load_text_title_zh_png"
+		},
+		{
+			"url": "assets/load_Interface.jpg",
+			"type": "image",
+			"name": "load_Interface_jpg"
+		}
+	]
+}

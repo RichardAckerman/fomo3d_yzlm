@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ExtractUnit" width="850" height="184.55" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="list_item_bg_png" horizontalCenter="0" verticalCenter="0"/>
+	<e:Image x="80.34" source="statistics_text_wdxh_png" verticalCenter="0.22499999999999432"/>
+	<e:Label text="{data.num}" horizontalCenter="64" textColor="0xbafffe" size="58" verticalCenter="0"/>
+	<e:Label text="{data.extractCoin1}" x="650.29" textColor="0xbafffe" size="58" verticalCenter="0"/>
+	<e:Label x="281.86" y="47.5" textColor="0xfdffdc" size="34" anchorOffsetX="0" width="73.5" anchorOffsetY="0" height="43.5" verticalAlign="middle" textAlign="center" text="{data.index}"/>
+	<e:Image source="num_13_png" x="607" anchorOffsetX="0" width="43.5" anchorOffsetY="0" height="64.5" verticalCenter="1.2249999999999943"/>
+</e:Skin>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameAlertUI" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="modal" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Group horizontalCenter="0" verticalCenter="0" width="894" height="491">
+		<e:Image verticalCenter="0" source="bg2_png" horizontalCenter="0"/>
+		<e:Label text="{msg}" size="40" anchorOffsetX="0" horizontalCenter="-5.5" width="765" textAlign="center" minHeight="100" verticalCenter="-89.5" bold="true" anchorOffsetY="0" height="144" textColor="0xffffff"/>
+		<e:Group id="submitBtn" width="300" height="104" y="294.18" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="btn_png"/>
+			<e:Image horizontalCenter="0" verticalCenter="0" source="btn_text_fz_zh_png"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>
