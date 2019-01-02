@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LanguageUI" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="modal" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Group height="1054" y="1716" left="0" right="0" width="1080">
+		<e:Image source="yltq_ditu_png" horizontalCenter="0" anchorOffsetY="0" height="1163" bottom="0"/>
+		<e:Image id="close" source="icon_close_png" x="900" y="-25" scaleX="1" scaleY="1" visible="false"/>
+		<e:Group id="langZHTW" width="1030" height="177" y="130" horizontalCenter="0">
+			<e:Image verticalCenter="0" height="177" source="yltq_ditu_green1_png" horizontalCenter="0"/>
+			<e:Image source="yuyan_text_chin_png" x="66" y="37"/>
+			<e:Image id="langZHTW_choosed" source="icon_ok_png" x="850" y="42"/>
+		</e:Group>
+		<e:Group id="langEN" width="1030" height="177" y="343.95" horizontalCenter="0">
+			<e:Image scaleX="1" scaleY="1" verticalCenter="0" source="yltq_ditu_green2_png" horizontalCenter="0"/>
+			<e:Image source="yuyan_text_eng_png" x="66" y="49" rotation="0"/>
+			<e:Image id="langEN_choosed" source="icon_ok_png" x="850" y="42" visible="false"/>
+		</e:Group>
+		<e:Image source="yltq_title_png" y="-78.5" horizontalCenter="0"/>
+		<e:Image id="title" y="-71" source="yuyan_text_zh_png" horizontalCenter="0"/>
+	</e:Group>
+</e:Skin>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="RefereeInfoUI" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="modal" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Group height="1054" y="1716" left="0" right="0" width="1080">
+		<e:Image source="yltq_ditu_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="close" source="icon_close_png" x="900" y="-25" scaleX="1" scaleY="1"/>
+		<e:Image id="langTitleImg" y="40" horizontalCenter="0" source="title_text_tjdz_zh_png"/>
+		<e:Group width="1030" height="204" horizontalCenter="0" y="130">
+			<e:Image source="statistics_ditu_blue2_png" scaleX="1" scaleY="1" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="langWalletAddr" x="65" y="50" source="tjdz_text_qbdz_zh_png"/>
+			<e:Label id="addressUrl" text="--" y="116.06" size="38" textAlign="left" left="67" right="27" anchorOffsetY="0" height="38" anchorOffsetX="0" width="900" maxWidth="900" maxHeight="38" verticalAlign="middle"/>
+			<e:Group id="copyAddrUrl" width="180" height="94" x="780" y="23" anchorOffsetY="0" anchorOffsetX="0">
+				<e:Image source="btn_tjdz_copy_png" x="0" y="7" scaleX="1" scaleY="1"/>
+				<e:Image id="langCopyBtn1" source="btn_text_fz_zh_png" y="15" scaleX="1" scaleY="1" horizontalCenter="0"/>
+			</e:Group>
+		</e:Group>
+		<e:Group width="1030" height="204" horizontalCenter="0" y="336">
+			<e:Image source="statistics_ditu_blue1_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="langIdAddr" x="65" y="50" source="tjdz_text_iddz_zh_png"/>
+			<e:Label id="idUrl" text="--" y="116.06" left="67" right="27" size="38" textAlign="left" verticalAlign="middle" anchorOffsetY="0" height="38" anchorOffsetX="0" width="900" maxHeight="38" maxWidth="900"/>
+			<e:Group id="copyIdUrl" width="174" height="84" x="784" y="28" anchorOffsetY="0" anchorOffsetX="0">
+				<e:Image source="btn_tjdz_copy_png" x="-4" y="0" scaleX="1" scaleY="1"/>
+				<e:Image id="langCopyBtn2" source="btn_text_fz_zh_png" y="8" scaleX="1" scaleY="1" horizontalCenter="0"/>
+			</e:Group>
+		</e:Group>
+		<e:Group width="1030" height="204" horizontalCenter="0" y="540" visible="false">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="statistics_ditu_blue3_png"/>
+			<e:Label id="nameUrl" text="--" y="116.06" left="67" right="27" size="38" textAlign="left" verticalAlign="middle" anchorOffsetY="0" height="38" anchorOffsetX="0" width="900" maxHeight="38" maxWidth="900"/>
+			<e:Image id="langNameAddr" x="65" y="50" source="tjdz_text_mcdz1_zh_png"/>
+			<e:Group id="copyNameUrl" width="166" height="90" x="785" y="24" anchorOffsetX="0" anchorOffsetY="0">
+				<e:Image source="btn_tjdz_copy_png" x="-5" y="4" scaleX="1" scaleY="1"/>
+				<e:Image id="langCopyBtn3" source="btn_text_fz_zh_png" y="12" scaleX="1" scaleY="1" horizontalCenter="0"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

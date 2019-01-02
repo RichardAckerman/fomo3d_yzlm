@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameUI" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+		<tween:TweenGroup id="alertBgBling">
+			<tween:TweenItem target="{alertBg}">
+				<tween:Set>
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:Set>
+				<tween:To duration="750">
+					<tween:props>
+						<e:Object alpha="{1}"/>
+					</tween:props>
+				</tween:To>
+				<tween:To duration="750">
+					<tween:props>
+						<e:Object alpha="{0}"/>
+					</tween:props>
+				</tween:To>
+			</tween:TweenItem>
+		</tween:TweenGroup>
+	</w:Declarations>
+	<e:Image left="0" right="0" top="0" bottom="0" source="game_bg_jpg"/>
+	<e:Image source="yx_ditu3_png" horizontalCenter="0" top="0"/>
+	<e:Group width="1042" height="172.72" y="200" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+		<e:Image y="-106.09" source="activepot_bg_png" horizontalCenter="0"/>
+		<e:Image source="yx_ditu_title_png" x="81" y="-30"/>
+		<e:Image source="yx_ditu_title_png" x="599.94" y="-30"/>
+		<e:Group left="533" right="29" y="21" height="152" width="580" anchorOffsetX="0" anchorOffsetY="0">
+			<e:BitmapLabel id="jackPotLabel" font="game_modal_num_100_fnt" scaleX="1" scaleY="1" top="62" bottom="10" anchorOffsetX="0" horizontalCenter="1" text="{data.jackpot}"/>
+			<e:Label id="readyTimeLabel" text="{langData.readyTime}" anchorOffsetY="0" top="0" bottom="0" left="0" right="0" verticalAlign="middle" textAlign="center" size="46" visible="false"/>
+			<e:Image id="langJackPot" source="activepot_zh_png" y="-45.2" horizontalCenter="2"/>
+			<e:Label text="{data.jackpotUs}" y="145.67" anchorOffsetX="0" width="354" verticalAlign="middle" textAlign="center" anchorOffsetY="0" height="36" size="40" horizontalCenter="-2" visible="false"/>
+		</e:Group>
+		<e:Group width="356" height="136" x="93" y="21" anchorOffsetY="0" anchorOffsetX="0">
+			<e:BitmapLabel id="totalInvestLabel" scaleX="1" scaleY="1" top="40" bottom="-24" anchorOffsetX="0" horizontalCenter="-4" x="402" y="20" font="game_modal_num_big_fnt" text="{data.totalInvest}" anchorOffsetY="0"/>
+			<e:Label y="145.67" anchorOffsetX="0" width="354" verticalAlign="middle" textAlign="center" anchorOffsetY="0" height="36" size="40" horizontalCenter="0" x="251" scaleX="1" scaleY="1" text="{data.totalInvestUsd}" visible="false"/>
+		</e:Group>
+		<e:Image id="totalAsset" x="153.24" y="-25.72" source="yx_text_cjxh_zh_png"/>
+	</e:Group>
+	<e:Image source="animal_bear_png" horizontalCenter="0" bottom="0"/>
+	<e:Label id="buyTip" y="1006" anchorOffsetX="0" width="847.33" anchorOffsetY="0" height="47.33" horizontalCenter="0" textAlign="center" verticalAlign="middle" textColor="0x79e7dd" size="38" text="{langData.panalTips1}"/>
+	<e:Group id="myEarningsPanal" anchorOffsetX="0" anchorOffsetY="0" left="0" right="0" top="922" bottom="505" visible="false">
+		<e:Image source="yx_ditu1_png" y="-10.15" horizontalCenter="0"/>
+		<e:Image id="roundBonus" source="yx_text_dqsy_zh_png" x="67" y="123"/>
+		<e:Image id="roundBuy" source="yx_text_dqtr_zh_png" x="67" y="52.68"/>
+		<e:Image source="yx_ditu_title2_png" x="196.58" y="67.18"/>
+		<e:Image source="yx_ditu_title2_png" x="706.85" y="65.52"/>
+		<e:Image source="yx_ditu_title2_png" x="196.58" y="137.5"/>
+		<e:Image id="queueNum" source="yx_text_syxh_zh_png" x="580.14" y="60"/>
+		<e:Label x="255.48" y="71.6" anchorOffsetX="0" width="242" size="44" verticalAlign="middle" textAlign="left" textColor="0x56D1F4" text="{data.moduleData.roundBuy}"/>
+		<e:Label x="255.48" y="142.56" anchorOffsetX="0" width="242" size="44" verticalAlign="middle" textAlign="left" text="{data.moduleData.roundBonus}" textColor="0xe3db60"/>
+		<e:Label x="396.72" y="146.96" anchorOffsetY="0" height="31" anchorOffsetX="0" width="235" textColor="0x79E7DD" text="{data.moduleData.roundBonusUs}"/>
+		<e:Label x="778.94" y="70.72" anchorOffsetX="0" width="242" size="44" verticalAlign="middle" textAlign="left" textColor="0x56d1f4" text="{data.moduleData.queueNum}"/>
+	</e:Group>
+	<e:Image source="yx_ditu2_png" x="4" y="573.08" anchorOffsetY="0" height="360.34"/>
+	<e:Image source="yx_ditu2_png" x="544" y="573.08" anchorOffsetY="0" height="360.34"/>
+	<e:Image source="yx_ditu_title1_png" x="121.18" y="616" visible="false"/>
+	<e:Image source="yx_ditu_title1_png" x="661.59" y="618.48" visible="false"/>
+	<e:Image id="myAsset" source="yx_text_wdzc_zh_png" x="675.32" y="627.49" visible="false"/>
+	<e:Image id="extractNum" x="42" y="710.09" source="yx_text_ljcs_zh_png"/>
+	<e:Image id="myNum" x="42" y="641.3" source="yx_text_rcmdid_zh_png"/>
+	<e:Image id="currentProf" x="586.08" y="703.46" source="yx_text_tdjl_zh_png"/>
+	<e:Image id="predictBonus" x="184.62" y="623" source="yx_text_djyc_zh_png" visible="false"/>
+	<e:Image id="profidImg" x="586.08" y="774.89" source="yx_text_fhsy_zh_png"/>
+	<e:Image id="keyImg" x="42.12" y="777.06" source="yx_text_ljtr_zh_png"/>
+	<e:Image source="yx_ditu_title2_png" x="170.18" y="779.55"/>
+	<e:Image source="yx_ditu_title2_png" x="170.18" y="714.15"/>
+	<e:Image source="yx_ditu_title2_png" x="707.28" y="711.46"/>
+	<e:Image source="yx_ditu_title2_png" x="708.8" y="780.62"/>
+	<e:Label x="221.39" y="716.96" anchorOffsetX="0" width="311.7" size="44" verticalAlign="middle" textAlign="left" textColor="0x56d1f4" text="{data.moduleData.allTime}"/>
+	<e:Image source="yx_ditu_title2_png" x="169.54" y="643.84"/>
+	<e:Label x="220.75" y="646.65" anchorOffsetX="0" width="311.7" size="44" verticalAlign="middle" textAlign="left" textColor="0x56D1F4" text="{data.moduleData.rcmdid}"/>
+	<e:Label x="779.04" y="711.52" anchorOffsetX="0" width="242" size="44" verticalAlign="middle" textAlign="left" textColor="0xe3db60" text="{data.moduleData.teamProf}"/>
+	<e:Image id="unionProf" x="586.96" y="634.65" source="yx_text_lmjl_zh_png"/>
+	<e:Image source="yx_ditu_title2_png" x="708.16" y="642.65"/>
+	<e:Label x="778.4" y="644.23" anchorOffsetX="0" width="242" size="44" verticalAlign="middle" textAlign="left" textColor="0xE3DB60" text="{data.moduleData.unionBonus }"/>
+	<e:Label x="222.48" y="784.2" anchorOffsetX="0" width="242" size="44" verticalAlign="middle" textAlign="left" textColor="0x56d1f4" text="{data.moduleData.allBuy}"/>
+	<e:Label text="{data.moduleData.myBonus}" x="779.04" y="785.68" anchorOffsetX="0" width="242" size="44" verticalAlign="middle" textAlign="left" textColor="0xe3db60"/>
+	<e:Label x="734.14" y="739.12" anchorOffsetY="0" height="31" anchorOffsetX="0" width="235" textColor="0x79e7dd" text="{data.moduleData.allBuyUs}" visible="false"/>
+	<e:Label text="{data.moduleData.secondBonusUs}" x="212.14" y="837.63" anchorOffsetY="0" height="31" anchorOffsetX="0" width="235" textColor="0x79e7dd" visible="false"/>
+	<e:Label text="{data.moduleData.myBonusUs}" x="738" y="822.02" anchorOffsetY="0" height="31" anchorOffsetX="0" width="235" textColor="0x79e7dd" visible="false"/>
+	<e:Image id="marqueeBg" source="pmd_png" y="13" horizontalCenter="0" visible="false"/>
+	<e:Group id="marquee" width="969.33" height="77.07" y="19.8" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="-0.5" maxWidth="969.33" scrollEnabled="true" visible="false">
+		<e:Label id="marqueeLabel" text="{data.marqueeText}" x="217" y="17.87" anchorOffsetX="0" anchorOffsetY="0" height="40.67" verticalAlign="middle"/>
+	</e:Group>
+	<e:Group height="60" y="431.46" anchorOffsetX="0" x="53.17" width="973.67">
+		<e:BitmapLabel top="-20" bottom="20" font="time_num_font_fnt" horizontalCenter="261.665" text="{data.timeRemaining}"/>
+		<e:Group id="roundZh" width="309.33" height="40" x="9.68" y="11.46" anchorOffsetY="0" anchorOffsetX="0">
+		<e:Image source="yx_lc2_png" x="99.03" y="-30.07" scaleX="1" scaleY="1"/>
+		<e:BitmapLabel id="roundNum" top="-26" bottom="26" horizontalCenter="54.83500000000001" anchorOffsetX="0" width="122.8" text="{data.roundNum}" textAlign="center" verticalAlign="middle" x="11.879999999999995" y="-6.4599999999999795" scaleX="1" scaleY="1" font="round_text_fnt"/>
+		</e:Group>
+		<e:Group id="roundEn" width="379.03" height="40" x="9.68" y="11.46" scaleX="1" scaleY="1" anchorOffsetX="0" visible="false">
+		<e:Image source="yx_lc2_en_png" x="47.75" y="-14.34"/>
+		<e:BitmapLabel id="roundNum0" top="-4" bottom="4" horizontalCenter="170.985" anchorOffsetX="0" width="102.8" text="{data.roundNum}" textAlign="left" verticalAlign="middle" x="141.87999999999994" y="-1.4599999999999795" scaleX="1" scaleY="1" font="round_text_fnt"/>
+		</e:Group>
+	</e:Group>
+	<e:Label id="tips1" y="1221" anchorOffsetX="0" width="391.63" anchorOffsetY="0" height="39.33" textColor="0x79e7dd" size="34" horizontalCenter="-114" verticalAlign="middle" textAlign="right" text="{langData.panalTips2}"/>
+	<e:Label text="{data.remainingBet}" x="627" y="1225.33" size="34"/>
+	<e:Group id="alertModal" left="0" right="0" top="0" bottom="0" visible="false">
+		<e:Image id="alertBg" source="special_effects_light_png" left="0" right="0" top="0" bottom="0"/>
+		<e:Image source="special_effects_text_png" y="78.79" horizontalCenter="0"/>
+	</e:Group>
+	<e:Image id="statisticsBtn" source="icon_tj_png" x="44.52" y="5.24"/>
+	<e:Image id="registerBtn" source="icon_tjzc_png" x="247" y="7.24"/>
+	<e:Image id="languageBtn" x="805.94" y="-0.76" source="icon_gl_png"/>
+	<e:Image id="helpBtn" x="581" y="5.24" source="icon_ft_png"/>
+	<e:Group id="extractBtn" width="270" height="102" x="682" y="850" anchorOffsetX="0" anchorOffsetY="0">
+		<e:Image source="yx_btn_png" y="7" scaleX="1" scaleY="1" horizontalCenter="0"/>
+		<e:Image id="extractText" source="yx_text_tq_zh_png" y="20" scaleX="1" scaleY="1" horizontalCenter="0.5"/>
+	</e:Group>
+	<e:Group id="showBuyModal" width="438" height="126" y="1070.65" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+		<e:Image source="btn_gmys_png" y="2.49" scaleX="1" scaleY="1" horizontalCenter="-10"/>
+		<e:Image y="24.82" horizontalCenter="0" source="btn_text_gmyc_zh_png"/>
+	</e:Group>
+</e:Skin>

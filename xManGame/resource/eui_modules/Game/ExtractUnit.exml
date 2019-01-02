@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ExtractUnit" width="970" height="280" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:tween="egret.tween.*">
+	<w:Declarations>
+	</w:Declarations>
+	<e:Image scaleX="1" scaleY="1" verticalCenter="0" source="car_bg_png" horizontalCenter="0"/>
+	<e:BitmapLabel scaleX="1" scaleY="1" verticalCenter="-47" anchorOffsetX="0" width="223.57" textAlign="left" horizontalCenter="-126" anchorOffsetY="0" height="86.06" font="game_modal_num_100_fnt" text="{data.extractNum}"/>
+	<e:Image source="statistics_text_syxh_png" x="50.78" y="57.81"/>
+	<e:Image source="statistics_text_syje_png" x="491.97" y="57.81"/>
+	<e:BitmapLabel scaleX="1" scaleY="1" anchorOffsetX="0" width="249.33" textAlign="left" anchorOffsetY="0" height="89.09" x="688.51" y="49.71" font="game_modal_num_100_fnt" text="{data.extractCoin1}"/>
+	<e:Group width="903.99" height="56" y="190.32" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" maxWidth="903.99" scrollEnabled="true">
+		<e:Image id="carLine" source="car_line_png" verticalCenter="0" left="0"/>
+		<e:Group id="carGroup" width="185.33" height="53.34" x="126" y="1.33" anchorOffsetY="0" anchorOffsetX="0">
+			<e:Image source="car_png" verticalCenter="-7.5" y="-10.330000000000013" scaleX="1" scaleY="1" horizontalCenter="0"/>
+			<e:Image id="wheelL" source="car_front_wheel_png" x="147.55" y="20.2" anchorOffsetX="14" anchorOffsetY="14"/>
+			<e:Image id="wheelR" source="car_rear_wheel_png" x="32.72" y="19.28" anchorOffsetX="16" anchorOffsetY="16"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

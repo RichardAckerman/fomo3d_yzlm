@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Self Data</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="list">
+        <li>
+            <span class="label">id:</span>
+            <span class="id"></span>
+        </li>
+        <li>
+            <span class="label">地址:</span>
+            <span class="addr"></span>
+        </li>
+        <li>
+            <span class="label">推荐人地址:</span>
+            <span class="referees"></span>
+        </li>
+        <li>
+            <span class="label">投资总额:</span>
+            <span class="allBuy"></span>
+        </li>
+        <li>
+            <span class="label">投放金额:</span>
+            <span class="turnBuy"></span>
+        </li>
+        <li>
+            <span class="label">收益:</span>
+            <span class="turnBonus"></span>
+        </li>
+        <li>
+            <span class="label">当前投放收益:</span>
+            <span class="currentBonus"></span>
+        </li>
+        <li>
+            <span class="label">投放总次数:</span>
+            <span class="reinvest"></span>
+        </li>
+        <!--<li>-->
+            <!--<span class="label">联盟奖:</span>-->
+            <!--<span class="unionBonus"></span>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<span class="label">推荐业绩:</span>-->
+            <!--<span class="performance"></span>-->
+        <!--</li>-->
+        <li>
+            <span class="label">等级:</span>
+            <span class="level"></span>
+        </li>
+        <li>
+            <span class="label">轮数:</span>
+            <span class="currentRound"></span>
+        </li>
+        <!--<li>-->
+            <!--<span class="label">总收益:</span>-->
+            <!--<span class="allEarning"></span>-->
+        <!--</li>-->
+        <li>
+            <span class="label">失效次数(最多5次):</span>
+            <span class="lostTimes"></span>
+        </li>
+        <li>
+            <span class="label">代理id(agents):</span>
+            <span class="agents"></span>
+        </li>
+        <li>
+            <span class="label">领袖id(leader):</span>
+            <span class="leader"></span>
+        </li>
+        <li>
+            <span class="label">我的投放列表:</span>
+            <span class="rollInArray"></span>
+        </li>
+    </ul>
+    <div class="luckyer-box">
+        <span class="label" style="font-size: 24px">分大奖的十名玩家地址:</span> <br>
+        <span class="selfLuckyer"></span>
+    </div>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="web3.min.js"></script>
+<script src="logic.js"></script>
+<script>
+    let luckyArr1 = []
+    let web3js = ""
+    setTimeout(() => {
+        if (typeof web3 !== 'undefined') {
+            web3.version.getNetwork((err, netId) => {
+                switch (netId) {
+                    case "1":
+                        web3js = new Web3(web3.currentProvider)
+                        web3js.eth.getAccounts()
+                            .then((addr) => {
+                                console.log(addr)
+                                getLuckyer1(0)
+                                if (addr && addr !== "" && addr.length !== 0) {
+                                    $(".luckyer-box").find(".selfLuckyer").html("")
+                                    beginAddr(addr[0])
+                                    setTimeout(() => {
+                                        let html = $(".id")
+                                        if (html.html() === "") {
+                                            html.html("查询信息为空")
+                                        }
+                                    }, 3000)
+                                } else {
+                                    $(".id").html("未登录钱包,无法获取你的账户地址")
+                                }
+                            })
+                        break
+                    default:
+                        $(".id").html("未连上以太坊主网,无法获取你的账户地址")
+                }
+            })
+        } else {
+            $(".id").html("未登录钱包,无法获取你的账户地址")
+        }
+    }, 1000)
+    function getLuckyer1(i) {
+        ContractInstance.methods.Luckyer(i).call().then((addr) => {
+            luckyArr1.push(addr)
+            i++
+            if (i < 10) {
+                getLuckyer1(i)
+            } else {
+                let str = luckyArr1.join("<br>")
+                $(".luckyer-box").find(".selfLuckyer").html(str)
+            }
+        })
+    }
+</script>
+</body>
+</html>

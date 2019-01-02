@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ExtractUI" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="modal" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Group height="1054" left="0" right="0" width="1080" y="1716">
+		<e:Image source="yltq_ditu_png" horizontalCenter="0" bottom="0"/>
+		<e:Image source="yltq_title_png" y="-82.57" horizontalCenter="0"/>
+		<e:Image id="langTitleImg" y="-74.65" source="title_text_yltq_zh_png" horizontalCenter="0.5"/>
+		<e:Image id="close" source="icon_close_png" x="900" y="-25" scaleX="1" scaleY="1" visible="false"/>
+		<e:Group width="1030" height="177" y="63" horizontalCenter="0">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="statistics_ditu_green_png"/>
+			<e:Image id="langFenHong" y="-9" source="yltq_text_zh_bb_png" horizontalCenter="0.5"/>
+			<e:Group width="728" x="152" anchorOffsetX="0" anchorOffsetY="0" top="69" bottom="6">
+			<e:BitmapLabel anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" font="game_modal_num_100_fnt" text="{data.scam}" right="0" left="0" top="0" bottom="0" verticalAlign="middle" textAlign="center"/>
+			</e:Group>
+		</e:Group>
+		<e:Group width="1030" height="177" y="327" horizontalCenter="0">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="statistics_ditu_green_png"/>
+			<e:Image id="langTuiJian" y="-7" source="yltq_text_zh_ra_png" horizontalCenter="0.5"/>
+			<e:Group width="698" anchorOffsetX="0" anchorOffsetY="0" top="73" bottom="4" horizontalCenter="0">
+			<e:BitmapLabel anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" font="game_modal_num_100_fnt" text="{data.advice}" right="0" left="0" top="0" bottom="0" verticalAlign="middle" textAlign="center"/>
+			</e:Group>
+		</e:Group>
+		<e:Group width="1030" height="204" y="609" horizontalCenter="0">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="statistics_ditu_blue2_png"/>
+			<e:Image id="langTotal" y="-27" source="yltq_text_zh_tg_png" horizontalCenter="0.5"/>
+			<e:Group width="704" x="176" anchorOffsetX="0" anchorOffsetY="0" top="41" bottom="97">
+			<e:BitmapLabel anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" font="game_modal_num_100_fnt" text="{data.total}" right="0" left="0" top="0" bottom="0" verticalAlign="middle" textAlign="center"/>
+				<e:Label text="{data.tatalUSD}" y="96" size="38" textAlign="right" horizontalCenter="0"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="drawBtn" width="484.85" height="122.13" y="870.72" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:Image source="btn_tjrzc_register_png" y="0" horizontalCenter="-0.42500000000001137" x="31.999999999999943" scaleX="1" scaleY="1"/>
+			<e:Image id="langExtractBtn" y="16.07" horizontalCenter="-0.42500000000001137" x="200.99999999999994" scaleX="1" scaleY="1" source="btn_text_tq_zh_png"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

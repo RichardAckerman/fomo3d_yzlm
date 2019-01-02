@@ -1,0 +1,61 @@
+{
+	"groups": [
+		{
+			"keys": "load_pb_png,load_ditu_png,icon_key_png,load_text_title_en_png,load_text_title_zh_png,load_text_title_png,gmys_text_yys_en_png,gmys_text_yys_zh_png,icon_yy_png,icon_ft_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/load_pb.png",
+			"type": "image",
+			"name": "load_pb_png"
+		},
+		{
+			"url": "assets/load_ditu.png",
+			"type": "image",
+			"name": "load_ditu_png",
+			"scale9grid": "1,4,16,64"
+		},
+		{
+			"url": "assets/game/icon_key.png",
+			"type": "image",
+			"name": "icon_key_png"
+		},
+		{
+			"url": "assets/load_text_title_en.png",
+			"type": "image",
+			"name": "load_text_title_en_png"
+		},
+		{
+			"url": "assets/load_text_title_zh.png",
+			"type": "image",
+			"name": "load_text_title_zh_png"
+		},
+		{
+			"name": "load_text_title_png",
+			"type": "image",
+			"url": "assets/load_text_title.png"
+		},
+		{
+			"name": "gmys_text_yys_en_png",
+			"type": "image",
+			"url": "assets/game/modal/gmys_text_yys_en.png"
+		},
+		{
+			"name": "gmys_text_yys_zh_png",
+			"type": "image",
+			"url": "assets/game/modal/gmys_text_yys_zh.png"
+		},
+		{
+			"name": "icon_yy_png",
+			"type": "image",
+			"url": "assets/game/icon_yy.png"
+		},
+		{
+			"name": "icon_ft_png",
+			"type": "image",
+			"url": "assets/game/icon_ft.png"
+		}
+	]
+}

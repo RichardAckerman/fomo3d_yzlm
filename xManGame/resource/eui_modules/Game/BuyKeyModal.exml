@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BuyKeyModal" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="closeModal" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Group width="1040" height="1054" horizontalCenter="0" y="662">
+		<e:Image source="yltq_ditu_png" horizontalCenter="0" bottom="0" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image source="yltq_title_png" y="-77.27" x="258"/>
+		<e:Image source="gmys_text_zh_png" y="-71.23" horizontalCenter="0"/>
+		<e:Image y="40.01" source="statistics_ditu_green_png" horizontalCenter="8" visible="false"/>
+		<e:Image id="totalTitle" source="gmys_text_yys_zh_png" y="63.48" horizontalCenter="0" visible="false"/>
+		<e:BitmapLabel font="game_modal_num_100_fnt" scaleX="1" scaleY="1" top="149" bottom="810" anchorOffsetX="0" y="-164.41999999999996" width="548.73" anchorOffsetY="0" verticalAlign="middle" textAlign="center" horizontalCenter="0" text="{data.myAllBuy}" visible="false"/>
+		<e:Group width="988" height="236" y="362" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:Image width="528.48" height="142" scaleX="1" scaleY="1" anchorOffsetX="0" horizontalCenter="0" verticalCenter="6" source="input_png" anchorOffsetY="0"/>
+			<e:EditableText id="inputText" text="{data.input}" top="0" bottom="0" verticalAlign="middle" textAlign="center" textColor="0xFFFD68" size="64" anchorOffsetX="0" width="590.92" horizontalCenter="0"/>
+			<e:Image id="minuInput" source="btn_sub_png" x="92.3" verticalCenter="0"/>
+			<e:Image id="addInput" source="btn_add_png" x="776.66" verticalCenter="0"/>
+		</e:Group>
+		<e:Group id="buyBtn" width="438" height="126" y="703.33" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:Image source="btn_gmys_png" y="-1" scaleX="1" scaleY="1" horizontalCenter="0"/>
+			<e:Image source="btn_text_gmyc_zh_png" y="29" horizontalCenter="0.5"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

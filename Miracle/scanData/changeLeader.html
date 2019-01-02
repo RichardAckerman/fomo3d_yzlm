@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Leader</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="leader">
+        <li>
+            <span class="label">我的Addr:</span>
+            <span class="id"></span>
+        </li>
+        <li>
+            <span class="label">目标id:</span>
+            <span>
+                <input type="text" id="aimId" placeholder="请输入目标id">
+            </span>
+        </li>
+        <li>
+            <span class="label">领袖id:</span>
+            <span>
+                <input type="text" id="leaderId" placeholder="5个leader的ID,以英文逗号隔开">
+            </span>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn">设置</button>
+        </li>
+        <li>
+            <span class="warn"></span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="../libs/web3.min.js"></script>
+<script>
+    let web3js = "";
+    setTimeout(() => {
+        if (typeof web3 !== 'undefined') {
+            web3.version.getNetwork((err, netId) => {
+                switch (netId) {
+                    case "1":
+                        web3js = new Web3(web3.currentProvider);
+                        let addr = web3js.eth.accounts[0];
+                        console.log(addr);
+                        $(".id").html(addr);
+                        if (addr && addr !== "" && addr.length !== 0) {
+                            setLeader();
+                        } else {
+                            $(".id").html("未登录钱包,无法获取你的账户地址")
+                        }
+                        break;
+                    default:
+                        $(".id").html("未连上以太坊主网,无法获取你的账户地址")
+                }
+            })
+        } else {
+            $(".id").html("未登录钱包,无法获取你的账户地址")
+        }
+    }, 1000);
+    let setBtn = $("#setBtn");
+    let warn = $(".warn");
+    let aimId = $("#aimId");
+    let leaderId = $("#leaderId");
+    let $gameContractInstance;
+    function getJson() {
+        return new Promise((resolve, reject) => {
+            fetch("../contract/XMan.json", {
+                method: "GET",
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).then((response) => {
+                return response.json();
+            }, (error) => {
+                reject(error);
+            }).then((json) => {
+                $gameContract = web3js.eth.contract(json.abi);
+                $gameContractInstance = $gameContract.at("0x75608E66eA465aDD636e1A86150aFa6DaAdC52eD");
+                resolve($gameContractInstance)
+            });
+        });
+    }
+    function setWarn(bool) {
+        warn.css("display", bool ? "inline-block" : "none");
+    }
+
+    function setBtnShow(bool) {
+        setBtn.attr("disabled", bool);
+    }
+
+    function setLeader() {
+        setBtn.on("click", () => {
+            if (aimId.val() === "") {
+                warn.html("请输入目标id");
+                setWarn(true);
+                return
+            }
+            if (leaderId.val() === "") {
+                warn.html("请输入leader Id");
+                setWarn(true);
+                return
+            }
+            let arr = leaderId.val().split(",");
+            if (arr.length !== 5) {
+                warn.html("请输入5个leader Id,以英文逗号隔开。末尾不要逗号");
+                setWarn(true);
+                return
+            }
+            setWarn(false);
+            setLeaderFun(aimId.val(), arr);
+        });
+    }
+
+    function setLeaderFun(aimId, arr) {
+        setBtnShow(true);
+        getJson().then(() => {
+            $gameContractInstance.playerxID_(aimId, (err, data) => {
+                if (data[0] === "0x0000000000000000000000000000000000000000") {
+                    $(".warn").html("查询不到这个目标id");
+                    setWarn(true);
+                    setBtnShow(false);
+                    return;
+                }
+                $gameContractInstance.changeLeader(aimId, arr, {gasPrice: 9000000000}, (err, data) => {
+                    setBtnShow(false);
+                });
+            })
+        })
+    }
+</script>
+</body>
+</html>

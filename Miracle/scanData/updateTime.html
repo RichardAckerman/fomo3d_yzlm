@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Time</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="leader">
+        <li>
+            <span class="label">我的Addr:</span>
+            <span class="id"></span>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn">设置时间</button>
+        </li>
+        <li>
+            <span class="warn"></span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="../libs/web3.min.js"></script>
+<script>
+    let web3js = "";
+    setTimeout(() => {
+        if (typeof web3 !== 'undefined') {
+            web3.version.getNetwork((err, netId) => {
+                switch (netId) {
+                    case "1":
+                        web3js = new Web3(web3.currentProvider);
+                        let addr = web3js.eth.accounts[0];
+                        console.log(addr);
+                        $(".id").html(addr);
+                        if (addr && addr !== "" && addr.length !== 0) {
+                            setLeader();
+                        } else {
+                            $(".id").html("未登录钱包,无法获取你的账户地址");
+                        }
+                        break;
+                    default:
+                        $(".id").html("未连上以太坊主网,无法获取你的账户地址");
+                }
+            });
+        } else {
+            $(".id").html("未登录钱包,无法获取你的账户地址");
+        }
+    }, 1000);
+    let setBtn = $("#setBtn");
+    let warn = $(".warn");
+    let $gameContractInstance;
+
+    function getJson() {
+        return new Promise((resolve, reject) => {
+            fetch("../contract/XMan.json", {
+                method: "GET",
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).then((response) => {
+                return response.json();
+            }, (error) => {
+                reject(error);
+            }).then((json) => {
+                $gameContract = web3js.eth.contract(json.abi);
+                $gameContractInstance = $gameContract.at("0x75608E66eA465aDD636e1A86150aFa6DaAdC52eD");
+                resolve($gameContractInstance);
+            });
+        });
+    }
+
+    function setWarn(bool) {
+        warn.css("display", bool ? "inline-block" : "none");
+    }
+
+    function setBtnShow(bool) {
+        setBtn.attr("disabled", bool);
+    }
+
+    function setLeader() {
+        setBtn.on("click", () => {
+            let time = Date.parse(new Date()) / 1000;
+            time += 86400;
+            warn.html(new Date(time*1000));
+            setWarn(true);
+            setTimeout(()=>{
+                setLeaderFun(time);
+            },5000);
+        });
+    }
+
+    function setLeaderFun(time) {
+        setBtnShow(true);
+        getJson().then(() => {
+            $gameContractInstance.updateTime(time, {gasPrice: 9000000000}, (err, data) => {
+                console.log(err, data);
+            });
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameAlertUI" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="modal" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Group horizontalCenter="0" verticalCenter="0" width="894" height="491">
+		<e:Image source="tips_ditu_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image source="tips_text_en_png" y="60" horizontalCenter="0" visible="false"/>
+		<e:Label text="{msg}" size="50" anchorOffsetX="0" horizontalCenter="-5.5" width="765" textAlign="center" minHeight="100" verticalCenter="-55.5"/>
+		<e:Group id="submitBtn" width="370" height="104" y="328" horizontalCenter="0">
+			<e:Image source="btn_tjrzc_register_png" y="0" anchorOffsetX="0" width="370" anchorOffsetY="0" height="104" horizontalCenter="0" x="0" scaleX="1" scaleY="1"/>
+			<e:Image y="9" horizontalCenter="0.5" x="133" scaleX="1" scaleY="1" source="tips_text_ok_zh_png"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

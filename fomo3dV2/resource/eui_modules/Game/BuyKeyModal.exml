@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="BuyKeyModal" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="closeModal" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Group width="1040" height="1054" horizontalCenter="0" y="1716">
+		<e:Image source="yltq_ditu_png" horizontalCenter="0" bottom="0" x="0" y="0" scaleX="1" scaleY="1"/>
+		<e:Image source="yltq_ditu_green_png" y="112" horizontalCenter="0"/>
+		<e:Image source="gmys_ditu_png" y="346" horizontalCenter="0"/>
+		<e:Image id="totalTitle" source="gmys_text_yys_zh_png" x="353.69" y="154.44"/>
+		<e:Image source="gmys_icon_key_png" x="288.34" y="153.44"/>
+		<e:BitmapLabel width="284" height="42.67" x="602.92" y="160.61" anchorOffsetY="0" anchorOffsetX="0" font="blue_key_num_fnt" text="{data.totalKeys}"/>
+		<e:Group id="percentChance" height="54.55" y="224.42" anchorOffsetX="0" anchorOffsetY="0" left="30" right="32">
+			<e:Label text="{langData.percentChance}" top="0" bottom="0" verticalAlign="middle" textAlign="center" horizontalCenter="0" size="40" x="38" y="-224.41999999999996" scaleX="1" scaleY="1" textColor="0xd9ffc3"/>
+			<e:Label text="{data.percentChance}" top="0" bottom="0" verticalAlign="middle" textAlign="center" horizontalCenter="0" size="40" x="81" y="-224.41999999999996" scaleX="1" scaleY="1" textColor="0xd9ffc3"/>
+			<e:Label top="0" bottom="0" verticalAlign="middle" textAlign="center" horizontalCenter="0" size="40" text="{langData.percentChance1}" x="26" y="-224.41999999999996" scaleX="1" scaleY="1" textColor="0xd9ffc3"/>
+		</e:Group>
+		<e:Group width="988" height="236" y="362" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:Image id="minusBtn" source="btn_sub_png" x="16" y="12.97" scaleX="1" scaleY="1"/>
+			<e:Image id="addBtn" source="btn_add_png" x="856" y="12.97" scaleX="1" scaleY="1"/>
+			<e:Group width="730" height="118" x="130" y="12.97" scaleX="1" scaleY="1">
+				<e:Image source="input_png" y="0" width="730" height="118" horizontalCenter="0" x="0" scaleX="1" scaleY="1"/>
+				<e:EditableText id="inputText" text="{data.input}" top="0" bottom="0" verticalAlign="middle" textAlign="center" textColor="0xFFFD68" size="64" anchorOffsetX="0" horizontalCenter="16.5" width="590.92"/>
+				<e:Image source="icon_key_png" verticalCenter="0" x="30"/>
+			</e:Group>
+			<e:Label text="{data.conversionNum}" y="133.41" width="800" verticalAlign="middle" textAlign="center" size="40" scaleX="1" scaleY="1" horizontalCenter="18"/>
+			<e:Label text="{langData.buyTips}" y="181.33" anchorOffsetX="0" width="956.67" textAlign="center" size="35" horizontalCenter="0.5" textColor="0xfffd68"/>
+		</e:Group>
+		<e:Group id="buyModalBtn" width="438" height="126" y="703.33" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
+			<e:Image source="btn_gmys_png" y="-1" scaleX="1" scaleY="1" horizontalCenter="0"/>
+			<e:Image source="btn_text_gmyc_zh_png" y="29" horizontalCenter="0.5"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>
