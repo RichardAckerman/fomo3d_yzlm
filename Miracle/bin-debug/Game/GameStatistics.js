@@ -46,9 +46,9 @@ var GameStatistics = (function (_super) {
         _super.prototype.childrenCreated.call(this);
         this.modal.addEventListener(egret.TouchEvent.TOUCH_TAP, this.clostFun, this);
         this.close.addEventListener(egret.TouchEvent.TOUCH_TAP, this.clostFun, this);
-        this.tab1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectTab.bind(this, 0), this);
-        this.tab2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectTab.bind(this, 1), this);
-        this.tab3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectTab.bind(this, 2), this);
+        // this.tab1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectTab.bind(this, 0), this);
+        // this.tab2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectTab.bind(this, 1), this);
+        // this.tab3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectTab.bind(this, 2), this);
         this.updateData.addEventListener(egret.TimerEvent.TIMER, this.getData, this);
         this.ExtractUnitOne = new ExtractUnitTs();
         this.teamTabScr.addChild(this.ExtractUnitOne);

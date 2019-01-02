@@ -72,11 +72,11 @@ class Register extends eui.Component {
                 if (err) {
                     console.log(err);
                 } else {
-                    err && console.log(err);
-                    setTimeout(() => {
-                        this.closeModalFun();
-                    }, 2000);
+                    hash && console.log(hash);
                 }
+                setTimeout(() => {
+                    this.closeModalFun();
+                }, 2000);
             });
         } else {
             notSignInMetamask();

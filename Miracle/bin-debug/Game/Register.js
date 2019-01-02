@@ -74,11 +74,11 @@ var Register = (function (_super) {
                     console.log(err);
                 }
                 else {
-                    err && console.log(err);
-                    setTimeout(function () {
-                        _this.closeModalFun();
-                    }, 2000);
+                    hash && console.log(hash);
                 }
+                setTimeout(function () {
+                    _this.closeModalFun();
+                }, 2000);
             });
         }
         else {

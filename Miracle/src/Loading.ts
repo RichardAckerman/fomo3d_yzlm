@@ -20,8 +20,8 @@ class Loading extends egret.Sprite implements RES.PromiseTaskReporter {
         this.addChild(loadBg);
 
         let logo = this.createBitmapByName(url);
-        logo.x = 0;
-        logo.y = 0;
+        logo.x = 490;
+        logo.y = 270;
         this.addChild(logo);
 
         let content = new egret.Sprite();
@@ -56,7 +56,7 @@ class Loading extends egret.Sprite implements RES.PromiseTaskReporter {
         let loadRate = current / total;
         this.progress.width = loadRate * 900;
         this.progress.visible = true;
-        this.textField.text = Math.floor(loadRate * 100) + "%";
+        this.textField.text = Math.floor(loadRate * 99) + "%";
     }
 
     /**

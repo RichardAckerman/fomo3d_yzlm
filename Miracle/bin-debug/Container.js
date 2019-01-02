@@ -18,7 +18,6 @@ var Container = (function (_super) {
     }
     Container.prototype.childrenCreated = function () {
         _super.prototype.childrenCreated.call(this);
-        this.content();
     };
     /**
      * stack content

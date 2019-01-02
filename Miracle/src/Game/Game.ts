@@ -247,7 +247,6 @@ class Game extends eui.Component {
                     });
                 }
             });
-
             /**更新我的数据信息 */
             $myAddress && getMyKeyProp().then((data) => {
                 if (!data[0]) {

@@ -18,10 +18,10 @@ contract XMan {
     uint public nPlayerArraySize = 30; // 玩家队列长度
     uint public nMustRollInNum = 10; // 必须复投次数
 
-    uint public nPlayerNum; // 玩家个数
+    uint public nPlayerNum = 100; // 玩家个数
     uint256 constant private rndInit_ = 5 minutes;              // 5分钟后开启游戏
-    uint256 public rndInc_ = 3600 seconds;              // 每次买key增加3600s
-    uint256 public rndMax_ = 24 hours;                 // 最长8h
+    uint256 public rndInc_ = 24 hours;              // 每次买key增加24 hours;
+    uint256 public rndMax_ = 24 hours;                 // 最长24 hours;
     uint256 public registrationFee_ = 20 finney;            // price to register a name
     uint256 public round = 1; // 本轮游戏是第几轮
     uint256 public createTime = now;

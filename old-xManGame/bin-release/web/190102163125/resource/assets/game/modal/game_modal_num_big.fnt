@@ -1,0 +1,13 @@
+{"file":"game_modal_num_big.png","frames":{
+"0":{"x":266,"y":2,"w":83,"h":120,"offX":2,"offY":3,"sourceW":85,"sourceH":124},
+"1":{"x":87,"y":249,"w":49,"h":120,"offX":17,"offY":3,"sourceW":85,"sourceH":124},
+"2":{"x":2,"y":140,"w":81,"h":120,"offX":2,"offY":3,"sourceW":85,"sourceH":124},
+"3":{"x":264,"y":126,"w":83,"h":119,"offX":0,"offY":5,"sourceW":85,"sourceH":124},
+"4":{"x":179,"y":2,"w":83,"h":120,"offX":0,"offY":3,"sourceW":85,"sourceH":124},
+"5":{"x":91,"y":125,"w":83,"h":120,"offX":2,"offY":3,"sourceW":85,"sourceH":124},
+"6":{"x":177,"y":126,"w":83,"h":119,"offX":2,"offY":5,"sourceW":85,"sourceH":124},
+"7":{"x":352,"y":2,"w":81,"h":120,"offX":2,"offY":3,"sourceW":85,"sourceH":124},
+"8":{"x":351,"y":126,"w":83,"h":119,"offX":2,"offY":5,"sourceW":85,"sourceH":124},
+"9":{"x":91,"y":2,"w":85,"h":119,"offX":0,"offY":5,"sourceW":85,"sourceH":124},
+"e":{"x":2,"y":2,"w":85,"h":134,"offX":0,"offY":0,"sourceW":85,"sourceH":136},
+"num_d":{"x":140,"y":249,"w":42,"h":90,"offX":22,"offY":17,"sourceW":85,"sourceH":124}}}

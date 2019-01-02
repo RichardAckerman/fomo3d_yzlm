@@ -10,7 +10,6 @@ class Container extends eui.Component {
 
     protected childrenCreated(): void {
         super.childrenCreated();
-        this.content();
     }
 
     /**

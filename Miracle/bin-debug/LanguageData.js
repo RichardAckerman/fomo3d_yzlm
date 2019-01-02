@@ -16,10 +16,10 @@ var $ZHTW = {
         whale_team_title: '萬磁王戰隊',
         remind_1: '滑動或點擊箭頭選擇壹個隊伍',
         /**register modal */
-        register_info_2: '· 玩家可在本頁面花費0.02ETH購買成為隊長。',
-        register_info_3: '· 隊長可獲得自己推薦的用戶購買投入的一部分ETH作為推薦人獎勵。',
-        register_info_4: '· 隊長推薦的使用者也購買投入後隊長等級會得到提升（最高為5級）。等級越高可獲得的推薦人獎勵越多。',
-        register_info_5: '· 玩家的直接推薦人視為1代推薦人，1代推薦人的推薦人視為2代推薦人，2代推薦人的推薦人視為3代推薦人……當其中一個玩家購買後將給予其1代推薦人一定ETH獎勵。',
+        register_info_2: '',
+        register_info_3: '',
+        register_info_4: '玩家可在本页面转0.02个ETH生成自己的推广链接',
+        register_info_5: '',
         panalTips1: "同時最多可投放 30 次，每次 1 ETH",
         panalTips2: "剩余投放次數:",
         /**help modal */
@@ -27,7 +27,7 @@ var $ZHTW = {
         help_text_2: '      遊戲倒計時24小時，玩家每投入1次增加一个小时的遊戲時間，遊戲結束後，最後投入的10名玩家將會獲得獎池中的大獎。',
         help_text_3: '2. 如何進行ETH投入？',
         help_text_4: '      ETH投入每次定投1 ETH，投入後本次投入將進入收益序列，每個玩家最多能有30次投入進入收益序列。當你的收益大於1ETH時會自動扣除你的收益進行投入而不是你錢包的餘額。複投10輪，玩家可以提取所有本金。',
-        help_text_5: '3. 隊長有什麼用？',
+        help_text_5: '3. 如何獲得收益？',
         help_text_6: '      玩家在遊戲中可申請成為隊長，隊長可將遊戲推薦給其他人，當被推薦人在遊戲中投入ETH後，隊長能獲得最大的直接推薦獎勵。\n' +
             '如果隊長推薦的玩家投入了ETH，隊長就能提升等級，推薦的玩家越多，隊長等級越高，獲得的推薦人收益也會增加，最高不超過5級。\n' +
             '隊長等級提升後，其推薦的玩家如果再推薦了其他玩家，隊長也能獲得獎勵，其收益和等級成正比。\n',
@@ -70,12 +70,12 @@ var $EN = {
         whale_team_title: 'Magneto',
         remind_1: 'Sliding or click a team ',
         /**register modal */
-        register_info_2: '· Address must be unique',
-        register_info_3: '· Dont exceed 32 characters',
-        register_info_4: '· Address must lower case and number',
-        register_info_5: '· Address dont simply number',
-        register_info_6: '· Cannot afford have special character',
-        register_info_7: '· Must not be any white space',
+        register_info_2: '',
+        register_info_3: '',
+        register_info_4: 'Players can go to 0.02 ETH on this page to generate their own promotional links',
+        register_info_5: '',
+        register_info_6: '',
+        register_info_7: '',
         panalTips1: "You can make up to 30 shots, 1 ETH at every time",
         panalTips2: "Number of residual inputs:",
         /**help modal */

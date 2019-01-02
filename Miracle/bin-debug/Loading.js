@@ -26,8 +26,8 @@ var Loading = (function (_super) {
         loadBg.y = 0;
         this.addChild(loadBg);
         var logo = this.createBitmapByName(url);
-        logo.x = 0;
-        logo.y = 0;
+        logo.x = 490;
+        logo.y = 270;
         this.addChild(logo);
         var content = new egret.Sprite();
         content.x = 50;
@@ -56,7 +56,7 @@ var Loading = (function (_super) {
         var loadRate = current / total;
         this.progress.width = loadRate * 900;
         this.progress.visible = true;
-        this.textField.text = Math.floor(loadRate * 100) + "%";
+        this.textField.text = Math.floor(loadRate * 99) + "%";
     };
     /**
      * 根据name关键字创建一个Bitmap对象。

@@ -11,7 +11,7 @@
 			<e:Group width="820" height="380" x="79" y="-82" anchorOffsetX="0" anchorOffsetY="0">
 				<e:Label text="{langData.register_info_2}" size="34" left="0" right="-76" top="16"/>
 				<e:Label text="{langData.register_info_3}" size="34" top="82" x="0" anchorOffsetX="0" width="780.25" anchorOffsetY="0" lineSpacing="12"/>
-				<e:Label text="{langData.register_info_4}" size="34" top="177" x="0" anchorOffsetX="0" width="780.37" lineSpacing="8"/>
+				<e:Label text="{langData.register_info_4}" size="34" top="187" x="0" anchorOffsetX="0" width="780.37" lineSpacing="8"/>
 				<e:Label text="{langData.register_info_5}" size="34" top="306" x="0" anchorOffsetX="0" width="775.82" lineSpacing="8"/>
 				<e:Label text="{langData.register_info_6}" size="34" top="270" x="0" visible="false"/>
 				<e:Label text="{langData.register_info_7}" size="34" top="332" x="0" visible="false"/>

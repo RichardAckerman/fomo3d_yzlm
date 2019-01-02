@@ -104,9 +104,11 @@ var Main = (function (_super) {
                     case 0: return [4 /*yield*/, this.loadResource()];
                     case 1:
                         _a.sent();
+                        this.createGameScene();
                         getNetWork().then(function () {
                             getJson().then(function (data) {
-                                _this.createGameScene();
+                                _this.stage.removeChild(_this.stage.$children[1]);
+                                $Content.container.content();
                                 getLanStatus();
                             });
                         });
@@ -124,7 +126,7 @@ var Main = (function (_super) {
                         _a.trys.push([0, 6, , 7]);
                         lang = localStorage.getItem('language');
                         if (!lang) {
-                            localStorage.setItem('language', "en");
+                            localStorage.setItem('language', "zhtw");
                         }
                         return [4 /*yield*/, RES.loadConfig("resource/loading.res.json", "resource/")];
                     case 1:
@@ -143,7 +145,6 @@ var Main = (function (_super) {
                         return [4 /*yield*/, RES.loadGroup("preload", 0, loadingView)];
                     case 5:
                         _a.sent();
-                        this.stage.removeChild(loadingView);
                         return [3 /*break*/, 7];
                     case 6:
                         e_1 = _a.sent();
