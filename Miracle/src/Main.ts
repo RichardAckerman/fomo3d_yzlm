@@ -60,6 +60,7 @@ class Main extends eui.UILayer {
     private async runGame() {
         await this.loadResource();
         this.createGameScene();
+        // return
         getNetWork().then( () => {
             getJson().then((data)=>{
                 this.stage.removeChild(this.stage.$children[1]);

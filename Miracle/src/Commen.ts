@@ -81,7 +81,7 @@ function getJson() {
                 'Content-Type': 'application/json'
             })
         }).then((response) => {
-            return response.json();
+            return response .json();
         }, (error) => {
             reject(error);
         }).then((json) => {

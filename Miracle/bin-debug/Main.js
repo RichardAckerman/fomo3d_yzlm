@@ -105,6 +105,7 @@ var Main = (function (_super) {
                     case 1:
                         _a.sent();
                         this.createGameScene();
+                        // return
                         getNetWork().then(function () {
                             getJson().then(function (data) {
                                 _this.stage.removeChild(_this.stage.$children[1]);

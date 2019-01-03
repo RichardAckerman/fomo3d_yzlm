@@ -21,7 +21,7 @@ class Loading extends egret.Sprite implements RES.PromiseTaskReporter {
 
         let logo = this.createBitmapByName(url);
         logo.x = 450;
-        logo.y = 270;
+        logo.y = 160;
         this.addChild(logo);
 
         let content = new egret.Sprite();

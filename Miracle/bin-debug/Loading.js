@@ -27,7 +27,7 @@ var Loading = (function (_super) {
         this.addChild(loadBg);
         var logo = this.createBitmapByName(url);
         logo.x = 450;
-        logo.y = 270;
+        logo.y = 160;
         this.addChild(logo);
         var content = new egret.Sprite();
         content.x = 50;

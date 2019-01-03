@@ -9,10 +9,10 @@
 	<e:BitmapLabel scaleX="1" scaleY="1" anchorOffsetX="0" width="249.33" textAlign="left" anchorOffsetY="0" height="89.09" x="691.54" y="49.71" font="game_modal_num_100_fnt" text="{data.extractCoin1}"/>
 	<e:Group width="903.99" height="56" y="190.32" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" maxWidth="903.99" scrollEnabled="true">
 		<e:Image id="carLine" source="car_line_png" verticalCenter="0" left="0"/>
-		<e:Group id="carGroup" width="185.33" height="53.34" x="126" y="1.33" anchorOffsetY="0" anchorOffsetX="0">
-			<e:Image source="car_png" verticalCenter="-7.5" y="-10.330000000000013" scaleX="1" scaleY="1" horizontalCenter="0"/>
-			<e:Image id="wheelL" source="car_front_wheel_png" x="147.55" y="20.2" anchorOffsetX="14" anchorOffsetY="14"/>
-			<e:Image id="wheelR" source="car_rear_wheel_png" x="32.72" y="19.28" anchorOffsetX="16" anchorOffsetY="16"/>
+		<e:Group id="carGroup" width="185.33" height="53.34" y="1.33" anchorOffsetY="0" anchorOffsetX="0" right="57.99000000000001">
+			<e:Image verticalCenter="-7.5" y="-10.330000000000013" scaleX="1" scaleY="1" horizontalCenter="0" source="car1_png"/>
+			<e:Image id="wheelL" source="car_front_wheel_png" x="147.55" y="20.2" anchorOffsetX="14" anchorOffsetY="14" visible="false"/>
+			<e:Image id="wheelR" source="car_rear_wheel_png" x="32.72" y="19.28" anchorOffsetX="16" anchorOffsetY="16" visible="false"/>
 		</e:Group>
 	</e:Group>
 </e:Skin>
