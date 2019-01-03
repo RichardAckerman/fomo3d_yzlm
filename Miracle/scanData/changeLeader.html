@@ -66,7 +66,7 @@
     let $gameContractInstance;
     function getJson() {
         return new Promise((resolve, reject) => {
-            fetch("../contract/XMan.json", {
+            fetch("../contract/miracle.json", {
                 method: "GET",
                 headers: new Headers({
                     'Content-Type': 'application/json'
@@ -77,7 +77,7 @@
                 reject(error);
             }).then((json) => {
                 $gameContract = web3js.eth.contract(json.abi);
-                $gameContractInstance = $gameContract.at("0x75608E66eA465aDD636e1A86150aFa6DaAdC52eD");
+                $gameContractInstance = $gameContract.at("0xd823b5d18542506638b7cae1be63df7f8255c98f");
                 resolve($gameContractInstance)
             });
         });

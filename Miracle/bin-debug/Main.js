@@ -126,7 +126,7 @@ var Main = (function (_super) {
                         _a.trys.push([0, 6, , 7]);
                         lang = localStorage.getItem('language');
                         if (!lang) {
-                            localStorage.setItem('language', "zhtw");
+                            localStorage.setItem('language', "en");
                         }
                         return [4 /*yield*/, RES.loadConfig("resource/loading.res.json", "resource/")];
                     case 1:

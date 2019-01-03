@@ -55,14 +55,14 @@ function getNetWork() {
                         }, 2000);
                         break;
                     default:
-                        // web3js = new Web3(new Web3.providers.HttpProvider("http://192.168.1.6:7545"));
+                        // web3js = new Web3(new Web3.providers.HttpProvider("http://192.168.1.102:7545"));
                         web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
                         resolve();
                 }
             });
         }
         else {
-            // web3js = new Web3(new Web3.providers.HttpProvider("http://192.168.1.6:7545"));
+            // web3js = new Web3(new Web3.providers.HttpProvider("http://192.168.1.102:7545"));
             web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
             resolve();
         }
@@ -82,6 +82,7 @@ function getJson() {
         }).then(function (json) {
             $gameContract = web3js.eth.contract(json.abi);
             $gameContractInstance = $gameContract.at("0xd823b5d18542506638b7cae1be63df7f8255c98f");
+            // $gameContractInstance = $gameContract.at("0x25ebb70ea8c2bd8dc26d3b6e2da8cce1374ce28e");
             resolve($tokenContractInstance);
         });
     });

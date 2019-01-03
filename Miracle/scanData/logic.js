@@ -1,6 +1,6 @@
 ﻿let web3Obj = new Web3("https://mainnet.infura.io/");
 
-let ContractAddr = "0x75608E66eA465aDD636e1A86150aFa6DaAdC52eD";
+let ContractAddr = "0xd823b5d18542506638b7cae1be63df7f8255c98f";
 
 let ContractInstance = null;
 
@@ -128,7 +128,7 @@ function begin(val) {
 
 function getJson() {
     return new Promise((resolve, reject) => {
-        fetch("../contract/XMan.json", {
+        fetch("../contract/miracle.json", {
             method: "GET",
             headers: new Headers({
                 "Content-Type": "application/json"

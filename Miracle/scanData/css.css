@@ -6,15 +6,15 @@
     padding-left: 40px;
 }
 
-#list, #leader {
+#list, #leader, #rate  {
     list-style: none;
 }
 
-#list li, #leader li {
+#list li, #leader li, #rate li {
     border-bottom: 1px solid #ddd;
 }
 
-#list li span, #leader li span {
+#list li span, #leader li span, #rate li span {
     font-size: 24px;
 }
 
@@ -22,7 +22,7 @@
     font-size: 24px;
 }
 
-#list .label, #leader .label {
+#list .label, #leader .label, #rate .label  {
     display: inline-block;
     width: 190px;
     border-right: 1px solid #ddd;
@@ -31,4 +31,8 @@
 #tips,.warn {
     color: red;
     display: none;
+}
+
+#rateId{
+    width: 100%;
 }

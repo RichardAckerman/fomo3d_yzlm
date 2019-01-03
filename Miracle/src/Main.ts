@@ -74,7 +74,7 @@ class Main extends eui.UILayer {
             /**load loading resource */
             let lang = localStorage.getItem('language');
             if(!lang){
-                localStorage.setItem('language',"zhtw");
+                localStorage.setItem('language',"en");
             }
             await RES.loadConfig("resource/loading.res.json", "resource/");
             await RES.loadGroup("preload", 0);
