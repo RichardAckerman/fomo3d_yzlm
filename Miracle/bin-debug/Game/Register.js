@@ -33,6 +33,7 @@ var Register = (function (_super) {
             notSignInMetamask();
             return;
         }
+        $Modal.betLoad.visible = true;
         var href = location.href;
         var addr = href.split("?")[1];
         var _referrer = "0x0000000000000000000000000000000000000000";
@@ -63,7 +64,7 @@ var Register = (function (_super) {
     };
     Register.prototype.registerFun = function (_referrer) {
         var _this = this;
-        console.log(_referrer);
+        // console.log(_referrer);
         if ($myAddress) {
             var commission = web3js.toWei("0.02");
             $gameContractInstance.registerName(_referrer, {
@@ -71,10 +72,12 @@ var Register = (function (_super) {
                 value: commission
             }, function (err, hash) {
                 if (err) {
-                    console.log(err);
+                    // console.log(err);                    
+                    $alert('网络错误');
                 }
                 else {
-                    hash && console.log(hash);
+                    // hash && console.log(hash);
+                    $Modal.betLoad.visible = false;
                 }
                 setTimeout(function () {
                     _this.closeModalFun();
@@ -83,6 +86,7 @@ var Register = (function (_super) {
         }
         else {
             notSignInMetamask();
+            $Modal.betLoad.visible = false;
         }
     };
     Register.prototype.clostFun = function () {

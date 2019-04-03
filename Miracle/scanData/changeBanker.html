@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Banker</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="rate">
+        <li>
+            <span class="label">我的Addr:</span>
+            <span class="id"></span>
+        </li>
+        <li>
+            <span class="label">游戏Addr:</span>
+            <span id="gameAddr"></span>
+        </li>
+        <li>
+            <span class="label">请输入庄家地址:</span>
+            <!--<span>庄家2不能为空其他如果没有则不输入<br>(庄家1 的地址不能修改)</span>-->
+        </li>
+        <li>
+            <div>
+                <ul>
+                    <li><input type="text" id="banker1" placeholder="庄家1"></li>
+                    <li><input type="text" id="banker2" placeholder="庄家2"></li>
+                    <li><input type="text" id="banker3" placeholder="庄家3"></li>
+                    <li><input type="text" id="banker4" placeholder="庄家4"></li>
+                </ul>
+            </div>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn">设置</button>
+        </li>
+        <li>
+            <span class="warn"></span>
+        </li>
+        <li>
+            <span class="label">当前4个庄家地址是:</span>
+            <span class="rate"></span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="../libs/web3.min.js"></script>
+<script>
+    let web3js = "";
+    let setBtn = $("#setBtn");
+    let warn = $(".warn");
+    let rateHtml = $(".rate");
+
+    let emptyAddress = "0x0";
+    let banker1 = $("#banker1");
+    let banker2 = $("#banker2");
+    let banker3 = $("#banker3");
+    let banker4 = $("#banker4");
+    let $gameContractInstance;
+    let rateArr = [];
+    let conAddr = "0xd823b5d18542506638b7cae1be63df7f8255c98f";
+    $("#gameAddr").html(conAddr);
+    setTimeout(() => {
+        if (typeof web3 !== 'undefined') {
+            web3.version.getNetwork((err, netId) => {
+                switch (netId) {
+                    case "1":
+                        web3js = new Web3(web3.currentProvider);
+                        let addr = web3js.eth.accounts[0];
+                        console.log(addr);
+                        $(".id").html(addr);
+                        if (addr && addr !== "" && addr.length !== 0) {
+                            setLeader();
+                        } else {
+                            $(".id").html("未登录钱包,无法获取你的账户地址");
+                        }
+                        break;
+                    default:
+                        $(".id").html("未连上以太坊主网,无法获取你的账户地址");
+                }
+            });
+        } else {
+            $(".id").html("未登录钱包,无法获取你的账户地址");
+        }
+    }, 1000);
+
+    function getJson() {
+        return new Promise((resolve, reject) => {
+            fetch("../contract/miracle.json", {
+                method: "GET",
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).then((response) => {
+                return response.json();
+            }, (error) => {
+                reject(error);
+            }).then((json) => {
+                $gameContract = web3js.eth.contract(json.abi);
+                $gameContractInstance = $gameContract.at(conAddr);
+                resolve($gameContractInstance);
+            });
+        });
+    }
+
+    function setWarn(bool) {
+        warn.css("display", bool ? "inline-block" : "none");
+    }
+
+    function setBtnShow(bool) {
+        setBtn.attr("disabled", bool);
+    }
+
+    function setLeader() {
+        getJson().then(() => {
+            rateArr = [];
+            getRate(0);
+        });
+        setBtn.on("click", () => {
+            // if (banker1.val() === "" || banker2.val() === "") {
+            //     warn.html("庄家2不能为空");
+            //     setWarn(true);
+            //     return;
+            // }
+            let arr = [banker1.val(), banker2.val()];
+            arr[0] = banker1.val() === "" ? emptyAddress : banker1.val();
+            arr[1] = banker2.val() === "" ? emptyAddress : banker2.val();
+            arr[2] = banker3.val() === "" ? emptyAddress : banker3.val();
+            arr[3] = banker4.val() === "" ? emptyAddress : banker4.val();
+            console.log(arr);
+            if (!web3js.isAddress(arr[0]) || !web3js.isAddress(arr[1])) {
+                warn.html("有地址不合法");
+                setWarn(true);
+                return;
+            }
+            setWarn(false);
+            setLeaderFun(arr);
+        });
+    }
+
+    function setLeaderFun(arr) {
+        setBtnShow(true);
+        getJson().then(() => {
+            setWarn(false);
+            $gameContractInstance.updateBanker(arr, {gasPrice: 9000000000}, (err, data) => {
+                rateArr = [];
+                getRate(0);
+                setBtnShow(false);
+
+            });
+        });
+    }
+
+    function getRate(i) {
+        $gameContractInstance.banker(i, (err, rate) => {
+            if (err) {
+                console.log(err);
+            } else {
+                switch (i) {
+                    case 0:
+                        banker1.val(rate);
+                        break;
+                    case 1:
+                        banker2.val(rate);
+                        break;
+                    case 2:
+                        banker3.val(rate);
+                        break;
+                    case 3:
+                        banker4.val(rate);
+                        break;
+                }
+                rateArr.push(rate);
+                if (i < 3) {
+                    i++;
+                    getRate(i);
+                } else {
+                    rateHtml.html("<br>" + rateArr.join("<br>"));
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

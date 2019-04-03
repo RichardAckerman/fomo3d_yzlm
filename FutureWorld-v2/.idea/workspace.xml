@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7364e87e-e92b-437e-85b5-1a58a9cd28c8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Miracle/contract/miracleTest.sol" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Miracle/scanData/changeBanker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CanonizationOfGods-v2/bin-debug/Commen.js" beforeDir="false" afterPath="$PROJECT_DIR$/../CanonizationOfGods-v2/bin-debug/Commen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CanonizationOfGods-v2/src/Commen.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../CanonizationOfGods-v2/src/Commen.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/.idea/xManGame.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/.wing/exml.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/.wing/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/.wing/launch.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-debug/Commen.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/bin-debug/Commen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-debug/Container.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/bin-debug/Container.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-debug/Game/BuyKey.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/bin-debug/Game/BuyKey.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-debug/Game/Extract.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/bin-debug/Game/Extract.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-debug/Game/ExtractUnitTs.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/bin-debug/Game/ExtractUnitTs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-debug/Game/Game.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/bin-debug/Game/Game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/js/assetsmanager.min_e1440ef3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/js/default.thm_a033330f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/js/egret.min_40e267ce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/js/egret.web.min_29018c52.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/js/eui.min_9cf92601.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/js/main.min_41cab26e.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/js/promise.min_83a6a5d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/js/tween.min_6c5a88f9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/car/car.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/car/car_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/car/car_front_wheel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/car/car_line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/car/car_rear_wheel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/activepot_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/activepot_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/activepot_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/animal_bear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/btn_gmys.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/btn_text_gmyc_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/btn_text_gmyc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/btn_tips.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/game_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/gm_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/icon_ft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/icon_ft_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/icon_gl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/icon_gl_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/icon_key1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/icon_tj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/icon_tj_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/icon_tjzc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/icon_tjzc_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/input.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/jiantou.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/Strategy_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/animal_bears.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/animal_bears_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/animal_bulls.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/animal_bulls_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/animal_snaeks_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/animal_sneks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/animal_sneks_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/animal_whales.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/animal_whales_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/blue_key_num.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/blue_key_num.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/btn_add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/btn_sub.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/btn_text_fz_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/btn_text_fz_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/btn_text_sj_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/btn_text_sj_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/btn_text_tq_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/btn_text_tq_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/btn_text_zc_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/btn_text_zc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/btn_tjdz_copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/btn_tjrzc_random.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/btn_tjrzc_register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/game_modal_num_100.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/game_modal_num_100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/game_modal_num_big.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/game_modal_num_big.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/gmys_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/gmys_text_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/gmys_text_yys_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/gmys_text_yys_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/gmys_text_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/icon_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/icon_key.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/icon_ok.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/input.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/btn_statistics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/btn_text_gmyc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/gmys_text_yys_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/gmys_text_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/icon_gl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_stats_text_ti_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_1_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_1_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_2_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_2_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_hs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_hs_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_rcmdid_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_rcmdid_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_round1_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_round1_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_round_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_round_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_stats1_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_stats1_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_stats_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_stats_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_syje.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_syxh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_teams1_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_teams1_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_teams_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_teams_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_xh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/statistics_text_xh_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/yx_text_cjxh_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/yx_text_cjxh_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/yx_text_dqsy_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/yx_text_dqtf_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/yx_text_lmj_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/yx_text_syxh_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/yx_text_syxh_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statis/yx_text_ys_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_ditu_blue1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_ditu_blue2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_ditu_blue3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_ditu_brown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_ditu_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_stats_text_dr_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_stats_text_dr_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_stats_text_ti_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_stats_text_ti_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_stats_text_tp_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_stats_text_tp_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_teams_cattle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_teams_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_teams_snake.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_teams_the_bear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_teams_whale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_text_ap_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_text_ap_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_text_cwdi_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_text_cwdi_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_text_mk_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_text_mk_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_text_round_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_text_round_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_text_stats_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_text_stats_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_text_teams_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/statistics_text_teams_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/tips_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/tips_text_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/tips_text_ok_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/tips_text_ok_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/tips_text_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/title_text_statistics_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/title_text_statistics_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/title_text_strategy_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/title_text_strategy_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/title_text_tjdz_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/title_text_tjrzc_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/title_text_tjrzc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/title_text_yltq_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/title_text_yltq_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/tjdz_text_iddz_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/tjdz_text_iddz_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/tjdz_text_mcdz1_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/tjdz_text_mcdz1_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/tjdz_text_qbdz_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/tjdz_text_qbdz_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/tjrzc_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/tjrzc_ditu_chang.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_ditu_blue1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_ditu_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_ditu_green1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_ditu_green2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_text_en_bb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_text_en_ra.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_text_en_sa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_text_en_tg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_text_zh_bb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_text_zh_ra.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_text_zh_sa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_text_zh_tg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yltq_title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yuyan_text_chin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yuyan_text_chin1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yuyan_text_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yuyan_text_eng.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yuyan_text_eng1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/modal/yuyan_text_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/pmd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/qipao_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/round_text.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/round_text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/special_effects_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/special_effects_text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/special_effects_text_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/time_num_font.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/time_num_font.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/totalInvested_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/totalInvested_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_btn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_ditu1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_ditu2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_ditu3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_ditu_title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_ditu_title1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_ditu_title2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_lc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_lc2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_lc2_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_1_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_1_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_2_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_2_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_cjcs_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_cjcs_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_djyc_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_djyc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_dqsy_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_dqsy_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_dqtf_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_dqtr_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_dqtr_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_fhsy_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_fhsy_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_hjsy_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_jc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_ljcs_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_ljcs_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_ljtf_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_ljtr_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_ljtr_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_lmj_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_lmjl_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_lmjl_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_rcmdid_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_rcmdid_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_sy_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_sy_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_syxh_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_syxh_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_tdjl_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_tdjl_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_tfcs_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_tfcs_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_tq_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_tq_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_wdxh_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_wdxh_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_wdzc_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_wdzc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_ys_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/yx_text_ys_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game/zys_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/game_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/load_Interface.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/load_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/load_pb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/load_text_title_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/load_text_title_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/assets/pc_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/config/description.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/default.res.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/default.thm.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/gameEui.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102182601/resource/loading.res.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/contract/miracle.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/js/assetsmanager.min_e1440ef3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/js/clipboard.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/js/default.thm_a033330f.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/js/egret.min_40e267ce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/js/egret.web.min_29018c52.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/js/eui.min_9cf92601.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/js/main.min_20ff5cd8.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/js/promise.min_83a6a5d.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/js/tween.min_6c5a88f9.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/js/web3.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/car/car.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/car/car_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/car/car_front_wheel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/car/car_line.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/car/car_rear_wheel.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/activepot_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/activepot_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/activepot_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/animal_bear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/btn_gmys.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/btn_text_gmyc_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/btn_text_gmyc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/btn_tips.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/game_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/gm_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/icon_ft.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/icon_ft_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/icon_gl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/icon_gl_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/icon_key1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/icon_tj.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/icon_tj_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/icon_tjzc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/icon_tjzc_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/input.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/jiantou.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/Strategy_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/animal_bears.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/animal_bears_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/animal_bulls.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/animal_bulls_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/animal_snaeks_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/animal_sneks.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/animal_sneks_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/animal_whales.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/animal_whales_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/blue_key_num.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/blue_key_num.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/btn_add.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/btn_sub.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/btn_text_fz_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/btn_text_fz_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/btn_text_sj_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/btn_text_sj_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/btn_text_tq_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/btn_text_tq_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/btn_text_zc_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/btn_text_zc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/btn_tjdz_copy.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/btn_tjrzc_random.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/btn_tjrzc_register.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/game_modal_num_100.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/game_modal_num_100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/game_modal_num_big.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/game_modal_num_big.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/gmys_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/gmys_text_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/gmys_text_yys_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/gmys_text_yys_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/gmys_text_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/icon_close.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/icon_key.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/icon_ok.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/input.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/btn_statistics.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/btn_text_gmyc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/gmys_text_yys_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/gmys_text_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/icon_gl.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_stats_text_ti_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_1_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_1_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_2_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_2_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_hs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_hs_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_rcmdid_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_rcmdid_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_round1_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_round1_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_round_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_round_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_stats1_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_stats1_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_stats_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_stats_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_syje.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_syxh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_teams1_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_teams1_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_teams_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_teams_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_xh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/statistics_text_xh_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/yx_text_cjxh_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/yx_text_cjxh_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/yx_text_dqsy_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/yx_text_dqtf_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/yx_text_lmj_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/yx_text_syxh_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/yx_text_syxh_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statis/yx_text_ys_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_ditu_blue1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_ditu_blue2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_ditu_blue3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_ditu_brown.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_ditu_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_stats_text_dr_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_stats_text_dr_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_stats_text_ti_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_stats_text_ti_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_stats_text_tp_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_stats_text_tp_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_teams_cattle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_teams_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_teams_snake.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_teams_the_bear.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_teams_whale.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_text_ap_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_text_ap_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_text_cwdi_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_text_cwdi_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_text_mk_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_text_mk_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_text_round_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_text_round_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_text_stats_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_text_stats_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_text_teams_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/statistics_text_teams_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/tips_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/tips_text_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/tips_text_ok_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/tips_text_ok_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/tips_text_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/title_text_statistics_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/title_text_statistics_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/title_text_strategy_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/title_text_strategy_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/title_text_tjdz_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/title_text_tjrzc_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/title_text_tjrzc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/title_text_yltq_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/title_text_yltq_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/tjdz_text_iddz_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/tjdz_text_iddz_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/tjdz_text_mcdz1_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/tjdz_text_mcdz1_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/tjdz_text_qbdz_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/tjdz_text_qbdz_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/tjrzc_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/tjrzc_ditu_chang.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_ditu_blue1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_ditu_green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_ditu_green1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_ditu_green2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_text_en_bb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_text_en_ra.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_text_en_sa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_text_en_tg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_text_zh_bb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_text_zh_ra.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_text_zh_sa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_text_zh_tg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yltq_title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yuyan_text_chin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yuyan_text_chin1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yuyan_text_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yuyan_text_eng.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yuyan_text_eng1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/modal/yuyan_text_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/pmd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/qipao_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/round_text.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/round_text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/special_effects_light.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/special_effects_text.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/special_effects_text_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/time_num_font.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/time_num_font.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/totalInvested_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/totalInvested_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_btn.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_ditu1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_ditu2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_ditu3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_ditu_title.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_ditu_title1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_ditu_title2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_lc.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_lc2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_lc2_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_1_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_1_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_2_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_2_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_cjcs_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_cjcs_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_djyc_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_djyc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_dqsy_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_dqsy_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_dqtf_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_dqtr_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_dqtr_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_fhsy_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_fhsy_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_hjsy_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_jc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_ljcs_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_ljcs_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_ljtf_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_ljtr_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_ljtr_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_lmj_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_lmjl_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_lmjl_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_rcmdid_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_rcmdid_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_sy_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_sy_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_syxh_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_syxh_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_tdjl_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_tdjl_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_tfcs_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_tfcs_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_tq_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_tq_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_wdxh_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_wdxh_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_wdzc_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_wdzc_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_ys_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/yx_text_ys_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/game/zys_bg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/load_Interface.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/load_ditu.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/load_pb.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/load_text_title_en.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/load_text_title_zh.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/assets/pc_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/config/description.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/default.res.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/default.thm.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/gameEui.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/bin-release/web/190102183809/resource/loading.res.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/libs/exml.e.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/libs/exml.e.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/resource/assets/car/car1.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/resource/assets/car/car1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/resource/assets/car/car2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/resource/assets/car/car2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/resource/default.res.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/resource/default.res.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/resource/default.thm.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/resource/default.thm.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/resource/eui_modules/Game/ExtractUnit.exml" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/resource/eui_modules/Game/ExtractUnit.exml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/scanData/changeData.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/scanData/changeData.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/scanData/logic.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/scanData/logic.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/src/Commen.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/src/Commen.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/src/Container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/src/Container.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/src/Game/BuyKey.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/src/Game/BuyKey.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/src/Game/Extract.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/src/Game/Extract.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/src/Game/ExtractUnitTs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/src/Game/ExtractUnitTs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/src/Game/Game.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/src/Game/Game.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Miracle/src/Main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../Miracle/src/Main.ts" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="462247080">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="ts" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="TypeScript" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts">
+        <counts>
+          <entry key="TypeScriptServerServiceImpl" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Commen.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="299">
+              <caret line="82" column="102" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FutureWorld-v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FutureWorld-v2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FutureWorld-v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FutureWorld-v2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="ts.external.directory.path" value="D:\WebStorm 2018.2.4\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7364e87e-e92b-437e-85b5-1a58a9cd28c8" name="Default Changelist" comment="" />
+      <created>1551692671665</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1551692671665</updated>
+      <workItem from="1551692672745" duration="11000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="11000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/Commen.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="82" column="102" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

@@ -37,7 +37,6 @@ var GameStatistics = (function (_super) {
             }
         };
         _this.status = 0;
-        _this.updateData = new egret.Timer(2000, 0);
         /**load Container skin */
         _this.skinName = "resource/eui_modules/Game/GameStatisticsUI.exml";
         return _this;
@@ -49,13 +48,14 @@ var GameStatistics = (function (_super) {
         // this.tab1.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectTab.bind(this, 0), this);
         // this.tab2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectTab.bind(this, 1), this);
         // this.tab3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectTab.bind(this, 2), this);
-        this.updateData.addEventListener(egret.TimerEvent.TIMER, this.getData, this);
-        this.ExtractUnitOne = new ExtractUnitTs();
+        // this.updateData.addEventListener(egret.TimerEvent.TIMER, this.getData, this);
+        $Modal.extractUnit = this.ExtractUnitOne = new ExtractUnitTs();
         this.teamTabScr.addChild(this.ExtractUnitOne);
     };
     GameStatistics.prototype.getData = function () {
-        this.getTeamTotalPot();
-        this.getTotalKey();
+        // this.getTeamTotalPot();
+        // this.getTotalKey();        
+        this.ExtractUnitOne.getData();
     };
     /**
      * 获取四个队的奖池总金额
@@ -65,7 +65,7 @@ var GameStatistics = (function (_super) {
         $gameContractInstance.teamPot(function (err, Coin) {
             if (err) {
                 console.log("++++++", err);
-                _this.updateData.stop();
+                // this.updateData.stop();
             }
             else {
                 // $Content.game.data.totalInvest = "e" + parseFloat(web3js.fromWei(Coin[0]).toString()).toFixed(2);
@@ -95,7 +95,7 @@ var GameStatistics = (function (_super) {
         });
     };
     GameStatistics.prototype.clostFun = function () {
-        this.updateData.stop();
+        // this.updateData.stop();
         var group = $Modal.gameStatistics.$children[1];
         var tw = egret.Tween.get(group); //开始动画
         tw.to({ y: 1716 }, 200).call(function () {

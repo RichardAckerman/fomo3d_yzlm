@@ -1,0 +1,724 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,game_bg_jpg,bg_png,btn_text_cancel_zh_png,btn_text_sure_zh_png,bg2_png,btn_green_png,btn_red_png,list_item_bg_png,title_text_faq_zh_png,statistics_stats_text_djs_zh_png,statistics_stats_text_ti_zh_png,statistics_stats_text_zhdjjc_zh_png,statistics_text_cjxh_png,statistics_text_round_zh_png,statistics_text_round1_zh_png,statistics_text_stats_zh_png,statistics_text_stats1_zh_png,statistics_text_teams_zh_png,statistics_text_teams1_zh_png,statistics_text_wdxh_png,title_text_strategy_zh_png,bg3_png,bg_mysort_png,statistics_stats_bg_png,statistics_stats_bg_xz_png,bg_rank_png,statistics_stats_bg2_png,statistics_stats_bg_xz2_png,title_text_xyj_png,title_text_xykc_png,title_text_xykc1_png,title_text_xyph_png,title_text_xyph1_png,btn_text_copy_zh_png,title_text_referee_zh_png,yuyan_text_zh_png,icon_ok_png,yuyan_text_chin_png,btn_blue_png,btn_text_gy_zh_png,btn_text_tq_zh_png,data_bg_png,icon_cjcs_png,icon_coin_png,icon_jjsy_png,icon_ljgy_png,icon_ljtr_png,icon_ltsy_png,icon_lxsy_png,icon_miner_png,icon_mining_png,icon_wccs_png,icon_wksy_png,img_decoration_png,line_png,line2_png,miner_bg_png,title_bg_png,title1_bg_png,title1_max_pot_png,title1_week_pot_png,title2_bg_png,title2_my_sort_png,title2_out_sort_png,title3_bg_png,title3_my_profit_png,title3_my_send_png,userface_bg_png,userface1_png,yx_text_cjcs_zh_png,yx_text_fhsy_en_png,yx_text_jjsy_png,yx_text_ljcs_png,yx_text_ljtr_png,yx_text_ltsy_png,yx_text_lxsy_png,yx_text_wccs_zh_png,green_big_fnt,green_big_png,orange_fnt,orange_png,green_small_fnt,green_small_png,gold_fnt,gold_png,white_fnt,white_png,icon_yq_logo_png,icon_bg_png,icon_ft_png,icon_ft_en_png,icon_ft_logo_png,icon_gl_png,icon_gl_en_png,icon_gl_logo_png,icon_tj_png,icon_tj_en_png,icon_tj_logo_png,icon_xyj_png,icon_xyj_en_png,icon_xyj_logo_png,icon_yq_en_png,btn_text_zc_zh_png,statistics_stats_text_xykc_zh_png,statistics_stats_text_wdcjs_zh_png,trainEmpty_mc_json,trainEmpty_tex_png,trainFull_tex_png,trainFull_mc_json,house_png,trainRun_mc_json,trainRun_tex_png,smokesStatic_tex_png,smokesMove_mc_json,smokesMove_tex_png,smokesStatic_mc_json,manLabor_tex_png,manLabor_mc_json,manPoor_mc_json,manPoor_tex_png,manRich_tex_png,manRich_mc_json,spark_mc_json,spark_tex_png,icon_yq_png,loading_png,icon_dj_logo_png,icon_dj_png,title_text_zhdj_zh_png,bg-man_png,bg-middle_png,circle_png,square_png,bg-left_png,guide-arrow_png,guide-withdraw_png,guide-register_png,guide-buy_png,statistics_stats_text_wdtds_zh_png,statistics_stats_text_ztd_zh_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "assets/game_bg.jpg",
+			"type": "image",
+			"name": "game_bg_jpg"
+		},
+		{
+			"url": "assets/alert/bg.png",
+			"type": "image",
+			"name": "bg_png"
+		},
+		{
+			"url": "assets/alert/btn_text_cancel_zh.png",
+			"type": "image",
+			"name": "btn_text_cancel_zh_png"
+		},
+		{
+			"url": "assets/alert/btn_text_sure_zh.png",
+			"type": "image",
+			"name": "btn_text_sure_zh_png"
+		},
+		{
+			"url": "assets/common/bg.png",
+			"type": "image",
+			"name": "bg2_png"
+		},
+		{
+			"url": "assets/common/btn_green.png",
+			"type": "image",
+			"name": "btn_green_png"
+		},
+		{
+			"url": "assets/common/btn_red.png",
+			"type": "image",
+			"name": "btn_red_png"
+		},
+		{
+			"url": "assets/common/list_item_bg.png",
+			"type": "image",
+			"name": "list_item_bg_png",
+			"scale9grid": "36,31,13,15"
+		},
+		{
+			"url": "assets/help/title_text_faq_zh.png",
+			"type": "image",
+			"name": "title_text_faq_zh_png"
+		},
+		{
+			"url": "assets/statistics/statistics_stats_text_djs_zh.png",
+			"type": "image",
+			"name": "statistics_stats_text_djs_zh_png"
+		},
+		{
+			"url": "assets/statistics/statistics_stats_text_ti_zh.png",
+			"type": "image",
+			"name": "statistics_stats_text_ti_zh_png"
+		},
+		{
+			"url": "assets/statistics/statistics_stats_text_zhdjjc_zh.png",
+			"type": "image",
+			"name": "statistics_stats_text_zhdjjc_zh_png"
+		},
+		{
+			"url": "assets/statistics/statistics_text_cjxh.png",
+			"type": "image",
+			"name": "statistics_text_cjxh_png"
+		},
+		{
+			"url": "assets/statistics/statistics_text_round_zh.png",
+			"type": "image",
+			"name": "statistics_text_round_zh_png"
+		},
+		{
+			"url": "assets/statistics/statistics_text_round1_zh.png",
+			"type": "image",
+			"name": "statistics_text_round1_zh_png"
+		},
+		{
+			"url": "assets/statistics/statistics_text_stats_zh.png",
+			"type": "image",
+			"name": "statistics_text_stats_zh_png"
+		},
+		{
+			"url": "assets/statistics/statistics_text_stats1_zh.png",
+			"type": "image",
+			"name": "statistics_text_stats1_zh_png"
+		},
+		{
+			"url": "assets/statistics/statistics_text_teams_zh.png",
+			"type": "image",
+			"name": "statistics_text_teams_zh_png"
+		},
+		{
+			"url": "assets/statistics/statistics_text_teams1_zh.png",
+			"type": "image",
+			"name": "statistics_text_teams1_zh_png"
+		},
+		{
+			"url": "assets/statistics/statistics_text_wdxh.png",
+			"type": "image",
+			"name": "statistics_text_wdxh_png"
+		},
+		{
+			"url": "assets/statistics/title_text_strategy_zh.png",
+			"type": "image",
+			"name": "title_text_strategy_zh_png"
+		},
+		{
+			"url": "assets/statistics/bg.png",
+			"type": "image",
+			"name": "bg3_png"
+		},
+		{
+			"url": "assets/statistics/bg_mysort.png",
+			"type": "image",
+			"name": "bg_mysort_png"
+		},
+		{
+			"url": "assets/statistics/statistics_stats_bg.png",
+			"type": "image",
+			"name": "statistics_stats_bg_png"
+		},
+		{
+			"url": "assets/statistics/statistics_stats_bg_xz.png",
+			"type": "image",
+			"name": "statistics_stats_bg_xz_png"
+		},
+		{
+			"url": "assets/lucky/bg_rank.png",
+			"type": "image",
+			"name": "bg_rank_png"
+		},
+		{
+			"url": "assets/lucky/statistics_stats_bg.png",
+			"type": "image",
+			"name": "statistics_stats_bg2_png"
+		},
+		{
+			"url": "assets/lucky/statistics_stats_bg_xz.png",
+			"type": "image",
+			"name": "statistics_stats_bg_xz2_png"
+		},
+		{
+			"url": "assets/lucky/title_text_xyj.png",
+			"type": "image",
+			"name": "title_text_xyj_png"
+		},
+		{
+			"url": "assets/lucky/title_text_xykc.png",
+			"type": "image",
+			"name": "title_text_xykc_png"
+		},
+		{
+			"url": "assets/lucky/title_text_xykc1.png",
+			"type": "image",
+			"name": "title_text_xykc1_png"
+		},
+		{
+			"url": "assets/lucky/title_text_xyph.png",
+			"type": "image",
+			"name": "title_text_xyph_png"
+		},
+		{
+			"url": "assets/lucky/title_text_xyph1.png",
+			"type": "image",
+			"name": "title_text_xyph1_png"
+		},
+		{
+			"url": "assets/invite/btn_text_copy_zh.png",
+			"type": "image",
+			"name": "btn_text_copy_zh_png"
+		},
+		{
+			"url": "assets/invite/title_text_referee_zh.png",
+			"type": "image",
+			"name": "title_text_referee_zh_png"
+		},
+		{
+			"url": "assets/language/yuyan_text_zh.png",
+			"type": "image",
+			"name": "yuyan_text_zh_png"
+		},
+		{
+			"url": "assets/language/icon_ok.png",
+			"type": "image",
+			"name": "icon_ok_png"
+		},
+		{
+			"url": "assets/language/yuyan_text_chin.png",
+			"type": "image",
+			"name": "yuyan_text_chin_png"
+		},
+		{
+			"url": "assets/home/btn_blue.png",
+			"type": "image",
+			"name": "btn_blue_png"
+		},
+		{
+			"url": "assets/home/btn_text_gy_zh.png",
+			"type": "image",
+			"name": "btn_text_gy_zh_png"
+		},
+		{
+			"url": "assets/home/btn_text_tq_zh.png",
+			"type": "image",
+			"name": "btn_text_tq_zh_png"
+		},
+		{
+			"url": "assets/home/data_bg.png",
+			"type": "image",
+			"name": "data_bg_png"
+		},
+		{
+			"url": "assets/home/icon_cjcs.png",
+			"type": "image",
+			"name": "icon_cjcs_png"
+		},
+		{
+			"url": "assets/home/icon_coin.png",
+			"type": "image",
+			"name": "icon_coin_png"
+		},
+		{
+			"url": "assets/home/icon_jjsy.png",
+			"type": "image",
+			"name": "icon_jjsy_png"
+		},
+		{
+			"url": "assets/home/icon_ljgy.png",
+			"type": "image",
+			"name": "icon_ljgy_png"
+		},
+		{
+			"url": "assets/home/icon_ljtr.png",
+			"type": "image",
+			"name": "icon_ljtr_png"
+		},
+		{
+			"url": "assets/home/icon_ltsy.png",
+			"type": "image",
+			"name": "icon_ltsy_png"
+		},
+		{
+			"url": "assets/home/icon_lxsy.png",
+			"type": "image",
+			"name": "icon_lxsy_png"
+		},
+		{
+			"url": "assets/home/icon_miner.png",
+			"type": "image",
+			"name": "icon_miner_png"
+		},
+		{
+			"url": "assets/home/icon_mining.png",
+			"type": "image",
+			"name": "icon_mining_png"
+		},
+		{
+			"url": "assets/home/icon_wccs.png",
+			"type": "image",
+			"name": "icon_wccs_png"
+		},
+		{
+			"url": "assets/home/icon_wksy.png",
+			"type": "image",
+			"name": "icon_wksy_png"
+		},
+		{
+			"url": "assets/home/img_decoration.png",
+			"type": "image",
+			"name": "img_decoration_png"
+		},
+		{
+			"url": "assets/home/line.png",
+			"type": "image",
+			"name": "line_png"
+		},
+		{
+			"url": "assets/home/line2.png",
+			"type": "image",
+			"name": "line2_png"
+		},
+		{
+			"url": "assets/home/miner_bg.png",
+			"type": "image",
+			"name": "miner_bg_png"
+		},
+		{
+			"url": "assets/home/title_bg.png",
+			"type": "image",
+			"name": "title_bg_png"
+		},
+		{
+			"url": "assets/home/title1_bg.png",
+			"type": "image",
+			"name": "title1_bg_png",
+			"scale9grid": "225,159,4,3"
+		},
+		{
+			"url": "assets/home/title1_max_pot.png",
+			"type": "image",
+			"name": "title1_max_pot_png"
+		},
+		{
+			"url": "assets/home/title1_week_pot.png",
+			"type": "image",
+			"name": "title1_week_pot_png"
+		},
+		{
+			"url": "assets/home/title2_bg.png",
+			"type": "image",
+			"name": "title2_bg_png",
+			"scale9grid": "36,29,15,11"
+		},
+		{
+			"url": "assets/home/title2_my_sort.png",
+			"type": "image",
+			"name": "title2_my_sort_png"
+		},
+		{
+			"url": "assets/home/title2_out_sort.png",
+			"type": "image",
+			"name": "title2_out_sort_png"
+		},
+		{
+			"url": "assets/home/title3_bg.png",
+			"type": "image",
+			"name": "title3_bg_png",
+			"scale9grid": "32,30,18,17"
+		},
+		{
+			"url": "assets/home/title3_my_profit.png",
+			"type": "image",
+			"name": "title3_my_profit_png"
+		},
+		{
+			"url": "assets/home/title3_my_send.png",
+			"type": "image",
+			"name": "title3_my_send_png"
+		},
+		{
+			"url": "assets/home/userface_bg.png",
+			"type": "image",
+			"name": "userface_bg_png"
+		},
+		{
+			"url": "assets/home/userface1.png",
+			"type": "image",
+			"name": "userface1_png"
+		},
+		{
+			"url": "assets/home/yx_text_cjcs_zh.png",
+			"type": "image",
+			"name": "yx_text_cjcs_zh_png"
+		},
+		{
+			"url": "assets/home/yx_text_fhsy_en.png",
+			"type": "image",
+			"name": "yx_text_fhsy_en_png"
+		},
+		{
+			"url": "assets/home/yx_text_jjsy.png",
+			"type": "image",
+			"name": "yx_text_jjsy_png"
+		},
+		{
+			"url": "assets/home/yx_text_ljcs.png",
+			"type": "image",
+			"name": "yx_text_ljcs_png"
+		},
+		{
+			"url": "assets/home/yx_text_ljtr.png",
+			"type": "image",
+			"name": "yx_text_ljtr_png"
+		},
+		{
+			"url": "assets/home/yx_text_ltsy.png",
+			"type": "image",
+			"name": "yx_text_ltsy_png"
+		},
+		{
+			"url": "assets/home/yx_text_lxsy.png",
+			"type": "image",
+			"name": "yx_text_lxsy_png"
+		},
+		{
+			"url": "assets/home/yx_text_wccs_zh.png",
+			"type": "image",
+			"name": "yx_text_wccs_zh_png"
+		},
+		{
+			"url": "assets/num/green_big.fnt",
+			"type": "font",
+			"name": "green_big_fnt"
+		},
+		{
+			"url": "assets/num/green_big.png",
+			"type": "image",
+			"name": "green_big_png"
+		},
+		{
+			"url": "assets/num/orange.fnt",
+			"type": "font",
+			"name": "orange_fnt"
+		},
+		{
+			"url": "assets/num/orange.png",
+			"type": "image",
+			"name": "orange_png"
+		},
+		{
+			"url": "assets/num/green_small.fnt",
+			"type": "font",
+			"name": "green_small_fnt"
+		},
+		{
+			"url": "assets/num/green_small.png",
+			"type": "image",
+			"name": "green_small_png"
+		},
+		{
+			"url": "assets/num/gold.fnt",
+			"type": "font",
+			"name": "gold_fnt"
+		},
+		{
+			"url": "assets/num/gold.png",
+			"type": "image",
+			"name": "gold_png"
+		},
+		{
+			"url": "assets/num/white.fnt",
+			"type": "font",
+			"name": "white_fnt"
+		},
+		{
+			"url": "assets/num/white.png",
+			"type": "image",
+			"name": "white_png"
+		},
+		{
+			"url": "assets/home/icon_yq_logo.png",
+			"type": "image",
+			"name": "icon_yq_logo_png"
+		},
+		{
+			"url": "assets/home/icon_bg.png",
+			"type": "image",
+			"name": "icon_bg_png"
+		},
+		{
+			"url": "assets/home/icon_ft.png",
+			"type": "image",
+			"name": "icon_ft_png"
+		},
+		{
+			"url": "assets/home/icon_ft_en.png",
+			"type": "image",
+			"name": "icon_ft_en_png"
+		},
+		{
+			"url": "assets/home/icon_ft_logo.png",
+			"type": "image",
+			"name": "icon_ft_logo_png"
+		},
+		{
+			"url": "assets/home/icon_gl.png",
+			"type": "image",
+			"name": "icon_gl_png"
+		},
+		{
+			"url": "assets/home/icon_gl_en.png",
+			"type": "image",
+			"name": "icon_gl_en_png"
+		},
+		{
+			"url": "assets/home/icon_gl_logo.png",
+			"type": "image",
+			"name": "icon_gl_logo_png"
+		},
+		{
+			"url": "assets/home/icon_tj.png",
+			"type": "image",
+			"name": "icon_tj_png"
+		},
+		{
+			"url": "assets/home/icon_tj_en.png",
+			"type": "image",
+			"name": "icon_tj_en_png"
+		},
+		{
+			"url": "assets/home/icon_tj_logo.png",
+			"type": "image",
+			"name": "icon_tj_logo_png"
+		},
+		{
+			"url": "assets/home/icon_xyj.png",
+			"type": "image",
+			"name": "icon_xyj_png"
+		},
+		{
+			"url": "assets/home/icon_xyj_en.png",
+			"type": "image",
+			"name": "icon_xyj_en_png"
+		},
+		{
+			"url": "assets/home/icon_xyj_logo.png",
+			"type": "image",
+			"name": "icon_xyj_logo_png"
+		},
+		{
+			"url": "assets/home/icon_yq_en.png",
+			"type": "image",
+			"name": "icon_yq_en_png"
+		},
+		{
+			"name": "btn_text_zc_zh_png",
+			"type": "image",
+			"url": "assets/invite/btn_text_zc_zh.png"
+		},
+		{
+			"name": "statistics_stats_text_xykc_zh_png",
+			"type": "image",
+			"url": "assets/lucky/statistics_stats_text_xykc_zh.png"
+		},
+		{
+			"name": "statistics_stats_text_wdcjs_zh_png",
+			"type": "image",
+			"url": "assets/statistics/statistics_stats_text_wdcjs_zh.png"
+		},
+		{
+			"name": "trainEmpty_mc_json",
+			"type": "json",
+			"url": "assets/effect/trainEmpty_mc.json"
+		},
+		{
+			"name": "trainEmpty_tex_png",
+			"type": "image",
+			"url": "assets/effect/trainEmpty_tex.png"
+		},
+		{
+			"name": "trainFull_tex_png",
+			"type": "image",
+			"url": "assets/effect/trainFull_tex.png"
+		},
+		{
+			"name": "trainFull_mc_json",
+			"type": "json",
+			"url": "assets/effect/trainFull_mc.json"
+		},
+		{
+			"name": "house_png",
+			"type": "image",
+			"url": "assets/home/house.png"
+		},
+		{
+			"name": "trainRun_mc_json",
+			"type": "json",
+			"url": "assets/effect/trainRun_mc.json"
+		},
+		{
+			"name": "trainRun_tex_png",
+			"type": "image",
+			"url": "assets/effect/trainRun_tex.png"
+		},
+		{
+			"name": "smokesStatic_tex_png",
+			"type": "image",
+			"url": "assets/effect/smokesStatic_tex.png"
+		},
+		{
+			"name": "smokesMove_mc_json",
+			"type": "json",
+			"url": "assets/effect/smokesMove_mc.json"
+		},
+		{
+			"name": "smokesMove_tex_png",
+			"type": "image",
+			"url": "assets/effect/smokesMove_tex.png"
+		},
+		{
+			"name": "smokesStatic_mc_json",
+			"type": "json",
+			"url": "assets/effect/smokesStatic_mc.json"
+		},
+		{
+			"name": "poorMan_tex_png",
+			"type": "image",
+			"url": "assets/effect/poorMan_tex.png"
+		},
+		{
+			"name": "manLabor_tex_png",
+			"type": "image",
+			"url": "assets/effect/manLabor_tex.png"
+		},
+		{
+			"name": "manLabor_mc_json",
+			"type": "json",
+			"url": "assets/effect/manLabor_mc.json"
+		},
+		{
+			"name": "manPoor_mc_json",
+			"type": "json",
+			"url": "assets/effect/manPoor_mc.json"
+		},
+		{
+			"name": "manPoor_tex_png",
+			"type": "image",
+			"url": "assets/effect/manPoor_tex.png"
+		},
+		{
+			"name": "manRich_tex_png",
+			"type": "image",
+			"url": "assets/effect/manRich_tex.png"
+		},
+		{
+			"name": "manRich_mc_json",
+			"type": "json",
+			"url": "assets/effect/manRich_mc.json"
+		},
+		{
+			"name": "spark_mc_json",
+			"type": "json",
+			"url": "assets/effect/spark_mc.json"
+		},
+		{
+			"name": "spark_tex_png",
+			"type": "image",
+			"url": "assets/effect/spark_tex.png"
+		},
+		{
+			"name": "icon_yq_png",
+			"type": "image",
+			"url": "assets/home/icon_yq.png"
+		},
+		{
+			"name": "loading_png",
+			"type": "image",
+			"url": "assets/home/loading.png"
+		},
+		{
+			"name": "icon_dj_logo_png",
+			"type": "image",
+			"url": "assets/home/icon_dj_logo.png"
+		},
+		{
+			"name": "icon_dj_png",
+			"type": "image",
+			"url": "assets/home/icon_dj.png"
+		},
+		{
+			"name": "title_text_zhdj_zh_png",
+			"type": "image",
+			"url": "assets/lucky/title_text_zhdj_zh.png"
+		},
+		{
+			"name": "bg-man_png",
+			"type": "image",
+			"url": "assets/guide/bg-man.png"
+		},
+		{
+			"name": "bg-middle_png",
+			"type": "image",
+			"url": "assets/guide/bg-middle.png"
+		},
+		{
+			"name": "circle_png",
+			"type": "image",
+			"url": "assets/guide/circle.png"
+		},
+		{
+			"name": "square_png",
+			"type": "image",
+			"url": "assets/guide/square.png"
+		},
+		{
+			"name": "bg-left_png",
+			"type": "image",
+			"url": "assets/guide/bg-left.png"
+		},
+		{
+			"name": "guide-arrow_png",
+			"type": "image",
+			"url": "assets/guide/guide-arrow.png"
+		},
+		{
+			"name": "guide-withdraw_png",
+			"type": "image",
+			"url": "assets/guide/guide-withdraw.png"
+		},
+		{
+			"name": "guide-register_png",
+			"type": "image",
+			"url": "assets/guide/guide-register.png"
+		},
+		{
+			"name": "guide-buy_png",
+			"type": "image",
+			"url": "assets/guide/guide-buy.png"
+		},
+		{
+			"name": "statistics_stats_text_wdtds_zh_png",
+			"type": "image",
+			"url": "assets/statistics/statistics_stats_text_wdtds_zh.png"
+		},
+		{
+			"name": "statistics_stats_text_ztd_zh_png",
+			"type": "image",
+			"url": "assets/statistics/statistics_stats_text_ztd_zh.png"
+		}
+	]
+}

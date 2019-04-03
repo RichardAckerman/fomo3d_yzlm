@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>游戏余额充值</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="rate">
+        <li>
+            <span class="label">我的地址:</span>
+            <span class="myAddr"></span>
+        </li>
+        <li>
+            <span class="label">我的token余额:</span>
+            <span class="myBalance"></span>
+        </li>
+        <li>
+            <span class="label">当前游戏名称:</span>
+            <span class="name">封神九帝</span>
+        </li>
+        <li>
+            <span class="label">当前游戏地址:</span>
+            <span class="addr"></span>
+        </li>
+        <li>
+            <span class="label">当前游戏token余额:</span>
+            <span class="balance"></span>
+        </li>
+        <li>
+            <span class="label">请输入充值金额:</span>
+            <span class="money">
+                  <input type="text" id="money" placeholder="请输入充值金额:">
+            </span>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn">充值</button>
+        </li>
+        <li>
+            <span class="warn"></span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="../libs/web3.min.js"></script>
+<script>
+    let web3js = "";
+    let myAddr = $(".myAddr");
+    let myBalance = $(".myBalance");
+    let addr = $(".addr");
+    let balance = $(".balance");
+
+    let setBtn = $("#setBtn");
+    let warn = $(".warn");
+    let money = $("#money");
+
+    let $tokenContractInstance;
+    let $gameContract;
+    let conAddr = "0x13552c7cc9ce39af665955412faa08f0e6555a29";
+    let TokenAddr = "0xAB4E1802c61e12fd7b10a69A226F5D727c76a8Aa";
+    addr.html(conAddr);
+    setTimeout(() => {
+        if (typeof web3 !== 'undefined') {
+            web3.version.getNetwork((err, netId) => {
+                switch (netId) {
+                    case "1":
+                        web3js = new Web3(web3.currentProvider);
+                        let addr = web3js.eth.accounts[0];
+                        console.log(addr);
+                        myAddr.html(addr);
+                        if (addr && addr !== "" && addr.length !== 0) {
+                            setLeader();
+                        } else {
+                            $(".id").html("未登录钱包,无法获取你的账户地址");
+                        }
+                        break;
+                    default:
+                        myAddr.html("未连上以太坊主网,无法获取你的账户地址");
+                }
+            });
+        } else {
+            myAddr.html("未登录钱包,无法获取你的账户地址");
+        }
+    }, 1000);
+
+    function getJson() {
+        return new Promise((resolve, reject) => {
+            fetch("../contract/Token.json", {
+                method: "GET",
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).then((response) => {
+                return response.json();
+            }, (error) => {
+                reject(error);
+            }).then((json) => {
+                $gameContract = web3js.eth.contract(json.abi);
+                $tokenContractInstance = $gameContract.at(TokenAddr);
+                resolve($tokenContractInstance);
+            });
+        });
+    }
+
+    function setWarn(bool) {
+        warn.css("display", bool ? "inline-block" : "none");
+    }
+
+    function setBtnShow(bool) {
+        setBtn.attr("disabled", bool);
+    }
+
+    function setLeader() {
+        getJson().then(() => {
+            getData();
+        });
+        setBtn.on("click", () => {
+            if (money.val() === "") {
+                warn.html("充值金额不能为空");
+                setWarn(true);
+                return;
+            }
+            if (isNaN(money.val())) {
+                warn.html("金额数字非法");
+                setWarn(true);
+                return;
+            }
+            if (parseInt(money.val()) > parseInt(myBalance.html())) {
+                warn.html("你的余额不够");
+                setWarn(true);
+                return;
+            }
+            setWarn(false);
+            setLeaderFun();
+        });
+    }
+
+    function setLeaderFun() {
+        setBtnShow(true);
+        getJson().then(() => {
+            setWarn(false);
+            let mo = web3js.toWei(money.val());
+            $tokenContractInstance.transfer(conAddr, mo, {gasPrice: 9000000000}, (err, data) => {
+                getData();
+                setBtnShow(false);
+            });
+        });
+    }
+
+    function getData() {
+        $tokenContractInstance.balanceOf(conAddr, (err, coin) => {
+            if (err) {
+                console.log(err);
+            } else {
+                balance.html(web3js.fromWei(coin.toString()));
+            }
+        });
+        $tokenContractInstance.balanceOf(myAddr.html(), (err, coin) => {
+            if (err) {
+                console.log(err);
+            } else {
+                myBalance.html(web3js.fromWei(coin.toString()));
+            }
+        });
+    }
+</script>
+</body>
+</html>

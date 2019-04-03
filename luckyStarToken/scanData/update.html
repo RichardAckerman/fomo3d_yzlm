@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update基础数据</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        input {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul id="rate">
+        <li>
+            <span class="label">我的Addr:</span>
+            <span class="id" id="myAddress" style="color: #f00"></span>
+        </li>
+        <li>
+            <ul>
+                <li><span style="display:inline-block;width: 200px;text-align: right">
+                    最新序列
+                    nRollIn:
+                </span>
+                    <input type="text" id="rate1" placeholder="rate1">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">
+                    当前分红的值
+                    nCurrentGainId:
+                </span>
+                    <input type="text" id="rate2" placeholder="rate2">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">
+                    买入总额
+                    total:</span>
+                    <input type="text" id="rate3" placeholder="rate3">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">
+                    总额按百分比进入奖池的额度
+                    potCoin:</span>
+                    <input type="text" id="rate4" placeholder="rate6">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">
+                    本周幸运奖池
+                    luckyPotCoin:</span><input
+                        type="text" id="rate5" placeholder="rate5"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">
+                    玩家个数
+                    nPlayerNum:</span>
+                    <input type="text" id="rate6" placeholder="rate6">
+                </li>
+            </ul>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn">设置</button>
+        </li>
+        <li>
+            <span class="warn" id="warn"></span>
+        </li>
+        <li>
+            <span class="label" style="color: #3F63A1"></span>
+            <span class="tips"><br>
+            </span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="chain3.js"></script>
+<script src="linkNet.js"></script>
+<script>
+
+    let rate1 = $("#rate1");
+    let rate2 = $("#rate2");
+    let rate3 = $("#rate3");
+    let rate4 = $("#rate4");
+    let rate5 = $("#rate5");
+    let rate6 = $("#rate6");
+
+    let rateArr = [];
+
+    setTimeout(() => {
+        setLeader();
+    }, 1000);
+
+    function setLeader() {
+        getJson().then(() => {
+            rateArr = [];
+            getRate();
+        });
+        setBtn.on("click", () => {
+            if (rate1.val() === "") {
+                warn.html("rate1不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate2.val() === "") {
+                warn.html("rate2不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate3.val() === "") {
+                warn.html("rate3不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate4.val() === "") {
+                warn.html("rate4不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate5.val() === "") {
+                warn.html("rate5不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate6.val() === "") {
+                warn.html("rate6不能为空");
+                setWarn(true);
+                return;
+            }
+            setWarn(false);
+            let arr = [rate1.val(), rate2.val(), rate3.val(), rate4.val(), rate5.val(), rate6.val()];
+            setLeaderFun(arr);
+        });
+    }
+
+    function setLeaderFun(arr) {
+        setBtnShow(true);
+        let isAllNum = true;
+        getJson().then(() => {
+            arr = arr.map((it) => {
+                if (isNaN(parseInt(it))) {
+                    isAllNum = false;
+                }
+                return parseInt(it);
+            });
+            if (!isAllNum) {
+                warn.html("有非数字输入");
+                setWarn(true);
+                setBtnShow(false);
+                return;
+            }
+            warn.html("修改中，请稍等。。。");
+            setWarn(true);
+            try {
+                $gameContractInstance.update(
+                    arr[0],
+                    arr[1],
+                    arr[2],
+                    arr[3],
+                    arr[4],
+                    arr[5],
+                    {gasPrice: 9000000000}, (err, data) => {
+                        rateArr = [];
+                        getRate();
+                        setBtnShow(false);
+                        setWarn(false);
+                    });
+            } catch (e) {
+                console.log(e);
+            }
+        });
+    }
+
+    function getRate() {
+        $gameContractInstance.nRollIn((err, rate) => {
+            rate1.val(rate);
+        });
+        $gameContractInstance.nCurrentGainId((err, rate) => {
+            rate2.val(rate);
+        });
+        $gameContractInstance.teamPot((err, rate) => {
+            rate3.val(rate[0]);
+            rate4.val(rate[1]);
+            rate5.val(rate[2]);
+        });
+        $gameContractInstance.nPlayerNum((err, rate) => {
+            rate6.val(rate);
+        });
+    }
+</script>
+</body>
+</html>

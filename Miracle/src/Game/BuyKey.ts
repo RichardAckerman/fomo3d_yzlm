@@ -38,21 +38,53 @@ class BuyKey extends eui.Component {
      * 买钥匙函数
      */
     private buyKeyFun(): void {
+        $Modal.betLoad.visible = true;  
         getIsBegin().then((bool) => {
             if (!bool) {
                 this.directBuy();
             } else {
                 setOverTime().then((time) => {
-                    if (time > 86400) {
-                        $alert($AlertMsg.readyTime);
-                        return;
-                    }
+                    // if (time > 86400) {
+                    //     $alert($AlertMsg.readyTime);
+                    //     return;
+                    // }
                     this.directBuy();
                 });
             }
         });
     }
 
+    // private directBuy() {
+    //     if (!$myAddress) {
+    //         notSignInMetamask();
+    //         return;
+    //     }
+    //     let href = location.href;
+    //     let addr = href.split("?")[1];
+    //     let _referrer = "0x0000000000000000000000000000000000000000";
+    //     if (addr) {
+    //         if (web3js.isAddress(addr)) { // 是地址
+    //             _referrer = addr;
+    //             this.rollIn(_referrer);
+    //         } else if (isNaN(Number(addr))) { // 是名称
+    //             console.log(web3js.fromAscii(addr));
+    //             console.log("請保持瀏覽器地址後綴為正確的賬戶地址或id");
+    //             $alert("請保持瀏覽器地址後綴為正確的賬戶地址或id");
+    //         } else {// 是id
+    //             $gameContractInstance.playerxID_(addr, (err, data) => {
+    //                 if (err) {
+    //                     $alert(err);
+    //                 }
+    //                 else {
+    //                     _referrer = data[0];
+    //                     this.rollIn(_referrer);
+    //                 }
+    //             });
+    //         }
+    //     } else {
+    //         this.rollIn(_referrer);
+    //     }
+    // }
     private directBuy() {
         if (!$myAddress) {
             notSignInMetamask();
@@ -70,13 +102,21 @@ class BuyKey extends eui.Component {
                 console.log("請保持瀏覽器地址後綴為正確的賬戶地址或id");
                 $alert("請保持瀏覽器地址後綴為正確的賬戶地址或id");
             } else {// 是id
-                $gameContractInstance.playerxID_(addr, (err, data) => {
-                    if (err) {
-                        $alert(err);
-                    }
-                    else {
-                        _referrer = data[0];
-                        this.rollIn(_referrer);
+                $gameContractInstance.returnAgent($myAddress, (err1, agentArr) => {
+                    if (err1) {
+                        $alert(err1);
+                    } else {
+                        let agentId = agentArr[9].toString();
+                        agentId = agentId != "0" ? agentId : addr;
+                        $gameContractInstance.playerxID_(agentId, (err, data) => {
+                            if (err) {
+                                $alert(err);
+                            }
+                            else {
+                                _referrer = data[0];
+                                this.rollIn(_referrer);
+                            }
+                        });
                     }
                 });
             }
@@ -84,6 +124,7 @@ class BuyKey extends eui.Component {
             this.rollIn(_referrer);
         }
     }
+
 
     private rollIn(_referrer) {
         if ($myAddress == _referrer) {
@@ -99,6 +140,7 @@ class BuyKey extends eui.Component {
             console.log(web3js.toWei(this.data.input, "ether"));
             web3js.eth.getBalance($myAddress, (err, balance) => {
                 if (err) {
+                    $alert('网络错误');
                     console.log(err);
                     return
                 }
@@ -111,7 +153,12 @@ class BuyKey extends eui.Component {
                     from: $myAddress,
                     value: web3js.toWei(this.data.input, "ether")
                 }, (err, hash) => {
-                    err && console.log(err);
+                    if (err) {
+                        $alert(err);
+                        console.log(err);
+                    } else {                        
+                        $alert('请耐心等待交易完成');
+                    }
                     console.log(hash);
                     setTimeout(() => {
                         this.closeModalFun();
@@ -119,6 +166,7 @@ class BuyKey extends eui.Component {
                 });
             });
         }, (err) => {
+            $alert('网络错误');
             console.log(err);
         });
     }

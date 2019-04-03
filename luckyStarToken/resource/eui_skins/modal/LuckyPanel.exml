@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LuckyPanel" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="closeBg" left="0" right="0" top="0" bottom="0" strokeAlpha="0.5" fillAlpha="0.5"/>
+	<e:Group width="1080" height="1030" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0">
+		<e:Image scaleX="1" scaleY="1" source="bg2_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="title" y="46.79" scaleX="1" scaleY="1" horizontalCenter="0.5" source="title_text_xyj_png"/>
+		<e:Group width="816" height="108" y="163.29" anchorOffsetX="0" scaleX="1" scaleY="1" horizontalCenter="0">
+			<e:Group id="tab1" width="500" height="95" scaleX="0.8" scaleY="0.8" anchorOffsetX="0" left="0" verticalCenter="0">
+			<e:Image id="tabBg1" source="statistics_stats_bg_xz2_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="tabAct1" source="title_text_xykc1_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group id="tab2" width="500" height="95" scaleX="0.8" scaleY="0.8" anchorOffsetX="0" right="1" verticalCenter="0">
+			<e:Image id="tabBg2" source="statistics_stats_bg2_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="tabAct2" verticalCenter="0" horizontalCenter="0" source="title_text_xyph_png"/>
+			</e:Group>
+		</e:Group>
+	<e:Group id="luckyTab" width="930" height="674" anchorOffsetX="0" y="305" anchorOffsetY="0" horizontalCenter="0" x="122" scaleX="1" scaleY="1">
+			<e:Group width="930" height="225" y="25.2" scaleX="1" scaleY="1" anchorOffsetX="0" horizontalCenter="0">
+				<e:Image left="0" right="0" top="0" bottom="0" source="bg3_png"/>
+			<e:Image id="overtimeImg" source="statistics_stats_text_djs_zh_png" y="26.86" horizontalCenter="0.5"/>
+				<e:BitmapLabel width="636" height="74.67" y="110.12" anchorOffsetX="0" anchorOffsetY="0" text="{data.drainTime}" textAlign="center" verticalAlign="middle" font="gold_fnt" scaleX="1" scaleY="1" horizontalCenter="0"/>
+			</e:Group>
+			<e:Group width="930" height="225" y="316.42" scaleX="1" scaleY="1" anchorOffsetX="0" horizontalCenter="0">
+			<e:Image left="0" right="0" top="0" bottom="0" source="bg3_png"/>
+			<e:Image id="potImg" y="27.94" horizontalCenter="0.5" source="statistics_stats_text_xykc_zh_png"/>
+				<e:BitmapLabel width="444" height="74.67" y="95.2" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" text="{data.pot}" font="orange_fnt" horizontalCenter="0"/>
+				<e:Image source="icon_coin_png" y="169.87" width="92" height="25" horizontalCenter="0"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="lastLucky" width="930" height="674" anchorOffsetX="0" y="305" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="0" visible="false">
+			<e:Scroller scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="on" left="0" right="0" x="0" top="0" height="662">
+			<e:Group id="lastLuckyInfo" anchorOffsetX="0" width="836" anchorOffsetY="0" height="642" x="0" y="36"/>
+			</e:Scroller>
+		</e:Group>
+	</e:Group>
+</e:Skin>

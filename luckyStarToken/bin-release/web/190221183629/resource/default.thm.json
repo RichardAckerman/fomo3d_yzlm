@@ -1,0 +1,19 @@
+{
+	"skins": {},
+	"autoGenerateExmlsList": true,
+	"exmls": [
+		"resource/eui_skins/GameUI.exml",
+		"resource/eui_skins/guide/GuideHome.exml",
+		"resource/eui_skins/modal/FinalBonusUI.exml",
+		"resource/eui_skins/modal/GameAlertUI.exml",
+		"resource/eui_skins/modal/HelpPanel.exml",
+		"resource/eui_skins/modal/LanguagePanel.exml",
+		"resource/eui_skins/modal/LoadingPanel.exml",
+		"resource/eui_skins/modal/LuckyPanel.exml",
+		"resource/eui_skins/modal/RegisterPanel.exml",
+		"resource/eui_skins/modal/StatisticsPanel.exml",
+		"resource/eui_skins/unit/ListUnit.exml",
+		"resource/eui_skins/unit/LuckyUnit.exml"
+	],
+	"path": "resource/default.thm.json"
+}

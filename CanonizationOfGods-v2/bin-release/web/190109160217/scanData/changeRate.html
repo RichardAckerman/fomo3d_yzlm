@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Rate</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="rate">
+        <li>
+            <span class="label">我的Addr:</span>
+            <span class="id"></span>
+        </li>
+        <li>
+            <span class="label">分配比例:</span>
+            <span>
+            </span>
+        </li>
+        <li>
+            <ul>
+                <li><span style="display:inline-block;width: 200px;text-align: right">序列:</span><input type="text" id="rate1" placeholder="rate1"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">奖池:</span><input type="text" id="rate2" placeholder="rate2"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">庄家:</span><input type="text" id="rate3" placeholder="rate3"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">拿到幸运奖后允许增加的投入次数:</span><input type="text" id="rate4" placeholder="rate4"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">幸运奖分配的比例:</span><input type="text" id="rate5" placeholder="rate5"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">多少注分一次幸运奖:</span><input type="text" id="rate6" placeholder="rate6"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">玩家队列长度:</span><input type="text" id="rate7" placeholder="rate7"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">必须复投次数:</span><input type="text" id="rate8" placeholder="rate8"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">队列空后最多允许拿几次推荐:</span><input type="text" id="rate9" placeholder="rate9"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">分红比例:</span><input type="text" id="rate10" placeholder="rate10"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">最后分钱多少人:</span><input type="text" id="rate11" placeholder="rate11"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">幸运奖分配比例:</span><input type="text" id="rate12" placeholder="rate12"></li>
+            </ul>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn">设置</button>
+        </li>
+        <li>
+            <span class="warn"></span>
+        </li>
+        <li>
+            <span class="label">当前12个分配比例:</span>
+            <span class="rate"></span>
+        </li>
+        <li>
+            <span class="label" style="color: #3F63A1">12个比例分别是:</span>
+            <span class="tips"><br>
+                1 序列、<br>
+                2 奖池、<br>
+                3 庄家<br>
+                4 拿到幸运奖后允许增加的投入次数,<br>
+                5 幸运奖分配的比例,<br>
+                6 多少注分一次幸运奖,<br>
+                7 玩家队列长度
+                8 必须复投次数,<br>
+                9 队列空后最多允许拿几次推荐,<br>
+                10 分红比例<br>
+                11 最后分钱多少人
+            </span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="../libs/web3.min.js"></script>
+<script>
+    let web3js = "";
+    let setBtn = $("#setBtn");
+    let warn = $(".warn");
+    let rateHtml = $(".rate");
+
+    let rate1 = $("#rate1");
+    let rate2 = $("#rate2");
+    let rate3 = $("#rate3");
+    let rate4 = $("#rate4");
+    let rate5 = $("#rate5");
+    let rate6 = $("#rate6");
+    let rate7 = $("#rate7");
+    let rate8 = $("#rate8");
+    let rate9 = $("#rate9");
+    let rate10 = $("#rate10");
+    let rate11 = $("#rate11");
+    let rate12 = $("#rate12");
+
+    let $gameContractInstance;
+    let rateArr = [];
+    let conAddr = "0x13552c7cc9ce39af665955412faa08f0e6555a29";
+    setTimeout(() => {
+        if (typeof web3 !== 'undefined') {
+            web3.version.getNetwork((err, netId) => {
+                switch (netId) {
+                    case "1":
+                        web3js = new Web3(web3.currentProvider);
+                        let addr = web3js.eth.accounts[0];
+                        console.log(addr);
+                        $(".id").html(addr);
+                        if (addr && addr !== "" && addr.length !== 0) {
+                            setLeader();
+                        } else {
+                            $(".id").html("未登录钱包,无法获取你的账户地址");
+                        }
+                        break;
+                    default:
+                        $(".id").html("未连上以太坊主网,无法获取你的账户地址");
+                }
+            });
+        } else {
+            $(".id").html("未登录钱包,无法获取你的账户地址");
+        }
+    }, 1000);
+
+    function getJson() {
+        return new Promise((resolve, reject) => {
+            fetch("../contract/NineGods.json", {
+                method: "GET",
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).then((response) => {
+                return response.json();
+            }, (error) => {
+                reject(error);
+            }).then((json) => {
+                $gameContract = web3js.eth.contract(json.abi);
+                $gameContractInstance = $gameContract.at(conAddr);
+                resolve($gameContractInstance);
+            });
+        });
+    }
+
+    function setWarn(bool) {
+        warn.css("display", bool ? "inline-block" : "none");
+    }
+
+    function setBtnShow(bool) {
+        setBtn.attr("disabled", bool);
+    }
+
+    function setLeader() {
+        getJson().then(() => {
+            rateArr = [];
+            getRate(0);
+        });
+        setBtn.on("click", () => {
+            if(rate1.val() === ""){
+                warn.html("rate1不能为空");
+                setWarn(true);
+                return;
+            }
+            if(rate2.val() === ""){
+                warn.html("rate2不能为空");
+                setWarn(true);
+                return;
+            }
+            if(rate3.val() === ""){
+                warn.html("rate3不能为空");
+                setWarn(true);
+                return;
+            }
+            if(rate4.val() === ""){
+                warn.html("rate4不能为空");
+                setWarn(true);
+                return;
+            }
+            if(rate5.val() === ""){
+                warn.html("rate5不能为空");
+                setWarn(true);
+                return;
+            }
+            if(rate6.val() === ""){
+                warn.html("rate6不能为空");
+                setWarn(true);
+                return;
+            }
+            if(rate6.val() === ""){
+                warn.html("rate6不能为空");
+                setWarn(true);
+                return;
+            }
+            if(rate7.val() === ""){
+                warn.html("rate7不能为空");
+                setWarn(true);
+                return;
+            }
+            if(rate8.val() === ""){
+                warn.html("rate8不能为空");
+                setWarn(true);
+                return;
+            }
+            if(rate9.val() === ""){
+                warn.html("rate9不能为空");
+                setWarn(true);
+                return;
+            }
+            if(rate10.val() === ""){
+                warn.html("rate10不能为空");
+                setWarn(true);
+                return;
+            }
+            if(rate11.val() === ""){
+                warn.html("rate11不能为空");
+                setWarn(true);
+                return;
+            }
+            if(rate12.val() === ""){
+                warn.html("rate12不能为空");
+                setWarn(true);
+                return;
+            }
+            setWarn(false);
+            let arr = [rate1.val(),rate2.val(),rate3.val(),rate4.val(),
+                rate5.val(), rate6.val(),rate7.val(),rate8.val(),
+                rate9.val(),rate10.val(),rate11.val(),rate12.val()];
+            setLeaderFun(arr);
+        });
+    }
+
+    function setLeaderFun(arr) {
+        setBtnShow(true);
+        let isAllNum = true;
+        getJson().then(() => {
+            arr = arr.map((it) => {
+                if (isNaN(parseInt(it))) {
+                    isAllNum = false;
+                }
+                return parseInt(it);
+            });
+            if (!isAllNum) {
+                warn.html("有非数字输入");
+                setWarn(true);
+                setBtnShow(false);
+                return;
+            }
+            console.log(arr);
+            setWarn(false);
+            $gameContractInstance.updateRate(arr, {gasPrice: 9000000000}, (err, data) => {
+                rateArr = [];
+                getRate(0);
+                setBtnShow(false);
+            });
+        });
+    }
+
+    function getRate(i) {
+        $gameContractInstance.rate(i, (err, rate) => {
+            if (err) {
+                console.log(err);
+            } else {
+                switch (i) {
+                    case 0:
+                        rate1.val(rate);
+                        break;
+                    case 1:
+                        rate2.val(rate);
+                        break;
+                    case 2:
+                        rate3.val(rate);
+                        break;
+                    case 3:
+                        rate4.val(rate);
+                        break;
+                    case 4:
+                        rate5.val(rate);
+                        break;
+                    case 5:
+                        rate6.val(rate);
+                        break;
+                    case 6:
+                        rate7.val(rate);
+                        break;
+                    case 7:
+                        rate8.val(rate);
+                        break;
+                    case 8:
+                        rate9.val(rate);
+                        break;
+                    case 9:
+                        rate10.val(rate);
+                        break;
+                    case 10:
+                        rate11.val(rate);
+                        break;
+                    case 11:
+                        rate12.val(rate);
+                        break;
+                }
+                rateArr.push(rate);
+                if (i < 11) {
+                    i++;
+                    getRate(i);
+                } else {
+                    rateHtml.html(rateArr.join(","));
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

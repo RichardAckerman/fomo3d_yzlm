@@ -1,0 +1,18 @@
+{
+	"skins": {},
+	"autoGenerateExmlsList": true,
+	"exmls": [
+		"resource/eui_modules/Game/ExtractUnit.exml",
+		"resource/eui_modules/Game/GameStatisticsUI.exml",
+		"resource/eui_modules/Game/GameUI.exml",
+		"resource/eui_modules/Game/LuckyUnit.exml",
+		"resource/eui_modules/Modal/AinimeBg.exml",
+		"resource/eui_modules/Modal/BuyingUI.exml",
+		"resource/eui_modules/Modal/GameAlertUI.exml",
+		"resource/eui_modules/Modal/GameApprove.exml",
+		"resource/eui_modules/Modal/GameHelpUI.exml",
+		"resource/eui_modules/Modal/LanguageUI.exml",
+		"resource/eui_modules/Modal/RegisterUI.exml"
+	],
+	"path": "resource/default.thm.json"
+}

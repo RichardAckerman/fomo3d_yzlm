@@ -42,8 +42,10 @@ function getData(id) {
             let currentRound = etra.currentRound;
             let allEarning = web3Obj.utils.fromWei(etra.allEarning);
             let lostTimes = etra.lostTimes;
+
             ContractInstance.methods.returnAgent(addr).call().then((agent) => {
                 let agents = agent;
+
                 ContractInstance.methods.playerxID_(agent[9]).call().then((ref) => {
                     $("#list").find(".referees").html(ref.addr);
                 });

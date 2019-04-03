@@ -1,3 +1,5 @@
+declare class BetLoadingUI extends eui.Skin{
+}
 declare class BuyKeyModal extends eui.Skin{
 }
 declare class ExtractUI extends eui.Skin{

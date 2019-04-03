@@ -44,13 +44,25 @@ class ExtractTs extends eui.Component {
         });
     }
 
-    private drawFun() {
+    private drawFun() {           
+        $Modal.betLoad.visible = true;       
         if($myAddress) {
             $gameContractInstance.withDraw({
                 from: $myAddress,
             }, (err, hash) => {
-                err && console.log(err);
-                console.log(hash);
+                if (err) {
+                    $alert(err);
+                    console.log(err);
+                } else {                        
+                    $alert('请耐心等待交易完成');
+                    let timer = setInterval( () => {
+                        $Content.game.updatePlayerData().then( () => {
+                            clearInterval(timer);
+                            timer = null;
+                        })
+                    }, 3000);
+                }
+                // console.log(hash);
             });
         } else {
             notSignInMetamask();

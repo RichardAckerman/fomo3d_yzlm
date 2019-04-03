@@ -61,7 +61,7 @@ class GameStatistics extends eui.Component {
     public langTitleImg: eui.Image;
 
 
-    private updateData: egret.Timer = new egret.Timer(2000, 0);
+    // private updateData: egret.Timer = new egret.Timer(2000, 0);
     private ExtractUnitOne;
 
     protected childrenCreated(): void {
@@ -73,15 +73,16 @@ class GameStatistics extends eui.Component {
         // this.tab2.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectTab.bind(this, 1), this);
         // this.tab3.addEventListener(egret.TouchEvent.TOUCH_TAP, this.selectTab.bind(this, 2), this);
 
-        this.updateData.addEventListener(egret.TimerEvent.TIMER, this.getData, this);
+        // this.updateData.addEventListener(egret.TimerEvent.TIMER, this.getData, this);
 
-        this.ExtractUnitOne= new ExtractUnitTs();
-        this.teamTabScr.addChild(this.ExtractUnitOne);
+        $Modal.extractUnit = this.ExtractUnitOne = new ExtractUnitTs();        
+        this.teamTabScr.addChild(this.ExtractUnitOne);        
     }
 
     private getData() {
-        this.getTeamTotalPot();
-        this.getTotalKey();
+        // this.getTeamTotalPot();
+        // this.getTotalKey();        
+        this.ExtractUnitOne.getData();
     }
 
     /**
@@ -91,7 +92,7 @@ class GameStatistics extends eui.Component {
         $gameContractInstance.teamPot((err, Coin) => {
             if (err) {
                 console.log("++++++", err);
-                this.updateData.stop();
+                // this.updateData.stop();
             } else {
                 // $Content.game.data.totalInvest = "e" + parseFloat(web3js.fromWei(Coin[0]).toString()).toFixed(2);
                 // this.data.stats.totalInvested = (parseFloat(web3js.fromWei(Coin[0]).toString())).toFixed(4) + "";
@@ -121,7 +122,7 @@ class GameStatistics extends eui.Component {
     }
 
     private clostFun() {
-        this.updateData.stop();
+        // this.updateData.stop();
         let group = $Modal.gameStatistics.$children[1];
         let tw = egret.Tween.get(group);//开始动画
         tw.to({y: 1716}, 200).call(function () {

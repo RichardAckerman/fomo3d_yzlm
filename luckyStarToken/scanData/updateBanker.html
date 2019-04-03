@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Banker</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="rate">
+        <li>
+            <span class="label">我的Addr:</span>
+            <span id="myAddress"></span>
+        </li>
+        <li>
+            <span class="label">游戏地址:</span>
+            <span class="gameAddr" id="gameAddr"></span>
+        </li>
+        <li>
+            <span class="label">请输入庄家地址:</span>
+            <span>庄家3不能为空其他如果没有则不输入<br>(庄家3 的地址不能修改)</span>
+        </li>
+        <li>
+            <div>
+                <ul>
+                    <li><input type="text" id="banker1" placeholder="庄家1"></li>
+                    <li><input type="text" id="banker2" placeholder="庄家2"></li>
+                    <li><input type="text" id="banker3" placeholder="庄家3" disabled></li>
+                    <li style="visibility: hidden"><input type="text" id="banker4" placeholder="庄家4"></li>
+                    <li style="visibility: hidden"><input type="text" id="banker5" placeholder="庄家5"></li>
+                    <li style="visibility: hidden"><input type="text" id="banker6" placeholder="庄家6"></li>
+                    <li style="visibility: hidden"><input type="text" id="banker7" placeholder="庄家7"></li>
+                    <li style="visibility: hidden"><input type="text" id="banker8" placeholder="庄家8"></li>
+                </ul>
+            </div>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn">设置</button>
+        </li>
+        <li>
+            <span class="warn"></span>
+        </li>
+        <li style="visibility: hidden">
+            <span class="label">当前8个庄家地址是:</span>
+            <span class="rate"></span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="chain3.js"></script>
+<script src="linkNet.js"></script>
+<script>
+
+    let rateHtml = $(".rate");
+
+    let emptyAddress = "0x0";
+    let banker1 = $("#banker1");
+    let banker2 = $("#banker2");
+    let banker3 = $("#banker3");
+    let banker4 = $("#banker4");
+    let banker5 = $("#banker5");
+    let banker6 = $("#banker6");
+    let banker7 = $("#banker7");
+    let banker8 = $("#banker8");
+
+    let rateArr = [];
+
+    setTimeout(() => {
+        getJson().then(() => {
+            rateArr = [];
+            getRate(0);
+        });
+    }, 1000);
+    setBtn.on("click", () => {
+        if (banker1.val() === "" || banker2.val() === "") {
+            warn.html("庄家2不能为空");
+            setWarn(true);
+            return;
+        }
+        if (!chain3Js.isAddress(banker1.val()) || !chain3Js.isAddress(banker2.val())) {
+            warn.html("庄家2的地址不合法");
+            setWarn(true);
+            return;
+        }
+        let arr = [banker1.val(), banker2.val()];
+        arr[2] = banker3.val() === "" ? emptyAddress : banker3.val();
+        arr[3] = banker4.val() === "" ? emptyAddress : banker4.val();
+        arr[4] = banker5.val() === "" ? emptyAddress : banker5.val();
+        arr[5] = banker6.val() === "" ? emptyAddress : banker6.val();
+        arr[6] = banker7.val() === "" ? emptyAddress : banker7.val();
+        arr[7] = banker8.val() === "" ? emptyAddress : banker8.val();
+        setWarn(false);
+        setLeaderFun(arr);
+    });
+
+    function setLeaderFun(arr) {
+        console.log(arr);
+        setBtnShow(true);
+        getJson().then(() => {
+            setWarn(false);
+            let data = $gameContractInstance.updateBanker.getData(arr);
+            $sendTransiction(data, () => {
+                rateArr = [];
+                getRate(0);
+                setBtnShow(false);
+            });
+        });
+    }
+
+    function getRate(i) {
+        $gameContractInstance.banker(i, (err, rate) => {
+            if (err) {
+                console.log(err);
+            } else {
+                switch (i) {
+                    case 0:
+                        banker1.val(rate);
+                        break;
+                    case 1:
+                        banker2.val(rate);
+                        break;
+                    case 2:
+                        banker3.val(rate);
+                        break;
+                    case 3:
+                        banker4.val(rate);
+                        break;
+                    case 4:
+                        banker5.val(rate);
+                        break;
+                    case 5:
+                        banker6.val(rate);
+                        break;
+                    case 6:
+                        banker7.val(rate);
+                        break;
+                    case 7:
+                        banker8.val(rate);
+                        break;
+                }
+                rateArr.push(rate);
+                if (i < 7) {
+                    i++;
+                    getRate(i);
+                } else {
+                    rateHtml.html("<br>" + rateArr.join("<br>"));
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

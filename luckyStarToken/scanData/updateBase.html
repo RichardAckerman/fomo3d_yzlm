@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>updateBase</title>
+    <link rel="stylesheet" href="css.css">
+    <style>
+        input {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul id="rate">
+        <li>
+            <span class="label">我的Addr:</span>
+            <span class="id" id="myAddress" style="color: #f00">请先点设置解锁钱包</span>
+        </li>
+        <li>
+            <span class="label">游戏地址:</span>
+            <span class="gameAddr" id="gameAddr"></span>
+        </li>
+        <li>
+            <ul>
+                <li><span style="display:inline-block;width: 200px;text-align: right">
+                    升级需要的推荐人数量
+                    levelAmount:
+                </span>
+                    <input type="text" id="rate1" placeholder="rate1">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">
+                    同时拥有的最大收益号数目
+                    nPlayerArraySize:
+                </span>
+                    <input type="text" id="rate2" placeholder="rate2">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">
+                    必须复投次数
+                    nMustRollInNum:</span>
+                    <input type="text" id="rate3" placeholder="rate3">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">
+                    5分钟后开启游戏
+                    rndInit_:</span>
+                    <input type="text" id="rate4" placeholder="rate4">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">
+                    每次买入增加时间
+                    rndInc_:</span><input
+                        type="text" id="rate5" placeholder="rate5"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">
+                    一局游戏结束时间
+                    rndMax_:</span>
+                    <input type="text" id="rate6" placeholder="rate6">
+                </li>
+                <li>
+                    <span style="display:inline-block;width: 200px;text-align: right">
+                        registrationFee_:</span>
+                    <input type="text" id="rate7" placeholder="rate7">
+                </li>
+                <li>
+                    <span style="display:inline-block;width: 200px;text-align: right">
+                        nMaxBonus:</span>
+                    <input type="text" id="rate8" placeholder="rate8">
+                </li>
+                <li>
+                    <span style="display:inline-block;width: 200px;text-align: right">
+                        nBugBonus:</span>
+                    <input type="text" id="rate9" placeholder="rate9">
+                </li>
+            </ul>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn">设置</button>
+        </li>
+        <li>
+            <span class="warn" id="warn"></span>
+        </li>
+        <li>
+            <span class="label" style="color: #3F63A1"></span>
+            <span class="tips"><br>
+            </span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="chain3.js"></script>
+<script src="linkNet.js"></script>
+<script>
+
+    let rate1 = $("#rate1");
+    let rate2 = $("#rate2");
+    let rate3 = $("#rate3");
+    let rate4 = $("#rate4");
+    let rate5 = $("#rate5");
+    let rate6 = $("#rate6");
+    let rate7 = $("#rate7");
+    let rate8 = $("#rate8");
+    let rate9 = $("#rate9");
+
+    let rateArr = [];
+
+    setTimeout(() => {
+        setLeader();
+    }, 1000);
+
+    function setLeader() {
+        getJson().then(() => {
+            rateArr = [];
+            getRate();
+        });
+        setBtn.on("click", () => {
+            if (rate1.val() === "") {
+                warn.html("rate1不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate2.val() === "") {
+                warn.html("rate2不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate3.val() === "") {
+                warn.html("rate3不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate4.val() === "") {
+                warn.html("rate4不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate5.val() === "") {
+                warn.html("rate5不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate6.val() === "") {
+                warn.html("rate6不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate7.val() === "") {
+                warn.html("rate7不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate8.val() === "") {
+                warn.html("rate8不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate9.val() === "") {
+                warn.html("rate9不能为空");
+                setWarn(true);
+                return;
+            }
+            setWarn(false);
+            let arr = [rate1.val(), rate2.val(), rate3.val(), rate4.val(),
+                rate5.val(), rate6.val(), rate7.val(), rate8.val(), rate9.val()];
+            setLeaderFun(arr);
+        });
+    }
+
+    function setLeaderFun(arr) {
+        setBtnShow(true);
+        let isAllNum = true;
+        getJson().then(() => {
+            arr = arr.map((it) => {
+                if (isNaN(parseInt(it))) {
+                    isAllNum = false;
+                }
+                return parseInt(it);
+            });
+            if (!isAllNum) {
+                warn.html("有非数字输入");
+                setWarn(true);
+                setBtnShow(false);
+                return;
+            }
+            warn.html("修改中，请稍等。。。");
+            setWarn(true);
+            try {
+                let data = $gameContractInstance.updateBase.getData(arr[0], arr[1], arr[2], arr[3],
+                    arr[4], arr[5], arr[6], arr[7], arr[8]);
+                $sendTransiction(data, () => {
+                    rateArr = [];
+                    alert("请等待出块");
+                    getRate();
+                    setBtnShow(false);
+                    setWarn(false);
+                });
+            } catch (e) {
+                alert(e);
+            }
+        });
+    }
+
+    function getRate() {
+        $gameContractInstance.levelAmount((err, rate) => {
+            rate1.val(rate);
+        });
+        $gameContractInstance.nPlayerArraySize((err, rate) => {
+            rate2.val(rate);
+        });
+        $gameContractInstance.nMustRollInNum((err, rate) => {
+            rate3.val(rate);
+        });
+        $gameContractInstance.rndInit_((err, rate) => {
+            rate4.val(rate);
+        });
+        $gameContractInstance.rndInc_((err, rate) => {
+            rate5.val(rate);
+        });
+        $gameContractInstance.rndMax_((err, rate) => {
+            rate6.val(rate);
+        });
+        $gameContractInstance.registrationFee_((err, rate) => {
+            rate7.val(rate);
+        });
+        $gameContractInstance.nMaxBonus((err, rate) => {
+            rate8.val(rate);
+        });
+        $gameContractInstance.nBugBonus((err, rate) => {
+            rate9.val(rate);
+        });
+    }
+</script>
+</body>
+</html>

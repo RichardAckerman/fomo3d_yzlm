@@ -147,6 +147,7 @@ function changeLang(lang) {
         $Content.game.statisticsBtn.source = 'icon_tj_png';
         $Content.game.registerBtn.source = 'icon_tjzc_png';
         $Content.game.helpBtn.source = 'icon_gl_png';
+        $Content.game.alertText.source = 'special_effects_text_png';
         $Content.game.roundZh.visible = true;
         $Content.game.roundEn.visible = false;
 
@@ -160,6 +161,8 @@ function changeLang(lang) {
         $Modal.gameStatistics.totalInvestment.source = 'statistics_stats_text_ti_zh_png';
         $Modal.gameStatistics.totalTime.source = 'statistics_text_rcmdid_zh_png';
         $Modal.gameStatistics.totalInvestment0.source = 'statistics_stats_text_dr_zh_png';
+        $Modal.extractUnit.myNumber = 'yx_text_wdxh_zh_png';
+        $Modal.extractUnit.fenfang = 'yx_text_fhsy_zh_png';
         $Modal.gameStatistics.tabAct1.visible = true;
         $Modal.gameStatistics.tabAct2.visible = true;
         $Modal.gameStatistics.tabAct3.visible = true;
@@ -182,7 +185,7 @@ function changeLang(lang) {
 
         $AlertMsg = $ZHTW.msg;
     }
-
+    
     if (lang === $EN.type) {
         /**text language change */
         $Content.container.langData = $EN.container;
@@ -206,6 +209,7 @@ function changeLang(lang) {
         $Content.game.statisticsBtn.source = 'icon_tj_en_png';
         $Content.game.registerBtn.source = 'icon_tjzc_en_png';
         $Content.game.helpBtn.source = 'icon_gl_en_png';
+        $Content.game.alertText.source = 'special_effects_text_en_png';
         $Content.game.roundZh.visible = false;
         $Content.game.roundEn.visible = true;
 
@@ -219,6 +223,8 @@ function changeLang(lang) {
         $Modal.gameStatistics.totalInvestment.source = 'statistics_stats_text_ti_en_png';
         $Modal.gameStatistics.totalTime.source = 'statistics_text_rcmdid_en_png';
         $Modal.gameStatistics.totalInvestment0.source = 'statistics_stats_text_dr_en_png';
+        $Modal.extractUnit.myNumber = 'yx_text_wdxh_en_png';
+        $Modal.extractUnit.fenfang = 'yx_text_fhsy_en_png';
         $Modal.gameStatistics.tabAct1.visible = false;
         $Modal.gameStatistics.tabAct2.visible = false;
         $Modal.gameStatistics.tabAct3.visible = false;

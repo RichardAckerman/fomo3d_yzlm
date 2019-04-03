@@ -74,14 +74,12 @@ function getNetWork() {
                         }, 2000);
                         break;
                     default:
-                        web3js = new Web3(new Web3.providers.HttpProvider("http://120.79.88.126:8551"));
-                        // web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
+                        web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
                         resolve();
                 }
             })
         } else {
-            web3js = new Web3(new Web3.providers.HttpProvider("http://120.79.88.126:8551"));
-            // web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
+            web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
             resolve();
         }
     });
@@ -117,14 +115,12 @@ function getNetWork1() {
                         }, 2000);
                         break;
                     default:
-                        web3js = new Web3(new Web3.providers.HttpProvider("http://120.79.88.126:8551"));
-                        // web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
+                        web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
                         resolve();
                 }
             });
         } else {
-            web3js = new Web3(new Web3.providers.HttpProvider("http://120.79.88.126:8551"));
-            // web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
+            web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
             resolve();
         }
     })

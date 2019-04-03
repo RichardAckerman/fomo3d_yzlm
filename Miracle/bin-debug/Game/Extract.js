@@ -38,12 +38,25 @@ var ExtractTs = (function (_super) {
         });
     };
     ExtractTs.prototype.drawFun = function () {
+        $Modal.betLoad.visible = true;
         if ($myAddress) {
             $gameContractInstance.withDraw({
                 from: $myAddress,
             }, function (err, hash) {
-                err && console.log(err);
-                console.log(hash);
+                if (err) {
+                    $alert(err);
+                    console.log(err);
+                }
+                else {
+                    $alert('请耐心等待交易完成');
+                    var timer_1 = setInterval(function () {
+                        $Content.game.updatePlayerData().then(function () {
+                            clearInterval(timer_1);
+                            timer_1 = null;
+                        });
+                    }, 3000);
+                }
+                // console.log(hash);
             });
         }
         else {

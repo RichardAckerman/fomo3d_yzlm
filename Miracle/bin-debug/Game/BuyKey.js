@@ -39,21 +39,53 @@ var BuyKey = (function (_super) {
      */
     BuyKey.prototype.buyKeyFun = function () {
         var _this = this;
+        $Modal.betLoad.visible = true;
         getIsBegin().then(function (bool) {
             if (!bool) {
                 _this.directBuy();
             }
             else {
                 setOverTime().then(function (time) {
-                    if (time > 86400) {
-                        $alert($AlertMsg.readyTime);
-                        return;
-                    }
+                    // if (time > 86400) {
+                    //     $alert($AlertMsg.readyTime);
+                    //     return;
+                    // }
                     _this.directBuy();
                 });
             }
         });
     };
+    // private directBuy() {
+    //     if (!$myAddress) {
+    //         notSignInMetamask();
+    //         return;
+    //     }
+    //     let href = location.href;
+    //     let addr = href.split("?")[1];
+    //     let _referrer = "0x0000000000000000000000000000000000000000";
+    //     if (addr) {
+    //         if (web3js.isAddress(addr)) { // 是地址
+    //             _referrer = addr;
+    //             this.rollIn(_referrer);
+    //         } else if (isNaN(Number(addr))) { // 是名称
+    //             console.log(web3js.fromAscii(addr));
+    //             console.log("請保持瀏覽器地址後綴為正確的賬戶地址或id");
+    //             $alert("請保持瀏覽器地址後綴為正確的賬戶地址或id");
+    //         } else {// 是id
+    //             $gameContractInstance.playerxID_(addr, (err, data) => {
+    //                 if (err) {
+    //                     $alert(err);
+    //                 }
+    //                 else {
+    //                     _referrer = data[0];
+    //                     this.rollIn(_referrer);
+    //                 }
+    //             });
+    //         }
+    //     } else {
+    //         this.rollIn(_referrer);
+    //     }
+    // }
     BuyKey.prototype.directBuy = function () {
         var _this = this;
         if (!$myAddress) {
@@ -74,13 +106,22 @@ var BuyKey = (function (_super) {
                 $alert("請保持瀏覽器地址後綴為正確的賬戶地址或id");
             }
             else {
-                $gameContractInstance.playerxID_(addr, function (err, data) {
-                    if (err) {
-                        $alert(err);
+                $gameContractInstance.returnAgent($myAddress, function (err1, agentArr) {
+                    if (err1) {
+                        $alert(err1);
                     }
                     else {
-                        _referrer = data[0];
-                        _this.rollIn(_referrer);
+                        var agentId = agentArr[9].toString();
+                        agentId = agentId != "0" ? agentId : addr;
+                        $gameContractInstance.playerxID_(agentId, function (err, data) {
+                            if (err) {
+                                $alert(err);
+                            }
+                            else {
+                                _referrer = data[0];
+                                _this.rollIn(_referrer);
+                            }
+                        });
                     }
                 });
             }
@@ -104,6 +145,7 @@ var BuyKey = (function (_super) {
             console.log(web3js.toWei(_this.data.input, "ether"));
             web3js.eth.getBalance($myAddress, function (err, balance) {
                 if (err) {
+                    $alert('网络错误');
                     console.log(err);
                     return;
                 }
@@ -116,7 +158,13 @@ var BuyKey = (function (_super) {
                     from: $myAddress,
                     value: web3js.toWei(_this.data.input, "ether")
                 }, function (err, hash) {
-                    err && console.log(err);
+                    if (err) {
+                        $alert(err);
+                        console.log(err);
+                    }
+                    else {
+                        $alert('请耐心等待交易完成');
+                    }
                     console.log(hash);
                     setTimeout(function () {
                         _this.closeModalFun();
@@ -124,6 +172,7 @@ var BuyKey = (function (_super) {
                 });
             });
         }, function (err) {
+            $alert('网络错误');
             console.log(err);
         });
     };

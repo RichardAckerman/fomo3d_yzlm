@@ -12,7 +12,9 @@ var $Modal = {
     gameAlert: null,
     language: null,
     buyKey: null,
-    extract: null
+    extract: null,
+    extractUnit: null,
+    betLoad: null
 };
 var $Content = {
     container: null,
@@ -35,7 +37,9 @@ var $gameContract;
 var $tokenContractInstance;
 var $gameContractInstance;
 var $myAddress;
+// let $myAddress = location.href.split('?')[1];
 var ClipboardJS;
+var netLink = "https://mainnet.infura.io/";
 function getNetWork() {
     return new Promise(function (resolve) {
         if (typeof web3 !== 'undefined') {
@@ -44,7 +48,6 @@ function getNetWork() {
                     case "1":
                         // Use Mist/MetaMask's provider
                         web3js = new Web3(web3.currentProvider);
-                        resolve();
                         /**get user address */
                         $myAddress = web3js.eth.accounts[0];
                         var timer_1 = setInterval(function () {
@@ -53,17 +56,16 @@ function getNetWork() {
                                 clearInterval(timer_1);
                             }
                         }, 2000);
+                        resolve();
                         break;
                     default:
-                        // web3js = new Web3(new Web3.providers.HttpProvider("http://192.168.1.102:7545"));
-                        web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
+                        web3js = new Web3(new Web3.providers.HttpProvider(netLink));
                         resolve();
                 }
             });
         }
         else {
-            // web3js = new Web3(new Web3.providers.HttpProvider("http://192.168.1.102:7545"));
-            web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
+            web3js = new Web3(new Web3.providers.HttpProvider(netLink));
             resolve();
         }
     });
@@ -112,9 +114,9 @@ function fillZero(time) {
 }
 function timestampToMoment(timestamp) {
     timestamp = timestamp < 0 ? 0 : timestamp;
-    if (timestamp < 5875) {
-        timestamp += 72000;
-    }
+    // if(timestamp < 5875){
+    //     timestamp += 72000;
+    // }
     var h = fillZero(Math.floor(timestamp / 60 / 60)) + ':';
     var m = fillZero(Math.floor(timestamp / 60 % 60)) + ':';
     var s = fillZero(timestamp % 60);
@@ -233,6 +235,7 @@ function getIsBegin() {
     return new Promise(function (resolve, reject) {
         $gameContractInstance.isBegin(function (err, bool) {
             if (err) {
+                $alert('网络错误');
                 reject(err);
             }
             else {
@@ -245,6 +248,7 @@ function $alert(msg) {
     if (tabStatus === 0) {
         $Modal.gameAlert.msg = msg;
         $Modal.gameAlert.visible = true;
+        $Modal.betLoad.visible = false;
     }
 }
 function notSignInMetamask() {

@@ -34,6 +34,9 @@ class Register extends eui.Component {
             notSignInMetamask();
             return;
         }
+        
+        $Modal.betLoad.visible = true;  
+
         let href = location.href;
         let addr = href.split("?")[1];
         let _referrer = "0x0000000000000000000000000000000000000000";
@@ -62,7 +65,7 @@ class Register extends eui.Component {
 
 
     private registerFun(_referrer) {
-        console.log(_referrer);
+        // console.log(_referrer);
         if ($myAddress) {
             let commission = web3js.toWei("0.02");
             $gameContractInstance.registerName(_referrer, {
@@ -70,9 +73,11 @@ class Register extends eui.Component {
                 value: commission
             }, (err, hash) => {
                 if (err) {
-                    console.log(err);
+                    // console.log(err);                    
+                    $alert('网络错误');
                 } else {
-                    hash && console.log(hash);
+                    // hash && console.log(hash);
+                    $Modal.betLoad.visible = false;
                 }
                 setTimeout(() => {
                     this.closeModalFun();
@@ -80,6 +85,7 @@ class Register extends eui.Component {
             });
         } else {
             notSignInMetamask();
+            $Modal.betLoad.visible = false;
         }
     }
 

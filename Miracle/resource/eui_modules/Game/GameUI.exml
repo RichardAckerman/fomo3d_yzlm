@@ -100,10 +100,6 @@
 	</e:Group>
 	<e:Label id="tips1" y="1221" anchorOffsetX="0" width="391.63" anchorOffsetY="0" height="39.33" textColor="0x79e7dd" size="34" horizontalCenter="-114" verticalAlign="middle" textAlign="right" text="{langData.panalTips2}"/>
 	<e:Label text="{data.remainingBet}" x="627" y="1225.33" size="34"/>
-	<e:Group id="alertModal" left="0" right="0" top="0" bottom="0" visible="false">
-		<e:Image id="alertBg" source="special_effects_light_png" left="0" right="0" top="0" bottom="0"/>
-		<e:Image source="special_effects_text_png" y="78.79" horizontalCenter="0"/>
-	</e:Group>
 	<e:Image id="statisticsBtn" source="icon_tj_png" x="44.52" y="5.24"/>
 	<e:Image id="registerBtn" source="icon_tjzc_png" y="7.24" horizontalCenter="0"/>
 	<e:Image id="languageBtn" x="805.94" y="-0.76" source="icon_gl_png"/>
@@ -115,5 +111,9 @@
 	<e:Group id="showBuyModal" width="438" height="126" y="1070.65" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0">
 		<e:Image source="btn_gmys_png" y="2.49" scaleX="1" scaleY="1" horizontalCenter="-10"/>
 		<e:Image y="24.82" horizontalCenter="0" source="btn_text_gmyc_zh_png"/>
+	</e:Group>
+	<e:Group id="alertModal" left="0" right="0" top="0" bottom="0" visible="false">
+		<e:Image id="alertBg" source="special_effects_light_png" left="0" right="0" top="0" bottom="0"/>
+		<e:Image id="alertText" source="special_effects_text_png" y="78.79" horizontalCenter="0"/>
 	</e:Group>
 </e:Skin>

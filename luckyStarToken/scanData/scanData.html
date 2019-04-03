@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Data</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <p class="btn-class">
+        <input type="text" id="input" placeholder="请输入id">
+        <button type="button" id="btn">搜索(id)</button>
+        <br>
+        <input type="text" id="inputAddr" placeholder="请输入地址">
+        <button type="button" id="btnAddr">搜索(地址)</button>
+        <br>
+        <span id="tips">正在查询中......</span>
+    </p>
+    <p class="nPlayerNum">游戏CBE余额: <span id="gameBalance"></span></p>
+    <p class="nPlayerNum">当前玩家数量: <span id="nPlayerNum"></span></p>
+    <p class="nPlayerNum">最新队列id: <span id="nRollIn"></span></p>
+    <p class="nPlayerNum">当前出局序号: <span id="nCurrentGainId"></span></p>
+    <p class="nPlayerNum">分大奖的十名玩家地址: <span id="rollInByPlayerId"></span></p>
+    <div class="luckyer-box">
+        <span class="label" style="font-size: 24px">上期幸运奖玩家id：</span><span class="Luckyer"></span>
+    </div>
+    <ul id="list">
+        <li>
+            <span class="label">id:</span>
+            <span class="id"></span>
+        </li>
+        <li>
+            <span class="label">地址:</span>
+            <span class="addr"></span>
+        </li>
+        <li>
+            <span class="label">推荐人地址:</span>
+            <span class="referees"></span>
+        </li>
+        <li>
+            <span class="label">我的moac余额:</span>
+            <span class="moacBalance"></span>
+        </li>
+        <li>
+            <span class="label">我的CBE余额:</span>
+            <span class="cbeBalance"></span>
+        </li>
+        <li>
+            <span class="label">我的剩余授权额度:</span>
+            <span class="allowance"></span>
+        </li>
+        <li>
+            <span class="label">投资总额allBuy:</span>
+            <span class="allBuy"></span>
+        </li>
+        <li>
+            <span class="label">这一局买入花的钱:</span>
+            <span class="turnBuy"></span>
+        </li>
+        <li>
+            <span class="label">收益turnBonus:</span>
+            <span class="turnBonus"></span>
+        </li>
+        <li>
+            <span class="label">currentBonus:</span>
+            <span class="currentBonus"></span>
+        </li>
+        <li>
+            <span class="label">投放总次数:</span>
+            <span class="reinvest"></span>
+        </li>
+        <li>
+            <span class="label">联盟奖:</span>
+            <span class="unionBonus"></span>
+        </li>
+        <li>
+            <span class="label">当前利息:</span>
+            <span class="currentInterest"></span>
+        </li>
+        <li>
+            <span class="label">代理id(agents):</span>
+            <span class="agents"></span>
+        </li>
+        <li>
+            <span class="label">推荐业绩performance:</span>
+            <span class="performance"></span>
+        </li>
+        <li>
+            <span class="label">等级:</span>
+            <span class="level"></span>
+        </li>
+        <li>
+            <span class="label">轮数:</span>
+            <span class="currentRound"></span>
+        </li>
+        <li>
+            <span class="label">总提取allEarning:</span>
+            <span class="allEarning"></span>
+        </li>
+        <li>
+            <span class="label">失效次数:</span>
+            <span class="lostTimes"></span>
+        </li>
+        <li>
+            <span class="label">curtPerOne:</span>
+            <span class="currentPerformanceOne"></span>
+        </li>
+        <li>
+            <span class="label">curtPerTwo:</span>
+            <span class="currentPerformanceTwo"></span>
+        </li>
+        <li>
+            <span class="label">已提本金:</span>
+            <span class="earningPrincipal"></span>
+        </li>
+        <li>
+            <span class="label">我的投放列表:</span>
+            <span class="rollInArray"></span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="chain3.js"></script>
+<script src="logic.js"></script>
+</body>
+</html>

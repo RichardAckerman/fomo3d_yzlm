@@ -81,7 +81,7 @@ class Main extends eui.UILayer {
             await RES.loadGroup("preload", 0);
 
             /**load default resource */
-            const loadingView = new Loading();
+            const loadingView:any = new Loading();
             this.stage.addChild(loadingView);
             await RES.loadConfig("resource/default.res.json", "resource/");
             await this.loadTheme();

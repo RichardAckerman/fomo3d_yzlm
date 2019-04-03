@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>游戏结算</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="rate">
+        <li>
+            <span class="label">我的地址:</span>
+            <span class="myAddr"></span>
+        </li>
+        <li>
+            <span class="label">当前游戏名称:</span>
+            <span class="name">封神九帝</span>
+        </li>
+        <li>
+            <span class="label">当前游戏地址:</span>
+            <span class="addr"></span>
+        </li>
+        <li>
+            <span class="label">当前游戏结束时间:</span>
+            <span class="balance"></span>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn">结算</button>
+        </li>
+        <li>
+            <span class="warn"></span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script>
+    let web3js = "";
+    let myAddr = $(".myAddr");
+    let addr = $(".addr");
+    let balance = $(".balance");
+
+    let setBtn = $("#setBtn");
+    let warn = $(".warn");
+
+    let $tokenContractInstance;
+    let $gameContract;
+    let conAddr = "0x13552c7cc9ce39af665955412faa08f0e6555a29";
+    let TokenAddr = "0x4313b17Cf68BaFA29817438baa36cbfdC68c28a2";
+    addr.html(conAddr);
+    setTimeout(() => {
+        if (typeof web3 !== 'undefined') {
+            web3.version.getNetwork((err, netId) => {
+                switch (netId) {
+                    case "1":
+                        web3js = new Web3(web3.currentProvider);
+                        let addr = web3js.eth.accounts[0];
+                        console.log(addr);
+                        myAddr.html(addr);
+                        if (addr && addr !== "" && addr.length !== 0) {
+                            setLeader();
+                        } else {
+                            $(".id").html("未登录钱包,无法获取你的账户地址");
+                        }
+                        break;
+                    default:
+                        myAddr.html("未连上以太坊主网,无法获取你的账户地址");
+                }
+            });
+        } else {
+            myAddr.html("未登录钱包,无法获取你的账户地址");
+        }
+    }, 1000);
+
+    function getJson() {
+        return new Promise((resolve, reject) => {
+            fetch("../contract/NineGods.json", {
+                method: "GET",
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).then((response) => {
+                return response.json();
+            }, (error) => {
+                reject(error);
+            }).then((json) => {
+                $gameContract = web3js.eth.contract(json.abi);
+                $tokenContractInstance = $gameContract.at(conAddr);
+                resolve($tokenContractInstance);
+            });
+        });
+    }
+
+    function setWarn(bool) {
+        warn.css("display", bool ? "inline-block" : "none");
+    }
+
+    function setBtnShow(bool) {
+        setBtn.attr("disabled", bool);
+    }
+
+    function setLeader() {
+        getJson().then(() => {
+            $tokenContractInstance.overMoment((err, time) => {
+                let num = time.toString();
+                time = new Date(num * 1000);
+                time = time.Format("yyyy-MM-dd hh:mm:ss");
+                balance.html(time);
+            });
+        });
+        setBtn.on("click", () => {
+            let bool = confirm("确定结算吗？");
+            if (bool) {
+                setWarn(false);
+                setLeaderFun();
+            }
+        });
+    }
+
+    function setLeaderFun() {
+        setBtnShow(true);
+        getJson().then(() => {
+            setWarn(false);
+            $tokenContractInstance.gameOver({gasPrice: 9000000000}, (err, data) => {
+                if(data){
+                    alert("请等待出块");
+                }
+            });
+        });
+    }
+
+    Date.prototype.Format = function (fmt) { //author: meizz
+        var o = {
+            "M+": this.getMonth() + 1,                 //月份
+            "d+": this.getDate(),                    //日
+            "h+": this.getHours(),                   //小时
+            "m+": this.getMinutes(),                 //分
+            "s+": this.getSeconds(),                 //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds()             //毫秒
+        };
+        if (/(y+)/.test(fmt))
+            fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt))
+                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    };
+
+</script>
+</body>
+</html>

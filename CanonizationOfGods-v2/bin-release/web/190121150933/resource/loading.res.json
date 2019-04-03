@@ -1,0 +1,49 @@
+{
+	"groups": [
+		{
+			"keys": "load_pb_png,load_ditu_png,load_Interface_jpg,img_2_json,img_1_json,load_text_title_zh_png,load_text_title_en_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "assets/load_pb.png",
+			"type": "image",
+			"name": "load_pb_png",
+			"scale9grid": "29,0,849,0"
+		},
+		{
+			"url": "assets/load_ditu.png",
+			"type": "image",
+			"name": "load_ditu_png",
+			"scale9grid": "1,4,16,64"
+		},
+		{
+			"url": "assets/load_Interface.jpg",
+			"type": "image",
+			"name": "load_Interface_jpg"
+		},
+		{
+			"name": "img_2_json",
+			"type": "sheet",
+			"url": "assets/img_2.json",
+			"subkeys": "jc,statistics_bg,yuyan_bg,yx_ditu2,bg_2,icon_dp_bottom,icon_dp_top"
+		},
+		{
+			"name": "img_1_json",
+			"type": "sheet",
+			"url": "assets/img_1.json",
+			"subkeys": "btn,btn_cancel_en,btn_cancel_zh,btn_gmys,btn_statistics,btn_statistics_teams,btn_sure_en,btn_sure_zh,btn_text_fz_1_en,btn_text_fz_1_zh,btn_text_fz_en,btn_text_fz_zh,btn_text_gmyc_en,btn_text_gmyc_zh,btn_text_yqdy_en,btn_text_yqdy_zh,btn1,close,icon_ft,icon_ft_en,icon_gl,icon_gl_en,icon_ok,icon_tj,icon_tj_en,icon_tjzc,icon_tjzc_en,ldz_bg,line,statistics_stats_text_dc_en,statistics_stats_text_dc_zh,statistics_stats_text_djs_en,statistics_stats_text_djs_zh,statistics_stats_text_dr_en,statistics_stats_text_dr_zh,statistics_stats_text_ti_en,statistics_stats_text_ti_zh,statistics_text_rank_en,statistics_text_rank_zh,statistics_text_rank1_en,statistics_text_rank1_zh,statistics_text_round_en,statistics_text_round_zh,statistics_text_round1_en,statistics_text_round1_zh,statistics_text_stats_en,statistics_text_stats_zh,statistics_text_stats1_en,statistics_text_stats1_zh,statistics_text_teams_en,statistics_text_teams_zh,statistics_text_teams1_en,statistics_text_teams1_zh,statistics_text_wdxh,statistics_text_wdxh_en,title_text_faq_en,title_text_faq_zh,title_text_referee_en,title_text_referee_zh,title_text_strategy_en,title_text_strategy_zh,title_text_ts,title_text_ts_en,title_text_yqlj_en,title_text_yqlj_zh,yuyan_text_chin,yuyan_text_en,yuyan_text_eng,yuyan_text_zh,yx_btn,yx_lc2,yx_lc2_en,yx_text_cjxh_en,yx_text_cjxh_zh,yx_text_dqsy_en,yx_text_dqsy_zh,yx_text_fhqy_zh,yx_text_fhsy_en,yx_text_fhsy_zh,yx_text_jc_en,yx_text_jc_zh,yx_text_ktsy_en,yx_text_ktsy_zh,yx_text_ldz_en,yx_text_ldz_zh,yx_text_ljcs_en,yx_text_ljcs_zh,yx_text_ljtr_en,yx_text_ljtr_zh,yx_text_tq_en,yx_text_tq_zh,yx_text_wdxh_en,yx_text_wdxh_zh,yx_text_zbld_en,yx_text_zbld_zh,yx_text_zbsj_en,yx_text_zbsj_zh"
+		},
+		{
+			"name": "load_text_title_zh_png",
+			"type": "image",
+			"url": "assets/load_text_title_zh.png"
+		},
+		{
+			"name": "load_text_title_en_png",
+			"type": "image",
+			"url": "assets/load_text_title_en.png"
+		}
+	]
+}

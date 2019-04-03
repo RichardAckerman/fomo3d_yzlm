@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="StatisticsPanel" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="closeBg" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
+	<e:Group height="1030" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0">
+		<e:Image source="bg2_png" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image id="title" y="46.88" horizontalCenter="0.5" source="title_text_strategy_zh_png"/>
+		<e:Group id="roundTab" width="930" height="695" anchorOffsetX="0" y="263" anchorOffsetY="0" horizontalCenter="0">
+			<e:Group width="930" height="225" y="60" scaleX="1" scaleY="1" anchorOffsetX="0" horizontalCenter="-0.5">
+				<e:Image verticalCenter="0" source="bg3_png" horizontalCenter="0"/>
+				<e:Image id="overtimeImg" source="statistics_stats_text_djs_zh_png" y="12.52" horizontalCenter="0.5"/>
+				<e:BitmapLabel width="444" height="74.67" y="119.57" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" font="gold_fnt" scaleX="1" scaleY="1" horizontalCenter="0" x="243.00000000000006" text="{data.round.drainTime}"/>
+			</e:Group>
+			<e:Group width="930" height="225" y="360" scaleX="1" scaleY="1" anchorOffsetX="0" horizontalCenter="0">
+				<e:Image horizontalCenter="0" verticalCenter="0" source="bg3_png"/>
+				<e:Image id="potImg" y="12.03" source="statistics_stats_text_zhdjjc_zh_png" horizontalCenter="0"/>
+				<e:Image y="179.76" source="icon_coin_png" width="92" height="25" horizontalCenter="0"/>
+				<e:BitmapLabel width="444" height="74.67" y="90.88" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" font="orange_fnt" horizontalCenter="0" x="243.00000000000006" text="{data.round.activePot}"/>
+			</e:Group>
+		</e:Group>
+		<e:Group id="statsTab" width="930" height="695" anchorOffsetX="0" y="263" anchorOffsetY="0" horizontalCenter="0" visible="false">
+			<e:Scroller anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="on" width="960" horizontalCenter="0" top="28" bottom="-28">
+				<e:Group anchorOffsetX="0" width="230" anchorOffsetY="0" height="777.21" y="24">
+					<e:Group width="930" height="225" y="32" scaleX="1" scaleY="1" anchorOffsetX="0" horizontalCenter="0">
+						<e:Image verticalCenter="0" source="bg3_png" horizontalCenter="0"/>
+						<e:Image id="listNum" y="12.52" horizontalCenter="0.5" source="statistics_text_cjxh_png"/>
+						<e:BitmapLabel width="444" height="74.67" y="119.57" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" horizontalCenter="0" x="243.00000000000006" text="{data.stats.currentNum}" font="green_big_fnt"/>
+					</e:Group>
+					<e:Group width="930" height="225" y="332" scaleX="1" scaleY="1" anchorOffsetX="0" horizontalCenter="0">
+						<e:Image verticalCenter="0" horizontalCenter="0" source="bg3_png"/>
+						<e:Image id="totalInvestment" y="12.52" horizontalCenter="0.5" source="statistics_stats_text_ti_zh_png"/>
+						<e:BitmapLabel width="444" height="74.67" y="119.57" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" horizontalCenter="0" x="243.00000000000006" text="{data.stats.rewards}" font="orange_fnt"/>
+					</e:Group>
+					<e:Group width="930" height="225" y="632" scaleX="1" scaleY="1" anchorOffsetX="0" horizontalCenter="0">
+						<e:Image verticalCenter="0" source="bg3_png" horizontalCenter="0"/>
+						<e:Image id="totalBuyTimes" y="12.52" horizontalCenter="0.5" source="statistics_stats_text_ztd_zh_png"/>
+						<e:BitmapLabel width="444" height="74.67" y="119.57" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" horizontalCenter="0" x="243.00000000000006" text="{data.stats.totalBuyTimes}" font="green_big_fnt"/>
+					</e:Group>
+					<e:Group width="930" height="225" y="932" scaleX="1" scaleY="1" anchorOffsetX="0" horizontalCenter="0">
+						<e:Image verticalCenter="0" source="bg3_png" horizontalCenter="0"/>
+						<e:Image id="myBuyTimes" y="12.52" horizontalCenter="0.5" source="statistics_stats_text_wdtds_zh_png"/>
+						<e:BitmapLabel width="444" height="74.67" y="119.57" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" horizontalCenter="0" x="243.00000000000006" text="{data.stats.myReinvest}" font="green_big_fnt"/>
+					</e:Group>
+					<e:Group width="930" height="225" y="1232" scaleX="1" scaleY="1" anchorOffsetX="0" horizontalCenter="0">
+						<e:Image verticalCenter="0" source="bg3_png" horizontalCenter="0"/>
+						<e:Image id="myOutTimes" y="12.52" horizontalCenter="0.5" source="statistics_stats_text_wdcjs_zh_png"/>
+						<e:BitmapLabel width="444" height="74.67" y="119.57" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" scaleX="1" scaleY="1" horizontalCenter="0" x="243.00000000000006" text="{data.stats.myOutTimes}" font="green_big_fnt"/>
+					</e:Group>
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Group id="teamsTab" width="930" height="695" anchorOffsetX="0" y="263" anchorOffsetY="0" horizontalCenter="0" visible="false">
+			<e:Scroller scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" scrollPolicyH="off" scrollPolicyV="on" left="0" right="0" top="34" bottom="-11">
+				<e:Group id="teamTabScr" anchorOffsetX="0" width="850" anchorOffsetY="0" height="852" x="38" y="0">
+				</e:Group>
+			</e:Scroller>
+		</e:Group>
+		<e:Group width="930" height="108" y="165.18" anchorOffsetX="0" horizontalCenter="0">
+			<e:Group id="tab1" width="314" height="95" scaleX="0.8" scaleY="0.8" anchorOffsetX="0" verticalCenter="0" left="0">
+				<e:Image id="tabBg1" scaleX="1" scaleY="1" source="statistics_stats_bg_xz_png" horizontalCenter="0" verticalCenter="0"/>
+			<e:Image id="tabAct1" scaleX="1" scaleY="1" source="statistics_text_round1_zh_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group id="tab2" width="314" height="95" anchorOffsetX="0" scaleX="0.8" scaleY="0.8" verticalCenter="0" horizontalCenter="0">
+				<e:Image id="tabBg2" verticalCenter="0" source="statistics_stats_bg_png" horizontalCenter="0"/>
+			<e:Image id="tabAct2" source="statistics_text_stats_zh_png" horizontalCenter="0" verticalCenter="0"/>
+			</e:Group>
+			<e:Group id="tab3" width="314" height="95" scaleX="0.8" scaleY="0.8" anchorOffsetX="0" verticalCenter="0" right="0">
+				<e:Image id="tabBg3" verticalCenter="0" source="statistics_stats_bg_png" horizontalCenter="0"/>
+			<e:Image id="tabAct3" source="statistics_text_teams_zh_png" verticalCenter="0" horizontalCenter="0"/>
+			</e:Group>
+		</e:Group>
+	</e:Group>
+</e:Skin>

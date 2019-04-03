@@ -13,12 +13,14 @@ let $Modal = {
     gameAlert: null,
     language: null,
     buyKey: null,
-    extract: null
-}
+    extract: null,
+    extractUnit: null,
+    betLoad: null
+};
 let $Content = {
     container: null,
     game: null,
-}
+};
 let tabStatus: number = 0;
 
 /**left layout*/
@@ -38,7 +40,9 @@ let $gameContract;
 let $tokenContractInstance;
 let $gameContractInstance;
 let $myAddress;
+// let $myAddress = location.href.split('?')[1];
 let ClipboardJS;
+let netLink = "https://mainnet.infura.io/";
 
 function getNetWork() {
     return new Promise(resolve => {
@@ -48,28 +52,29 @@ function getNetWork() {
                     case "1":
                         // Use Mist/MetaMask's provider
                         web3js = new Web3(web3.currentProvider);
-                        resolve();
+
                         /**get user address */
                         $myAddress = web3js.eth.accounts[0];
                         let timer = setInterval(() => {
                             $myAddress = web3js.eth.accounts[0];
+
                             if (!$myAddress) {
-                                clearInterval(timer)
+                                clearInterval(timer);
                             }
                         }, 2000);
+
+                        resolve();
                         break;
                     default:
-                        // web3js = new Web3(new Web3.providers.HttpProvider("http://192.168.1.102:7545"));
-                        web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
+                        web3js = new Web3(new Web3.providers.HttpProvider(netLink));
                         resolve();
                 }
             });
         } else {
-            // web3js = new Web3(new Web3.providers.HttpProvider("http://192.168.1.102:7545"));
-            web3js = new Web3(new Web3.providers.HttpProvider("https://mainnet.infura.io/"));
+            web3js = new Web3(new Web3.providers.HttpProvider(netLink));
             resolve();
         }
-    })
+    });
 }
 
 
@@ -81,14 +86,14 @@ function getJson() {
                 'Content-Type': 'application/json'
             })
         }).then((response) => {
-            return response .json();
+            return response.json();
         }, (error) => {
             reject(error);
         }).then((json) => {
             $gameContract = web3js.eth.contract(json.abi);
             $gameContractInstance = $gameContract.at("0xd823b5d18542506638b7cae1be63df7f8255c98f");
             // $gameContractInstance = $gameContract.at("0x25ebb70ea8c2bd8dc26d3b6e2da8cce1374ce28e");
-            resolve($tokenContractInstance)
+            resolve($tokenContractInstance);
         });
     });
 }
@@ -98,9 +103,9 @@ function getJson() {
  */
 function timestampToTime(timestamp) {
     if (timestamp.length === 10) {
-        timestamp = timestamp * 1000
+        timestamp = timestamp * 1000;
     } else {
-        timestamp = timestamp * 1
+        timestamp = timestamp * 1;
     }
     let date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
     let Y = date.getFullYear() + '.';
@@ -109,7 +114,7 @@ function timestampToTime(timestamp) {
     let h = fillZero(date.getHours()) + ':';
     let m = fillZero(date.getMinutes()) + ':';
     let s = fillZero(date.getSeconds());
-    return Y + M + D + h + m + s
+    return Y + M + D + h + m + s;
 }
 
 function fillZero(time) {
@@ -119,13 +124,13 @@ function fillZero(time) {
 
 function timestampToMoment(timestamp) {
     timestamp = timestamp < 0 ? 0 : timestamp;
-    if(timestamp < 5875){
-        timestamp += 72000;
-    }
+    // if(timestamp < 5875){
+    //     timestamp += 72000;
+    // }
     let h = fillZero(Math.floor(timestamp / 60 / 60)) + ':';
     let m = fillZero(Math.floor(timestamp / 60 % 60)) + ':';
     let s = fillZero(timestamp % 60);
-    return h + m + s
+    return h + m + s;
 }
 
 /**
@@ -137,14 +142,14 @@ function setOverTime() {
         getBjTime().then((nowTime) => {
             $gameContractInstance.overMoment((err, time) => {
                 if (err) {
-                    reject(err)
+                    reject(err);
                 } else {
                     let overT = time.toString();
                     resolve(overT - Number(nowTime) / 1000);
                 }
-            })
+            });
         });
-    })
+    });
 }
 
 // 获取北京时间 todo
@@ -152,7 +157,7 @@ function getBjTime() {
     return new Promise((resolve, reject) => {
         let now: any = Date.parse(new Date().toString());
         resolve(now);
-    })
+    });
 }
 
 /**
@@ -162,12 +167,12 @@ function getTotalPot() {
     return new Promise((resolve, reject) => {
         $gameContractInstance.getTotalPot((err, keys) => {
             if (err) {
-                reject(err)
+                reject(err);
             } else {
-                resolve(web3js.fromWei(keys))
+                resolve(web3js.fromWei(keys));
             }
         });
-    })
+    });
 }
 
 /**
@@ -185,9 +190,9 @@ function getEthXUSDrate() {
         // }, (error) => {
         //     reject(error);
         // }).then((json) => {
-        resolve("200")
+        resolve("200");
         // });
-    })
+    });
 }
 
 /**
@@ -209,12 +214,12 @@ function getMyKeyProp() {
                     }
                     else {
                         // console.log(data[1].toString());
-                        resolve(data)
+                        resolve(data);
                     }
                 });
             }
         });
-    })
+    });
 }
 
 /**
@@ -230,19 +235,20 @@ function getMyEtraProp() {
                     if (err) {
                         reject(err);
                     } else {
-                        resolve(data)
+                        resolve(data);
                     }
                 });
             }
         });
-    })
+    });
 }
 
 function getIsBegin() {
     return new Promise((resolve, reject) => {
         $gameContractInstance.isBegin((err, bool) => {
             if (err) {
-                reject(err)
+                $alert('网络错误');
+                reject(err);
             } else {
                 resolve(bool);
             }
@@ -254,6 +260,7 @@ function $alert(msg) {
     if (tabStatus === 0) {
         $Modal.gameAlert.msg = msg;
         $Modal.gameAlert.visible = true;
+        $Modal.betLoad.visible = false;
     }
 }
 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e:Skin class="GameStatisticsUI" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
 	<e:Rect id="modal" left="0" right="0" top="0" bottom="0" fillAlpha="0.7"/>
-	<e:Group height="1169.16" anchorOffsetY="0" horizontalCenter="0" y="1716">
-		<e:Image source="yltq_ditu_png" verticalCenter="0" horizontalCenter="0"/>
+	<e:Group height="1600" anchorOffsetY="0" horizontalCenter="0" y="1716">
+		<e:Image source="yltq_ditu_png" horizontalCenter="0" verticalCenter="0" height="1600"/>
 		<e:Image id="close" source="icon_close_png" x="900" y="-25" scaleX="1" scaleY="1" visible="false"/>
 		<e:Group id="roundTab" width="1030" height="836" anchorOffsetX="0" x="25" y="255" anchorOffsetY="0" visible="false">
 			<e:Scroller width="1012.12" height="850" y="1.61" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" scrollPolicyH="off" scrollPolicyV="on">
@@ -58,9 +58,9 @@
 				</e:Group>
 			</e:Group>
 		</e:Group>
-		<e:Group id="teamsTab" width="1030" height="846" anchorOffsetX="0" x="25" y="255" anchorOffsetY="0">
-			<e:Scroller width="970" height="838" y="7" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" scrollPolicyH="off" scrollPolicyV="on">
-				<e:Group id="teamTabScr" anchorOffsetX="0" width="992" anchorOffsetY="0" height="838">
+		<e:Group id="teamsTab" width="1030" height="1310" anchorOffsetX="0" x="25" y="218.64" anchorOffsetY="0">
+			<e:Scroller width="970" height="1310" scaleX="1" scaleY="1" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" scrollPolicyH="off" scrollPolicyV="on" verticalCenter="0">
+				<e:Group id="teamTabScr" anchorOffsetX="0" width="992" anchorOffsetY="0" height="1310">
 				</e:Group>
 			</e:Scroller>
 		</e:Group>

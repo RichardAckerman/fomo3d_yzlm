@@ -49,6 +49,9 @@ var Container = (function (_super) {
         $Modal.gameAlert = new GameAlert(); //游戏-消息模态框
         $Modal.gameAlert.visible = false;
         this.addChild($Modal.gameAlert);
+        $Modal.betLoad = new BetLoading(); //游戏-下注转动
+        $Modal.betLoad.visible = false;
+        this.addChild($Modal.betLoad);
     };
     return Container;
 }(eui.Component));
