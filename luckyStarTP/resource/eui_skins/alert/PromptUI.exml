@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="PromptUI" width="1080" height="1716" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Rect id="modal" left="0" right="0" top="0" bottom="0" fillAlpha="0.85" fillColor="0x050e21"/>
+	<e:Group width="894" height="754.64" anchorOffsetY="0" horizontalCenter="0" verticalCenter="0">
+		<e:Image anchorOffsetX="0" width="861.93" anchorOffsetY="0" height="495" source="bg_png" horizontalCenter="0" verticalCenter="8.180000000000007"/>
+		<e:Label size="48" anchorOffsetX="0" width="579.67" textAlign="center" minHeight="100" verticalCenter="-123.82" bold="true" anchorOffsetY="0" height="52.67" horizontalCenter="0" textColor="0xffe200" lineSpacing="12" text="请输入你的推荐码"/>
+		<e:Image anchorOffsetX="0" anchorOffsetY="0" verticalCenter="-17.319999999999993" source="list_item_bg_png" width="630" height="98" horizontalCenter="0"/>
+		<e:EditableText width="514" height="86" text="{code}" x="195" y="315" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" size="40"/>
+		<e:Group id="cancelBtn" width="300" height="104" y="449.69" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="-182">
+			<e:Image horizontalCenter="0" verticalCenter="0" source="btn_green_png"/>
+			<e:Image horizontalCenter="0" source="btn_text_cancel1_zh_png" verticalCenter="0"/>
+		</e:Group>
+		<e:Group id="submitBtn" width="300" height="104" y="447.69" anchorOffsetX="0" anchorOffsetY="0" scaleX="1" scaleY="1" horizontalCenter="164">
+			<e:Image source="btn_red_png" verticalCenter="8" anchorOffsetX="0" width="296" horizontalCenter="0"/>
+			<e:Image horizontalCenter="0.5" verticalCenter="0" source="btn_text_sure1_zh_png"/>
+		</e:Group>
+	</e:Group>
+</e:Skin>

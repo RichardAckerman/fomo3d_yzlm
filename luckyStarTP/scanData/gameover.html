@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>游戏结算</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="rate">
+        <li>
+            <span class="label">我的Addr:</span>
+            <span class="id" id="myAddress" style="color: #f00">请先点设置解锁钱包</span>
+        </li>
+        <li>
+            <span class="label">当前游戏名称:</span>
+            <span class="name">幸运星</span>
+        </li>
+        <li>
+            <span class="label">游戏地址:</span>
+            <span class="gameAddr" id="gameAddr"></span>
+        </li>
+        <li>
+            <span class="label">本轮游戏的结束时刻:</span>
+            <span id="overMoment"></span>
+            <button type="button" id="setBtn">结算24小时</button>
+        </li>
+        <li>
+            <span class="label">本周星期日时间:</span>
+            <span id="fridayTime"></span>
+            <button type="button" id="setBtnFriday">结算本周星期日</button>
+        </li>
+        <li>
+            <span class="warn"></span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="chain3.js"></script>
+<script src="tp.js"></script>
+<script src="linkNet.js"></script>
+<script>
+    let addr = $(".addr");
+    let overMoment = $("#overMoment");
+    let fridayTime = $("#fridayTime");
+
+    let setBtnTen = $("#setBtnTen");
+    let setBtnFriday = $("#setBtnFriday");
+
+    addr.html(conAddr);
+    let $tokenContractInstance;
+    let TokenAddr = "0xD98792127Cb7A0953669f2986af6fCAa37E40CD0";
+
+    setTimeout(() => {
+        setLeader();
+    }, 1000);
+
+    function setLeader() {
+        getJson().then(() => {
+            $gameContractInstance.overMoment((err, time) => {
+                if (err) {
+                    console.log(err);
+                } else {
+                    let num = time.toString();
+                    time = new Date(num * 1000);
+                    time = time.Format("yyyy-MM-dd hh:mm:ss");
+                    overMoment.html(time);
+                }
+            });
+            getFridayTime();
+        });
+        setBtn.on("click", () => {
+            let bool = confirm("确定结算24小时吗？");
+            if (bool) {
+                setWarn(false);
+                setLeaderFun();
+            }
+        });
+        // 星期五结算
+        setBtnFriday.on("click", () => {
+            let bool = confirm("确定结算星期日吗？");
+            if (bool) {
+                setWarn(false);
+                fridayOverFun();
+            }
+        });
+    }
+
+    function setLeaderFun() {
+        setBtnShow(true);
+        getJson().then(() => {
+            setWarn(false);
+            $tokenContractInstance.gameOver({gasPrice: 9000000000}, (err, data) => {
+                if (data) {
+                    alert("请等待出块");
+                }
+            });
+        });
+    }
+
+    function getFridayTime() {
+        let now = Date.parse(new Date().toString());
+        let d = new Date();
+        d.setHours(12, 0, 0, 0);
+        let week = 7 - d.getDay();
+        let thisHour = new Date().getHours();
+        week = (week === 0 && thisHour >= 12) ? 7 : week;
+        let result = d.getTime() + week * 86400000;
+        let final = result - now;
+        fridayTime.html(timestampToMoment(final / 1000));
+    }
+
+    function timestampToMoment(timestamp) {
+        timestamp = timestamp < 0 ? 0 : timestamp;
+        let h = fillZero(Math.floor(timestamp / 60 / 60)) + ':';
+        let m = fillZero(Math.floor(timestamp / 60 % 60)) + ':';
+        let s = fillZero(timestamp % 60);
+        return h + m + s;
+    }
+
+    function fillZero(time) {
+        time = time < 10 ? "0" + time : time;
+        return time;
+    }
+
+    function setLeaderFun() {
+        getJson().then(() => {
+            setWarn(false);
+            try {
+                let data = $gameContractInstance.gameOver.getData();
+                $sendTransiction(data, () => {
+                    warn.html("结算成功");
+                    setWarn(true);
+                    alert("请等待出块");
+                });
+            } catch (e) {
+                alert(e);
+                warn.html(e.message);
+                setWarn(true);
+            }
+        });
+    }
+
+    function fridayOverFun() {
+        setBtnShow(true);
+        getJson().then(() => {
+            setWarn(false);
+            try {
+                let data = $gameContractInstance.luckyOver.getData();
+                $sendTransiction(data, () => {
+                    warn.html("结算成功");
+                    setWarn(true);
+                    alert("请等待出块");
+                });
+            } catch (e) {
+                alert(e);
+                warn.html(e.message);
+                setWarn(true);
+            }
+        });
+    }
+
+    Date.prototype.Format = function (fmt) { //author: meizz
+        var o = {
+            "M+": this.getMonth() + 1,                 //月份
+            "d+": this.getDate(),                    //日
+            "h+": this.getHours(),                   //小时
+            "m+": this.getMinutes(),                 //分
+            "s+": this.getSeconds(),                 //秒
+            "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+            "S": this.getMilliseconds()             //毫秒
+        };
+        if (/(y+)/.test(fmt))
+            fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+        for (var k in o)
+            if (new RegExp("(" + k + ")").test(fmt))
+                fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+        return fmt;
+    };
+
+</script>
+</body>
+</html>

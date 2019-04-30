@@ -140,6 +140,9 @@ class Game extends eui.Component {
                 this.overTime = parseInt(time + "");
                 if (this.overTime > 86400) {
                     this.gainId = "0";
+                    if (this.overTime > 87000) {
+                        this.overTime = 86400;
+                    }
                 } else {
 
                 }
@@ -271,14 +274,7 @@ class Game extends eui.Component {
             }, (err) => {
                 console.log(err);
             });
-
-            $myAddress && $gameContractInstance.allowMoney($myAddress, (err, coin) => {
-                if (err) {
-                    console.log(err);
-                } else {
-                    this.data.canWithDraw = $toFixedDecimal(coin);
-                }
-            });
+            $myAddress && this.getCanWithdraw();
         }
         this.data.leftTime = timestampToMoment(this.overTime);
         //更新统计界面倒计时
@@ -287,12 +283,20 @@ class Game extends eui.Component {
         }
     }
 
-    // 获取本周五中午12点倒计时
+    // 获取本周日中午12点倒计时
     private getWeekTime() {
         getBjTime().then((now) => {
             let d = new Date();
             d.setHours(12, 0, 0, 0);
-            let week = 7 - d.getDay();
+            let day = 0;
+            switch (d.getDay()) {
+                case 0:
+                    day = 7;
+                    break;
+                default:
+                    day = d.getDay();
+            }
+            let week = 7 - day;
             let thisHour = new Date().getHours();
             week = (week == 0 && thisHour >= 12) ? 7 : week;
             let result = d.getTime() + week * 86400000;
@@ -310,13 +314,30 @@ class Game extends eui.Component {
             $Modal.gameLucky.data.pot = this.data.weekPot;
         });
         this.getWeekTime();
-        $gameContractInstance.nPlayerArraySize((err, times) => {
+        /**剩余投入次数 */
+        $gameContractInstance.nPlayerArraySize((err, size) => {
             if (err) {
-                console.log("nPlayerArraySize", err);
+                console.log("nPlayerArraySize++++++:", err);
             } else {
-                this.data.canBetTimes = times.toString();
-                this.data.residueTimes = times.toString();// 默认让我的剩余下注次数和总共下注次数一样
-                this.data.pageShowTime = `${this.data.residueTimes}/${this.data.canBetTimes}`;
+                this.data.canBetTimes = size.toString();
+                this.data.residueTimes = size.toString();
+                let numSize = parseInt(size.toString());
+                $myAddress && $gameContractInstance.getRollInArrayDetail($myAddress, (err3, n) => {
+                    if (err3) {
+                        console.log("getRollInArrayDetail++++++:", err3);
+                    } else {
+                        let len = n.length;
+                        if (len > 0) {
+                            let num = numSize - len < 0 ? 0 : numSize - len;
+                            this.data.residueTimes = num + "";
+                            this.data.myNum = parseInt(n[0].toString()) + "";
+                        } else {
+                            this.data.residueTimes = size.toString();
+                            this.data.myNum = "0";
+                        }
+                    }
+                    this.data.pageShowTime = `${this.data.residueTimes}/${this.data.canBetTimes}`;
+                });
             }
         });
         $gameContractInstance.nCurrentGainId((err, id) => {
@@ -334,13 +355,8 @@ class Game extends eui.Component {
                 this.data.price = parseInt(coin.toString()) / 10000 + " CBE";
             }
         });
-        $myAddress && $gameContractInstance.allowMoney($myAddress, (err, coin) => {
-            if (err) {
-                console.log(err);
-            } else {
-                this.data.canWithDraw = $toFixedDecimal(coin);
-            }
-        });
+        // 获取CanWithdraw
+        $myAddress && this.getCanWithdraw();
         //生成小人
         $myAddress && $gameContractInstance.getRollInArrayDetail($myAddress, (err3, roll) => {
             if (err3) {
@@ -382,12 +398,16 @@ class Game extends eui.Component {
      */
     private withdrawFun() {
         if ($myAddress) {
+            if (this.data.canWithDraw == "0") {
+                $alert('可提金额为0');
+                return;
+            }
             let data = $gameContractInstance.withDraw.getData();
             let parameters = {
                 data: data,
                 from: moac.selectedAddress,
                 shardingFlag: 0,
-                gasPrice: chain3Js.intToHex(9000000000),
+                gasPrice: chain3Js.intToHex(30000000000),
                 gasLimit: chain3Js.intToHex(2000000),
                 to: $contract,
             };
@@ -399,8 +419,8 @@ class Game extends eui.Component {
                 if (response.code === 'fail') {
                     alert('交易发送失败！' + response.message);
                 } else {
-                    alert('提取交易发送成功，请等待出块！'); // 链上的失败消息也会弹出来
-                    // alert('提取交易发送成功，请等待出块！' + JSON.stringify(response.data)); // 链上的失败消息也会弹出来
+                    $alert('提取交易发送成功，请等待交易完成！'); // 链上的失败消息也会弹出来
+                    // alert('提取交易发送成功，请等待交易完成！' + JSON.stringify(response.data)); // 链上的失败消息也会弹出来
                 }
             });
         } else {
@@ -420,13 +440,14 @@ class Game extends eui.Component {
         return new Promise((resolve, reject) => {
             if (!$myAddress) {
                 notSignInMetamask();
-                reject("You're not signed into moac");
+                reject("请在墨宝钱包中打开游戏");
                 return;
             }
             let from = $myAddress;
             let to = $gameContractInstance.address;
             $tokenContractInstance.allowance(from, to, (err, data) => {
                 if (err) {
+                    $loadingDisplay(false);
                     reject(err);
                 } else {
                     resolve(data.toString());
@@ -445,6 +466,7 @@ class Game extends eui.Component {
             $tokenContractInstance.balanceOf($myAddress, (err, token) => {
                 if (err) {
                     reject(err);
+                    $loadingDisplay(false);
                 } else {
                     resolve(token.toString());
                 }
@@ -472,13 +494,14 @@ class Game extends eui.Component {
             $alert("购买次数达到上限!请等待出局后再购买!");
             return;
         }
+        $loadingDisplay(true);
         this.chargeLimit().then((has) => {
             // 下注控制
             getMyKeyProp().then((data) => {
-                let input = parseInt(data[3]) + parseInt(data[6]);
+                let input = parseInt(data[3]);
                 $gameContractInstance.nBugBonus((err, coin) => {
                     if (err) {
-                        console.log(err);
+                        $alert(err);
                     } else {
                         if (input >= coin) {
                             this.data.input = "0";
@@ -495,7 +518,8 @@ class Game extends eui.Component {
                             });
                         } else {
                             // 弹窗去充值额度
-                            if (confirm("您的授权额度为" + parseInt(has + "") / 10000 + ",将为您进行授权")) {
+                            $loadingDisplay(false);
+                            if (confirm("您的授权额度为" + $toFixedDecimal(has) + ",将为您进行授权")) {
                                 this.approveFun(() => {
                                     $loadingDisplay(true);
                                     let timer = setInterval(() => {
@@ -528,7 +552,7 @@ class Game extends eui.Component {
             data: data,
             from: moac.selectedAddress,
             shardingFlag: 0,
-            gasPrice: chain3Js.intToHex(9000000000),
+            gasPrice: chain3Js.intToHex(30000000000),
             gasLimit: chain3Js.intToHex(2000000),
             to: $tokenAddr,
         };
@@ -538,7 +562,7 @@ class Game extends eui.Component {
         };
         moac.sendAsync(payload, function (response) {
             if (response.code === 'fail') {
-                alert('交易发送失败！' + response.message);
+                $alert('交易发送失败！' + response.message);
             } else {
                 // alert("response:" + JSON.stringify(response.data));
                 if (f) {
@@ -552,59 +576,40 @@ class Game extends eui.Component {
     private buyEntrance() {
         getIsBegin().then((bool) => {
             if (!bool) {
-                this.directBuy();
+                this.chargeFirst();
             } else {
                 setOverTime().then((time) => {
-                    if (time > 86400) {
-                        $alert($AlertMsg.readyTime);
-                        return;
-                    }
-                    this.directBuy();
+                    // if (time > 86400) {
+                    //     $alert($AlertMsg.readyTime);
+                    //     return;
+                    // }
+                    this.chargeFirst();
                 });
             }
         });
     }
 
-    private directBuy() {
+    /**
+     * 判断是否是第一次购买
+     */
+    private chargeFirst() {
         if (!$myAddress) {
             notSignInMetamask();
             return;
         }
-
-        // $gameContractInstance.pIDxAddr_($myAddress, (err, id) => {
-        //     if (err) {
-        //         console.log(err);
-        //     } else {
-        //         if (id.toString() == "0") {
-        //
-        //         }
-        //         prompt("");
-        //     }
-        // });
-
-
-        let href = location.href;
-        let addr = href.split("?")[1];
-        let _referrer = "0x0000000000000000000000000000000000000000";
-        if (addr) {
-            if (chain3Js.isAddress(addr)) { // 是地址
-                _referrer = addr;
-                this.rollIn(_referrer);
-            } else if (isNaN(Number(addr))) { // 是名称
-                $alert("請保持瀏覽器地址後綴為正確的賬戶地址或id");
-            } else {// 是id
-                $gameContractInstance.playerxID_(addr, (err, data) => {
-                    if (err) {
-                        $alert(err);
-                    } else {
-                        _referrer = data[0];
-                        this.rollIn(_referrer);
-                    }
-                });
+        $gameContractInstance.pIDxAddr_($myAddress, (err, id) => {
+            if (err) {
+                $alert("pIDxAddr_===" + err);
+            } else {
+                let _referrer = "0x0000000000000000000000000000000000000000";
+                if (id.toString() == "0" && !$chargeEquelAddr($beginAddr, $myAddress)) {
+                    $loadingDisplay(false);
+                    $Modal.bandCodeAlert.visible = true;
+                } else {
+                    this.rollIn(_referrer);
+                }
             }
-        } else {
-            this.rollIn(_referrer);
-        }
+        });
     }
 
     private rollIn(_referrer) {
@@ -618,12 +623,13 @@ class Game extends eui.Component {
         try {
             // alert('this.data.input：' + this.data.input);
             // alert('_referrer：' + _referrer);
+            $loadingDisplay(false);
             let data = $gameContractInstance.coinRollIn.getData(this.data.input, _referrer);
             let parameters = {
                 data: data,
                 from: moac.selectedAddress,
                 shardingFlag: 0,
-                gasPrice: chain3Js.intToHex(9000000000),
+                gasPrice: chain3Js.intToHex(30000000000),
                 gasLimit: chain3Js.intToHex(2000000),
                 to: $contract,
             };
@@ -635,8 +641,8 @@ class Game extends eui.Component {
                 if (response.code === 'fail') {
                     alert('交易发送失败！' + response.message);
                 } else {
-                    alert('交易发送成功，请等待出块！'); // 链上的失败消息也会弹出来
-                    // alert('交易发送成功，请等待出块！' + JSON.stringify(response.data)); // 链上的失败消息也会弹出来
+                    $alert('交易发送成功，请等待交易完成！'); // 链上的失败消息也会弹出来
+                    // alert('交易发送成功，请等待交易完成！' + JSON.stringify(response.data)); // 链上的失败消息也会弹出来
                 }
             });
         } catch (e) {
@@ -673,6 +679,7 @@ class Game extends eui.Component {
                     $Modal.register.registerGroup.visible = true;
                     $Modal.register.linkGroup.visible = false;
                 }
+                $Modal.register.getMyInviter();
                 $modalShowEvent($Modal.register, 205);
             }
         });
@@ -716,5 +723,15 @@ class Game extends eui.Component {
         $Guide.guideHome.visible = false;
         this.openBtn.visible = true;
         this.headBg.visible = true;
+    }
+
+    private getCanWithdraw() {
+        $myAddress && $gameContractInstance.allowMoney($myAddress, (err, coin) => {
+            if (err) {
+                console.log(err);
+            } else {
+                this.data.canWithDraw = $toFixedDecimal(coin);
+            }
+        });
     }
 }

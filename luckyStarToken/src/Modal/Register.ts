@@ -19,7 +19,8 @@ class Register extends eui.Component {
 
     private data = {
         idUrl: "",
-        addrUrl: ""
+        addrUrl: "",
+        myInviter: "无"
     };
 
     protected childrenCreated(): void {
@@ -29,6 +30,22 @@ class Register extends eui.Component {
         this.copyBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.copyUrl.bind(this, 'id'), this);
     }
 
+    private getMyInviter() {
+        getMyKeyProp().then((data) => {
+            if (data[8].toString() == "0") {
+                this.data.myInviter = "无";
+            } else {
+                $gameContractInstance.playerxID_(data[8].toString(), (err, info) => {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        this.data.myInviter = info[0];
+                    }
+                });
+            }
+        });
+    }
+
     /**
      * 注册按钮
      */
@@ -36,29 +53,31 @@ class Register extends eui.Component {
         if ($isNotAtApp()) {
             return;
         }
-        let href = location.href;
-        let addr = href.split("?")[1];
         let _referrer = "0x0000000000000000000000000000000000000000";
-        if (addr) {
-            if (chain3Js.isAddress(addr)) { // 是地址
-                _referrer = addr;
-                this.registerFun(_referrer);
-            } else if (isNaN(Number(addr))) { // 是名称
-                $alert("請保持瀏覽器地址後綴為正確的賬戶地址或id");
-            } else {// 是id
-                $gameContractInstance.playerxID_(addr, (err, data) => {
-                    if (err) {
-                        $alert(err);
-                    }
-                    else {
-                        _referrer = data[0];
-                        this.registerFun(_referrer);
-                    }
-                });
-            }
-        } else {
+        if ($chargeEquelAddr($beginAddr, $myAddress)) {
             this.registerFun(_referrer);
+            return;
         }
+        $myAddress && $gameContractInstance.pIDxAddr_($myAddress, (err, id) => {
+            if (err) {
+                alert("pIDxAddr_===" + err);
+            } else {
+                if (id.toString() == "0") {
+                    $Modal.bandCodeAlert.inviteCode().then((ref) => {
+                        this.registerFun(ref);
+                    });
+                } else {
+                    getMyKeyProp().then((data) => {
+                        if (data[8].toString() == "0") {
+                            $alert("您在投注时未输入推荐码，不能申请成为推荐人");
+                            this.visible = false;
+                        } else {
+                            this.registerFun(_referrer);
+                        }
+                    });
+                }
+            }
+        });
     }
 
     private registerFun(_referrer) {
@@ -74,14 +93,14 @@ class Register extends eui.Component {
                             $Content.game.chargeBalance().then((coin) => {
                                 // alert("我的Token余額為:" + coin);
                                 if (Number(coin) < parseInt(fee)) {
-                                    $alert(`您的CBE余額為${coin},不足以支付本次投入`);
+                                    $alert(`您的CBE余額為${$toFixedDecimal(coin)},不足以支付本次交易`);
                                     return;
                                 }
                                 this.moacBuyFun(fee.toString(), _referrer);
                             });
                         } else {
                             // 弹窗去充值额度
-                            if (confirm("您的授权额度为" + parseInt(has + "") / 10000 + ",将为您进行授权")) {
+                            if (confirm("您的授权额度为" + $toFixedDecimal(has) + ",将为您进行授权")) {
                                 $Content.game.approveFun(() => {
                                     $loadingDisplay(true);
                                     let timer = setInterval(() => {
@@ -90,7 +109,7 @@ class Register extends eui.Component {
                                         } else {
                                             $loadingDisplay(false);
                                             clearInterval(timer);
-                                            if (confirm("授权成功，将发起投注交易！")) {
+                                            if (confirm("授权成功，将为您发起申请推荐码交易！")) {
                                                 // $Modal.register.moacBuyFun(fee.toString(), _referrer);
                                                 $Modal.register.registerFun(_referrer);
                                             }
@@ -111,12 +130,13 @@ class Register extends eui.Component {
 
     private moacBuyFun(input, _referrer) {
         try {
+            $loadingDisplay(false);
             let data = $gameContractInstance.registerName.getData(input, _referrer);
             let parameters = {
                 data: data,
                 from: moac.selectedAddress,
                 shardingFlag: 0,
-                gasPrice: chain3Js.intToHex(9000000000),
+                gasPrice: chain3Js.intToHex(30000000000),
                 gasLimit: chain3Js.intToHex(2000000),
                 to: $contract,
             };
@@ -128,8 +148,8 @@ class Register extends eui.Component {
                 if (response.code === 'fail') {
                     alert('交易发送失败！' + response.message);
                 } else {
-                    alert('注册交易发送成功，请等待出块！'); // 链上的失败消息也会弹出来
-                    // alert('注册交易发送成功，请等待出块！' + JSON.stringify(response.data)); // 链上的失败消息也会弹出来
+                    $alert('注册交易发送成功，请等待交易完成！'); // 链上的失败消息也会弹出来
+                    // $alert('注册交易发送成功，请等待交易完成！' + JSON.stringify(response.data)); // 链上的失败消息也会弹出来
                 }
                 setTimeout(() => {
                     $closeModalFun($Modal.register, -1360);
@@ -193,8 +213,9 @@ class Register extends eui.Component {
             if (err) {
                 $alert(err);
             } else {
-                let url = location.href.split("?")[0];
-                this.data.idUrl = `${url}?${data.toString()}`;
+                // let url = location.href.split("?")[0];
+                // this.data.idUrl = `${url}?${data.toString()}`;
+                this.data.idUrl = window.btoa(data.toString());
             }
         });
     }

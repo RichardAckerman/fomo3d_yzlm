@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="LuckyUnit" width="930" height="220.67" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="title2_bg_png" left="0" right="0" height="180" verticalCenter="0"/>
+	<e:Image source="bg_rank_png" x="33" verticalCenter="0"/>
+	<e:BitmapLabel width="117.88" height="56.36" x="13.34" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" text="{data.index}" font="white_fnt" verticalCenter="0"/>
+	<e:Label size="30" textAlign="left" horizontalCenter="-89" width="400" text="{data.address}" verticalCenter="0" textColor="0xffffff"/>
+	<e:Image x="725.28" verticalCenter="48.5" source="icon_coin_png" width="74" height="19"/>
+	<e:BitmapLabel width="324.54" height="56.36" x="600.01" anchorOffsetX="0" anchorOffsetY="0" textAlign="center" verticalAlign="middle" text="{data.extractCoin1}" font="orange_fnt" verticalCenter="0"/>
+</e:Skin>

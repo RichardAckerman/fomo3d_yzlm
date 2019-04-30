@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="ListUnit" width="930" height="150" xmlns:e="http://ns.egret.com/eui">
+	<e:Image source="list_item_bg_png" scale9Grid="36,31,13,15" left="0" right="0" height="114" verticalCenter="0"/>
+	<e:Image source="bg_mysort_png" x="56" verticalCenter="0"/>
+	<e:Image source="statistics_text_wdxh_png" x="68.33" verticalCenter="0.5"/>
+	<e:BitmapLabel width="392" height="101.33" x="489" anchorOffsetX="0" anchorOffsetY="0" font="green_big_fnt" textAlign="center" verticalAlign="middle" verticalCenter="0" text="{data.num}"/>
+</e:Skin>

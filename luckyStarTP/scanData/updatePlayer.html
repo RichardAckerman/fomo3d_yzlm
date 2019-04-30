@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改用户信息</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="rate">
+        <li>
+            <span class="label">我的地址:</span>
+            <span id="myAddress"></span>
+        </li>
+        <li>
+            <span class="label">游戏地址:</span>
+            <span class="addr"></span>
+        </li>
+        <li>
+            <span class="label">游戏名称:</span>
+            <span class="name">幸运星</span>
+        </li>
+        <li>
+            <span class="label">目标id</span>
+            <span>
+                <input type="text" id="aimId">
+                <button type="button" id="searchBtn" disabled>搜索</button>
+            </span>
+        </li>
+        <li>
+            <span class="label">目标地址:</span>
+            <span class="aimAddr"></span>
+        </li>
+        <li>
+            <span class="label">allBuy:</span>
+            <span class="allBuy">
+                  <input type="text" id="allBuy">
+            </span>
+        </li>
+        <li>
+            <span class="label">turnBuy:</span>
+            <span class="turnBuy">
+                <input type="text" id="turnBuy">
+            </span>
+        </li>
+        <li>
+            <span class="label">turnBonus:</span>
+            <span class="turnBonus">
+                  <input type="text" id="turnBonus">
+            </span>
+        </li>
+        <li>
+            <span class="label">currentBonus:</span>
+            <span class="currentBonus">
+                  <input type="text" id="currentBonus">
+            </span>
+        </li>
+        <li>
+            <span class="label">reinvest:</span>
+            <span class="reinvest">
+                  <input type="text" id="reinvest">
+            </span>
+        </li>
+        <li>
+            <span class="label">unionBonus:</span>
+            <span class="unionBonus">
+                  <input type="text" id="unionBonus">
+            </span>
+        </li>
+        <li>
+            <span class="label">currentInterest:</span>
+            <span class="currentInterest">
+                  <input type="text" id="currentInterest">
+            </span>
+        </li>
+        <li>
+            <span class="label">agents:</span>
+            <span class="agents">
+                  <input type="text" id="agents">
+            </span>
+        </li>
+        <li>
+            <span class="label">performance:</span>
+            <span class="performance">
+                  <input type="text" id="performance">
+            </span>
+        </li>
+
+        <li>
+            <span class="label">level:</span>
+            <span class="level">
+                  <input type="text" id="level">
+            </span>
+        </li>
+        <li>
+            <span class="label">currentRound:</span>
+            <span class="currentRound">
+                  <input type="text" id="currentRound">
+            </span>
+        </li>
+        <li>
+            <span class="label">allEarning:</span>
+            <span class="allEarning">
+                  <input type="text" id="allEarning">
+            </span>
+        </li>
+        <li>
+            <span class="label">lostTimes:</span>
+            <span class="lostTimes">
+                  <input type="text" id="lostTimes">
+            </span>
+        </li>
+        <li>
+            <span class="label">curPerOne:</span>
+            <span class="currentPerformanceOne">
+                  <input type="text" id="currentPerformanceOne">
+            </span>
+        </li>
+        <li>
+            <span class="label">curPerTwo:</span>
+            <span class="currentPerformanceTwo">
+                  <input type="text" id="currentPerformanceTwo">
+            </span>
+        </li>
+        <li>
+            <span class="label">earningPrincipal:</span>
+            <span class="earningPrincipal">
+                  <input type="text" id="earningPrincipal">
+            </span>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn" disabled>修改</button>
+        </li>
+        <li>
+            <span class="warn"></span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="chain3.js"></script>
+<script src="tp.js"></script>
+<script src="linkNet.js"></script>
+<script>
+    let addr = $(".addr");
+
+    let aimId = $("#aimId");
+    let aimAddr = $(".aimAddr");
+
+    let allBuy = $("#allBuy");
+    let turnBuy = $("#turnBuy");
+    let turnBonus = $("#turnBonus");
+    let currentBonus = $("#currentBonus");
+    let reinvest = $("#reinvest");
+    let unionBonus = $("#unionBonus");
+    let currentInterest = $("#currentInterest");
+    let agents = $("#agents");
+    let performance = $("#performance");
+    let level = $("#level");
+    let currentRound = $("#currentRound");
+    let allEarning = $("#allEarning");
+    let lostTimes = $("#lostTimes");
+    let currentPerformanceOne = $("#currentPerformanceOne");
+    let currentPerformanceTwo = $("#currentPerformanceTwo");
+    let earningPrincipal = $("#earningPrincipal");
+
+    let searchBtn = $("#searchBtn");
+
+    addr.html(conAddr);
+
+    function setSearchBtnShow(bool) {
+        searchBtn.attr("disabled", bool);
+    }
+    setTimeout(() => {
+        setSearchBtnShow(false)
+    }, 1000);
+
+    searchBtn.on("click", () => {
+        if (aimId.val() === "") {
+            warn.html("请输入目标id");
+            setWarn(true);
+            return;
+        }
+        setSearchBtnShow(true);
+        setBtnShow(true);
+        setWarn(false);
+        getJson().then(() => {
+            getData(aimId.val(), function () {
+                console.log("查询完了");
+            });
+        });
+    });
+
+    setBtn.on("click", () => {
+        if (aimId.val() === "" || aimId.val() === "0") {
+            warn.html("目标id不能为空和0");
+            setWarn(true);
+            return;
+        }
+        if (aimAddr.html() === emptyAddr) {
+            warn.html("目标地址不存在");
+            setWarn(true);
+            return;
+        }
+        setWarn(false);
+        let arr = [aimId.val(), allBuy.val(), turnBuy.val(), turnBonus.val(), currentBonus.val(), reinvest.val(),
+            unionBonus.val(),currentInterest.val(), agents.val(), performance.val(), level.val(), currentRound.val(),
+            allEarning.val(), lostTimes.val(), currentPerformanceOne.val(), currentPerformanceTwo.val(), earningPrincipal.val()];
+        let err = false;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === "" || isNaN(parseInt(arr[i]))) {
+                err = true;
+                break;
+            }
+        }
+        if (err) {
+            warn.html("输入有误");
+            setWarn(true);
+            return;
+        }
+        getJson().then(() => {
+            setLeaderFun(arr);
+        });
+    });
+
+    function setLeaderFun(arr) {
+        setBtnShow(true);
+        setWarn(false);
+        console.log(arr);
+        $gameContractInstance.updatePlayer(arr, {gasPrice: 12000000000}, (err, data) => {
+            setBtnShow(false);
+            if(data){
+                alert("请等待出块")
+            }
+        });
+    }
+
+    function getData(id, fb) {
+        $gameContractInstance.playerxID_(id, (err, data) => {
+            if (err) {
+                console.log(err, "------playerxID_-----");
+            } else {
+                console.log(data);
+                let thisId = id;
+                let addr = data[0];
+                aimAddr.html(addr);
+                allBuy.val(data[1]);
+                turnBuy.val(data[2]);
+                turnBonus.val(data[3]);
+                currentBonus.val(data[4]);
+                reinvest.val(data[5]);
+                unionBonus.val(data[6]);
+                currentInterest.val(data[7]);
+                agents.val(data[8]);
+                $gameContractInstance.playerEtraxAddr_(thisId, (err1, etra) => {
+                    if (err1) {
+                        console.log(err1, "------playerEtraxAddr_-----");
+                    } else {
+                        performance.val(etra[0]);
+                        level.val(etra[1]);
+                        currentRound.val(etra[2]);
+                        allEarning.val(etra[3]);
+                        lostTimes.val(etra[4]);
+                        currentPerformanceOne.val(etra[5]);
+                        currentPerformanceTwo.val(etra[6]);
+                        earningPrincipal.val(etra[7]);
+                        setSearchBtnShow(false);
+                        setBtnShow(false);
+                        fb();
+                    }
+                });
+            }
+        });
+    }
+
+    function fromWei(val) {
+        return web3js.fromWei(val.toString(), "wei");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change 级差</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="rate">
+        <li>
+            <span class="label">我的Addr:</span>
+            <span id="myAddress"></span>
+        </li>
+        <li>
+            <span class="label">游戏地址:</span>
+            <span class="gameAddr" id="gameAddr"></span>
+        </li>
+        <li>
+            <ul>
+                <li><span style="display:inline-block;width: 200px;text-align: right">级差1:</span>
+                    <input type="text" id="rate1" placeholder="rate1">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">级差2:</span>
+                    <input type="text" id="rate2" placeholder="rate2">
+                </li>
+            </ul>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn">设置</button>
+        </li>
+        <li>
+            <span class="warn"></span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="chain3.js"></script>
+<script src="tp.js"></script>
+<script src="linkNet.js"></script>
+<script>
+
+    let rate1 = $("#rate1");
+    let rate2 = $("#rate2");
+
+    let rateArr = [];
+    setTimeout(() => {
+        setLeader();
+    }, 1000);
+
+    function setLeader() {
+        getJson().then(() => {
+            rateArr = [];
+            getRate();
+        });
+        setBtn.on("click", () => {
+            if (rate1.val() === "") {
+                warn.html("rate1不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate2.val() === "") {
+                warn.html("rate2不能为空");
+                setWarn(true);
+                return;
+            }
+            setWarn(false);
+            let arr = [rate1.val(), rate2.val()];
+            setLeaderFun(arr);
+        });
+    }
+
+    function setLeaderFun(arr) {
+        setBtnShow(true);
+        let isAllNum = true;
+        getJson().then(() => {
+            arr = arr.map((it) => {
+                if (isNaN(parseInt(it))) {
+                    isAllNum = false;
+                }
+                return parseInt(it);
+            });
+            if (!isAllNum) {
+                warn.html("有非数字输入");
+                setWarn(true);
+                setBtnShow(false);
+                return;
+            }
+            console.log(arr);
+            setWarn(false);
+            let data = $gameContractInstance.updateJicha.getData(arr);
+            $sendTransiction(data, () => {
+                rateArr = [];
+                getRate();
+                alert("请等待出块");
+                setBtnShow(false);
+            });
+        });
+    }
+
+    function getRate() {
+        $gameContractInstance.jicha(0, (err, rate) => {
+            if (err) {
+                console.log(err);
+            } else {
+                rate1.val(rate);
+                rateArr.push(rate);
+            }
+        });
+        $gameContractInstance.jicha(1, (err, rate) => {
+            if (err) {
+                console.log(err);
+            } else {
+                rate2.val(rate);
+                rateArr.push(rate);
+            }
+        });
+    }
+</script>
+</body>
+</html>

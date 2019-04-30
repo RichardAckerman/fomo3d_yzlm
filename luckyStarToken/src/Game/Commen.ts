@@ -8,6 +8,8 @@ let $Modal = {
     gameHelp: null,
     register: null,
     gameAlert: null,
+    gamePrompt: null,
+    bandCodeAlert: null,
     language: null,
     finalBonus: null,
     gameLucky: null,
@@ -41,8 +43,10 @@ let $gameContractInstance;
 let $tokenContractInstance;
 let $myAddress;
 let ClipboardJS;
-const $contract = "0x7fc0432c35ba6c9da4489c84ff8ade154d5b884e";
+// const $contract = "0x3acbf2503d8963983d5194f16a187ad4d86831fc";
+const $contract = "0x426f6a364ca09b88e190d51fbbda27001c72c95d";
 const $tokenAddr = "0xD98792127Cb7A0953669f2986af6fCAa37E40CD0";
+const $beginAddr = "0x0a4128aae07d8e4b0fa2c7338ea5f082fb42edd7";
 const linkNet = "https://chain3.mytokenpocket.vip";
 
 // http://gateway.moac.io/mainnet
@@ -51,7 +55,7 @@ const linkNet = "https://chain3.mytokenpocket.vip";
 
 function getNetWork() {
     // $myAddress = "0x0a4128aae07d8e4b0fa2c7338ea5f082fb42edd7";
-    // $myAddress = "0xA01dB6DaaaE9d04b0F8896C190FC215D3dB09534";
+    // $myAddress = "0x9ae33f3B4c49bB8DE0D706ba4e0E93ac5af44fBb";
     return new Promise(resolve => {
         const chain3 = new Chain3();
         chain3.setProvider(new chain3.providers.HttpProvider(linkNet));
@@ -192,6 +196,7 @@ function getMyKeyProp() {
                 $gameContractInstance.playerxID_(pid, (err, data) => {
                     if (err) {
                         reject(err);
+                        $loadingDisplay(false);
                     }
                     else {
                         resolve(data);
@@ -232,16 +237,29 @@ function getIsBegin() {
 }
 
 function $alert(msg) {
-    console.log(tabStatus);
     if (tabStatus === 0) {
+        $loadingDisplay(false);
         $Modal.gameAlert.msg = msg;
         $Modal.gameAlert.visible = true;
+    }
+}
+
+function $testtttt() {
+    console.log(33);
+}
+
+function $alertFun(msg, f) {
+    $Modal.gameAlert.msg = msg;
+    $Modal.gameAlert.visible = true;
+    if (f) {
+        f();
     }
 }
 
 function notSignInMetamask() {
     $alert("请在墨宝钱包中打开游戏");
 }
+
 
 function $isNotAtApp() {
     return $moac == 'undefined';
@@ -269,4 +287,10 @@ function $closeModalFun(modal, y) {
 function $loadingDisplay(bool) {
     bool && $Modal.loading.show();
     !bool && $Modal.loading.hide();
+}
+
+function $chargeEquelAddr(addr1, addr2) {
+    addr1 = chain3Js.toChecksumAddress(addr1);
+    addr2 = chain3Js.toChecksumAddress(addr2);
+    return addr1 == addr2;
 }

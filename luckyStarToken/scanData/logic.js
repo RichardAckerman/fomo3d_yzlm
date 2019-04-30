@@ -3,7 +3,7 @@ const chain3 = new Chain3();
 chain3.setProvider(new chain3.providers.HttpProvider(linkNet));
 let chain3Js = chain3;
 
-let ContractAddr = "0x7fc0432c35ba6c9da4489c84ff8ade154d5b884e";
+let ContractAddr = "0x426f6a364ca09b88e190d51fbbda27001c72c95d";
 let TokenAddr = "0xD98792127Cb7A0953669f2986af6fCAa37E40CD0";
 
 let ContractInstance = null;

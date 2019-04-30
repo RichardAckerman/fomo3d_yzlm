@@ -10,7 +10,7 @@ let warn = $(".warn");
 let myAddress = $("#myAddress");
 let myAddressAddr = undefined;
 let $gameContractInstance;
-let conAddr = "0x7fc0432c35ba6c9da4489c84ff8ade154d5b884e";
+let conAddr = "0x426f6a364ca09b88e190d51fbbda27001c72c95d";
 let emptyAddr = "0x0000000000000000000000000000000000000000";
 $("#gameAddr").html(conAddr);
 /**

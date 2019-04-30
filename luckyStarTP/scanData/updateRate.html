@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>updateRate</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="rate">
+        <li>
+            <span class="label">我的Addr:</span>
+            <span id="myAddress"></span>
+        </li>
+        <li>
+            <span class="label">游戏地址:</span>
+            <span class="gameAddr" id="gameAddr"></span>
+        </li>
+        <li>
+            <span class="label">分配比例:</span>
+            <span>
+            </span>
+        </li>
+        <li>
+            <ul>
+                <li><span style="display:inline-block;width: 200px;text-align: right">奖池3%:</span>
+                    <input type="text" id="rate1" placeholder="rate1">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">出局收益65%:</span>
+                    <input type="text" id="rate2" placeholder="rate2">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">邀请奖22%:</span>
+                    <input type="text" id="rate3" placeholder="rate3">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">联盟奖5%:</span>
+                    <input type="text" id="rate4" placeholder="rate4"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">幸运奖3%:</span>
+                    <input type="text" id="rate5" placeholder="rate5">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">庄家0.6%:</span>
+                    <input type="text" id="rate6" placeholder="rate6"></li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">庄家0.3%:</span>
+                    <input type="text" id="rate7" placeholder="rate7">
+                </li>
+                <li><span style="display:inline-block;width: 200px;text-align: right">庄家1.1%:</span>
+                    <input type="text" id="rate8" placeholder="rate8">
+                </li>
+                <li style="visibility: hidden"><span
+                        style="display:inline-block;width: 200px;text-align: right">庄家0:</span>
+                    <input type="text" id="rate9" placeholder="rate9"></li>
+                <li style="visibility: hidden"><span
+                        style="display:inline-block;width: 200px;text-align: right">庄家0:</span>
+                    <input type="text" id="rate10" placeholder="rate10">
+                </li>
+                <li style="visibility: hidden"><span
+                        style="display:inline-block;width: 200px;text-align: right">庄家0:</span>
+                    <input type="text" id="rate11" placeholder="rate11">
+                </li>
+            </ul>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn">设置</button>
+        </li>
+        <li>
+            <span class="warn"></span>
+        </li>
+        <li style="visibility: hidden">
+            <span class="label">当前11个分配比例:</span>
+            <span class="rate"></span>
+        </li>
+        <li style="visibility: hidden">
+            <span class="label" style="color: #3F63A1">11个比例分别是:</span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="chain3.js"></script>
+<script src="tp.js"></script>
+<script src="linkNet.js"></script>
+<script>
+    let rateHtml = $(".rate");
+
+    let rate1 = $("#rate1");
+    let rate2 = $("#rate2");
+    let rate3 = $("#rate3");
+    let rate4 = $("#rate4");
+    let rate5 = $("#rate5");
+    let rate6 = $("#rate6");
+    let rate7 = $("#rate7");
+    let rate8 = $("#rate8");
+    let rate9 = $("#rate9");
+    let rate10 = $("#rate10");
+    let rate11 = $("#rate11");
+
+    let rateArr = [];
+    setTimeout(() => {
+        setLeader();
+    }, 1000);
+
+    function setLeader() {
+        getJson().then(() => {
+            rateArr = [];
+            getRate(0);
+        });
+        setBtn.on("click", () => {
+            if (rate1.val() === "") {
+                warn.html("rate1不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate2.val() === "") {
+                warn.html("rate2不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate3.val() === "") {
+                warn.html("rate3不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate4.val() === "") {
+                warn.html("rate4不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate5.val() === "") {
+                warn.html("rate5不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate6.val() === "") {
+                warn.html("rate6不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate6.val() === "") {
+                warn.html("rate6不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate7.val() === "") {
+                warn.html("rate7不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate8.val() === "") {
+                warn.html("rate8不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate9.val() === "") {
+                warn.html("rate9不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate10.val() === "") {
+                warn.html("rate10不能为空");
+                setWarn(true);
+                return;
+            }
+            if (rate11.val() === "") {
+                warn.html("rate11不能为空");
+                setWarn(true);
+                return;
+            }
+            setWarn(false);
+            let arr = [rate1.val(), rate2.val(), rate3.val(), rate4.val(),
+                rate5.val(), rate6.val(), rate7.val(), rate8.val(),
+                rate9.val(), rate10.val(), rate11.val()];
+            setLeaderFun(arr);
+        });
+    }
+
+    function setLeaderFun(arr) {
+        setBtnShow(true);
+        let isAllNum = true;
+        getJson().then(() => {
+            arr = arr.map((it) => {
+                if (isNaN(parseInt(it))) {
+                    isAllNum = false;
+                }
+                return parseInt(it);
+            });
+            if (!isAllNum) {
+                warn.html("有非数字输入");
+                setWarn(true);
+                setBtnShow(false);
+                return;
+            }
+            console.log(arr);
+            setWarn(false);
+            let data = $gameContractInstance.updateRate.getData(arr);
+            $sendTransiction(data, () => {
+                rateArr = [];
+                getRate(0);
+                setBtnShow(false);
+            });
+        });
+    }
+
+    function getRate(i) {
+        $gameContractInstance.rate(i, (err, rate) => {
+            if (err) {
+                console.log(err);
+            } else {
+                switch (i) {
+                    case 0:
+                        rate1.val(rate);
+                        break;
+                    case 1:
+                        rate2.val(rate);
+                        break;
+                    case 2:
+                        rate3.val(rate);
+                        break;
+                    case 3:
+                        rate4.val(rate);
+                        break;
+                    case 4:
+                        rate5.val(rate);
+                        break;
+                    case 5:
+                        rate6.val(rate);
+                        break;
+                    case 6:
+                        rate7.val(rate);
+                        break;
+                    case 7:
+                        rate8.val(rate);
+                        break;
+                    case 8:
+                        rate9.val(rate);
+                        break;
+                    case 9:
+                        rate10.val(rate);
+                        break;
+                    case 10:
+                        rate11.val(rate);
+                        break;
+                }
+                rateArr.push(rate);
+                if (i < 10) {
+                    i++;
+                    getRate(i);
+                } else {
+                    rateHtml.html(rateArr.join(","));
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

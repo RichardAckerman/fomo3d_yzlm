@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Time</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div>
+    <ul id="leader">
+        <li>
+            <span class="label">我的Addr:</span>
+            <span id="myAddress"></span>
+        </li>
+        <li style="text-align: center">
+            <button type="button" id="setBtn">设置时间</button>
+        </li>
+        <li>
+            <span class="warn"></span>
+        </li>
+    </ul>
+</div>
+<script src="jquery_1.12.4_jquery.min.js"></script>
+<script src="chain3.js"></script>
+<script src="tp.js"></script>
+<script src="linkNet.js"></script>
+<script>
+    setTimeout(() => {
+        setLeader();
+    }, 1000);
+
+    function setLeader() {
+        setBtn.on("click", () => {
+            let time = Date.parse(new Date()) / 1000;
+            time += 86400;
+            warn.html(new Date(time*1000));
+            setWarn(true);
+            setTimeout(()=>{
+                setLeaderFun(time);
+            },5000);
+        });
+    }
+
+    function setLeaderFun(time) {
+        setBtnShow(true);
+        getJson().then(() => {
+            let data = $gameContractInstance.updateTime.getData(time);
+            $sendTransiction(data, () => {
+            });
+        });
+    }
+</script>
+</body>
+</html>

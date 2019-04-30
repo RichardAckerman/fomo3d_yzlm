@@ -120,6 +120,9 @@ var Game = (function (_super) {
                 _this.overTime = parseInt(time + "");
                 if (_this.overTime > 86400) {
                     _this.gainId = "0";
+                    if (_this.overTime > 87000) {
+                        _this.overTime = 86400;
+                    }
                 }
                 else {
                 }
@@ -261,14 +264,7 @@ var Game = (function (_super) {
             }, function (err) {
                 console.log(err);
             });
-            $myAddress && $gameContractInstance.allowMoney($myAddress, function (err, coin) {
-                if (err) {
-                    console.log(err);
-                }
-                else {
-                    _this.data.canWithDraw = $toFixedDecimal(coin);
-                }
-            });
+            $myAddress && this.getCanWithdraw();
         }
         this.data.leftTime = timestampToMoment(this.overTime);
         //更新统计界面倒计时
@@ -276,13 +272,21 @@ var Game = (function (_super) {
             $Modal.gameStatistics.data.round.drainTime = this.data.leftTime;
         }
     };
-    // 获取本周五中午12点倒计时
+    // 获取本周日中午12点倒计时
     Game.prototype.getWeekTime = function () {
         var _this = this;
         getBjTime().then(function (now) {
             var d = new Date();
             d.setHours(12, 0, 0, 0);
-            var week = 7 - d.getDay();
+            var day = 0;
+            switch (d.getDay()) {
+                case 0:
+                    day = 7;
+                    break;
+                default:
+                    day = d.getDay();
+            }
+            var week = 7 - day;
             var thisHour = new Date().getHours();
             week = (week == 0 && thisHour >= 12) ? 7 : week;
             var result = d.getTime() + week * 86400000;
@@ -300,14 +304,33 @@ var Game = (function (_super) {
             $Modal.gameLucky.data.pot = _this.data.weekPot;
         });
         this.getWeekTime();
-        $gameContractInstance.nPlayerArraySize(function (err, times) {
+        /**剩余投入次数 */
+        $gameContractInstance.nPlayerArraySize(function (err, size) {
             if (err) {
-                console.log("nPlayerArraySize", err);
+                console.log("nPlayerArraySize++++++:", err);
             }
             else {
-                _this.data.canBetTimes = times.toString();
-                _this.data.residueTimes = times.toString(); // 默认让我的剩余下注次数和总共下注次数一样
-                _this.data.pageShowTime = _this.data.residueTimes + "/" + _this.data.canBetTimes;
+                _this.data.canBetTimes = size.toString();
+                _this.data.residueTimes = size.toString();
+                var numSize_2 = parseInt(size.toString());
+                $myAddress && $gameContractInstance.getRollInArrayDetail($myAddress, function (err3, n) {
+                    if (err3) {
+                        console.log("getRollInArrayDetail++++++:", err3);
+                    }
+                    else {
+                        var len = n.length;
+                        if (len > 0) {
+                            var num = numSize_2 - len < 0 ? 0 : numSize_2 - len;
+                            _this.data.residueTimes = num + "";
+                            _this.data.myNum = parseInt(n[0].toString()) + "";
+                        }
+                        else {
+                            _this.data.residueTimes = size.toString();
+                            _this.data.myNum = "0";
+                        }
+                    }
+                    _this.data.pageShowTime = _this.data.residueTimes + "/" + _this.data.canBetTimes;
+                });
             }
         });
         $gameContractInstance.nCurrentGainId(function (err, id) {
@@ -327,14 +350,8 @@ var Game = (function (_super) {
                 _this.data.price = parseInt(coin.toString()) / 10000 + " CBE";
             }
         });
-        $myAddress && $gameContractInstance.allowMoney($myAddress, function (err, coin) {
-            if (err) {
-                console.log(err);
-            }
-            else {
-                _this.data.canWithDraw = $toFixedDecimal(coin);
-            }
-        });
+        // 获取CanWithdraw
+        $myAddress && this.getCanWithdraw();
         //生成小人
         $myAddress && $gameContractInstance.getRollInArrayDetail($myAddress, function (err3, roll) {
             if (err3) {
@@ -373,12 +390,16 @@ var Game = (function (_super) {
      */
     Game.prototype.withdrawFun = function () {
         if ($myAddress) {
+            if (this.data.canWithDraw == "0") {
+                $alert('可提金额为0');
+                return;
+            }
             var data = $gameContractInstance.withDraw.getData();
             var parameters = {
                 data: data,
                 from: moac.selectedAddress,
                 shardingFlag: 0,
-                gasPrice: chain3Js.intToHex(9000000000),
+                gasPrice: chain3Js.intToHex(30000000000),
                 gasLimit: chain3Js.intToHex(2000000),
                 to: $contract,
             };
@@ -391,8 +412,8 @@ var Game = (function (_super) {
                     alert('交易发送失败！' + response.message);
                 }
                 else {
-                    alert('提取交易发送成功，请等待出块！'); // 链上的失败消息也会弹出来
-                    // alert('提取交易发送成功，请等待出块！' + JSON.stringify(response.data)); // 链上的失败消息也会弹出来
+                    $alert('提取交易发送成功，请等待交易完成！'); // 链上的失败消息也会弹出来
+                    // alert('提取交易发送成功，请等待交易完成！' + JSON.stringify(response.data)); // 链上的失败消息也会弹出来
                 }
             });
         }
@@ -411,13 +432,14 @@ var Game = (function (_super) {
         return new Promise(function (resolve, reject) {
             if (!$myAddress) {
                 notSignInMetamask();
-                reject("You're not signed into moac");
+                reject("请在墨宝钱包中打开游戏");
                 return;
             }
             var from = $myAddress;
             var to = $gameContractInstance.address;
             $tokenContractInstance.allowance(from, to, function (err, data) {
                 if (err) {
+                    $loadingDisplay(false);
                     reject(err);
                 }
                 else {
@@ -436,6 +458,7 @@ var Game = (function (_super) {
             $tokenContractInstance.balanceOf($myAddress, function (err, token) {
                 if (err) {
                     reject(err);
+                    $loadingDisplay(false);
                 }
                 else {
                     resolve(token.toString());
@@ -465,13 +488,14 @@ var Game = (function (_super) {
             $alert("购买次数达到上限!请等待出局后再购买!");
             return;
         }
+        $loadingDisplay(true);
         this.chargeLimit().then(function (has) {
             // 下注控制
             getMyKeyProp().then(function (data) {
-                var input = parseInt(data[3]) + parseInt(data[6]);
+                var input = parseInt(data[3]);
                 $gameContractInstance.nBugBonus(function (err, coin) {
                     if (err) {
-                        console.log(err);
+                        $alert(err);
                     }
                     else {
                         if (input >= coin) {
@@ -491,7 +515,8 @@ var Game = (function (_super) {
                         }
                         else {
                             // 弹窗去充值额度
-                            if (confirm("您的授权额度为" + parseInt(has + "") / 10000 + ",将为您进行授权")) {
+                            $loadingDisplay(false);
+                            if (confirm("您的授权额度为" + $toFixedDecimal(has) + ",将为您进行授权")) {
                                 _this.approveFun(function () {
                                     $loadingDisplay(true);
                                     var timer = setInterval(function () {
@@ -524,7 +549,7 @@ var Game = (function (_super) {
             data: data,
             from: moac.selectedAddress,
             shardingFlag: 0,
-            gasPrice: chain3Js.intToHex(9000000000),
+            gasPrice: chain3Js.intToHex(30000000000),
             gasLimit: chain3Js.intToHex(2000000),
             to: $tokenAddr,
         };
@@ -534,7 +559,7 @@ var Game = (function (_super) {
         };
         moac.sendAsync(payload, function (response) {
             if (response.code === 'fail') {
-                alert('交易发送失败！' + response.message);
+                $alert('交易发送失败！' + response.message);
             }
             else {
                 // alert("response:" + JSON.stringify(response.data));
@@ -549,61 +574,43 @@ var Game = (function (_super) {
         var _this = this;
         getIsBegin().then(function (bool) {
             if (!bool) {
-                _this.directBuy();
+                _this.chargeFirst();
             }
             else {
                 setOverTime().then(function (time) {
-                    if (time > 86400) {
-                        $alert($AlertMsg.readyTime);
-                        return;
-                    }
-                    _this.directBuy();
+                    // if (time > 86400) {
+                    //     $alert($AlertMsg.readyTime);
+                    //     return;
+                    // }
+                    _this.chargeFirst();
                 });
             }
         });
     };
-    Game.prototype.directBuy = function () {
+    /**
+     * 判断是否是第一次购买
+     */
+    Game.prototype.chargeFirst = function () {
         var _this = this;
         if (!$myAddress) {
             notSignInMetamask();
             return;
         }
-        // $gameContractInstance.pIDxAddr_($myAddress, (err, id) => {
-        //     if (err) {
-        //         console.log(err);
-        //     } else {
-        //         if (id.toString() == "0") {
-        //
-        //         }
-        //         prompt("");
-        //     }
-        // });
-        var href = location.href;
-        var addr = href.split("?")[1];
-        var _referrer = "0x0000000000000000000000000000000000000000";
-        if (addr) {
-            if (chain3Js.isAddress(addr)) {
-                _referrer = addr;
-                this.rollIn(_referrer);
-            }
-            else if (isNaN(Number(addr))) {
-                $alert("請保持瀏覽器地址後綴為正確的賬戶地址或id");
+        $gameContractInstance.pIDxAddr_($myAddress, function (err, id) {
+            if (err) {
+                $alert("pIDxAddr_===" + err);
             }
             else {
-                $gameContractInstance.playerxID_(addr, function (err, data) {
-                    if (err) {
-                        $alert(err);
-                    }
-                    else {
-                        _referrer = data[0];
-                        _this.rollIn(_referrer);
-                    }
-                });
+                var _referrer = "0x0000000000000000000000000000000000000000";
+                if (id.toString() == "0" && !$chargeEquelAddr($beginAddr, $myAddress)) {
+                    $loadingDisplay(false);
+                    $Modal.bandCodeAlert.visible = true;
+                }
+                else {
+                    _this.rollIn(_referrer);
+                }
             }
-        }
-        else {
-            this.rollIn(_referrer);
-        }
+        });
     };
     Game.prototype.rollIn = function (_referrer) {
         if ($myAddress == _referrer) {
@@ -615,12 +622,13 @@ var Game = (function (_super) {
         try {
             // alert('this.data.input：' + this.data.input);
             // alert('_referrer：' + _referrer);
+            $loadingDisplay(false);
             var data = $gameContractInstance.coinRollIn.getData(this.data.input, _referrer);
             var parameters = {
                 data: data,
                 from: moac.selectedAddress,
                 shardingFlag: 0,
-                gasPrice: chain3Js.intToHex(9000000000),
+                gasPrice: chain3Js.intToHex(30000000000),
                 gasLimit: chain3Js.intToHex(2000000),
                 to: $contract,
             };
@@ -633,8 +641,8 @@ var Game = (function (_super) {
                     alert('交易发送失败！' + response.message);
                 }
                 else {
-                    alert('交易发送成功，请等待出块！'); // 链上的失败消息也会弹出来
-                    // alert('交易发送成功，请等待出块！' + JSON.stringify(response.data)); // 链上的失败消息也会弹出来
+                    $alert('交易发送成功，请等待交易完成！'); // 链上的失败消息也会弹出来
+                    // alert('交易发送成功，请等待交易完成！' + JSON.stringify(response.data)); // 链上的失败消息也会弹出来
                 }
             });
         }
@@ -671,6 +679,7 @@ var Game = (function (_super) {
                     $Modal.register.registerGroup.visible = true;
                     $Modal.register.linkGroup.visible = false;
                 }
+                $Modal.register.getMyInviter();
                 $modalShowEvent($Modal.register, 205);
             }
         });
@@ -708,6 +717,17 @@ var Game = (function (_super) {
         $Guide.guideHome.visible = false;
         this.openBtn.visible = true;
         this.headBg.visible = true;
+    };
+    Game.prototype.getCanWithdraw = function () {
+        var _this = this;
+        $myAddress && $gameContractInstance.allowMoney($myAddress, function (err, coin) {
+            if (err) {
+                console.log(err);
+            }
+            else {
+                _this.data.canWithDraw = $toFixedDecimal(coin);
+            }
+        });
     };
     return Game;
 }(eui.Component));

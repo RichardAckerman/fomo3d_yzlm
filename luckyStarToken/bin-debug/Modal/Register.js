@@ -16,7 +16,8 @@ var Register = (function (_super) {
         _this.langData = $ZHTW.game;
         _this.data = {
             idUrl: "",
-            addrUrl: ""
+            addrUrl: "",
+            myInviter: "无"
         };
         /**load Container skin */
         _this.skinName = "resource/eui_skins/modal/RegisterPanel.exml";
@@ -28,6 +29,24 @@ var Register = (function (_super) {
         this.registerBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.registerReg, this);
         this.copyBtn.addEventListener(egret.TouchEvent.TOUCH_TAP, this.copyUrl.bind(this, 'id'), this);
     };
+    Register.prototype.getMyInviter = function () {
+        var _this = this;
+        getMyKeyProp().then(function (data) {
+            if (data[8].toString() == "0") {
+                _this.data.myInviter = "无";
+            }
+            else {
+                $gameContractInstance.playerxID_(data[8].toString(), function (err, info) {
+                    if (err) {
+                        console.log(err);
+                    }
+                    else {
+                        _this.data.myInviter = info[0];
+                    }
+                });
+            }
+        });
+    };
     /**
      * 注册按钮
      */
@@ -36,32 +55,34 @@ var Register = (function (_super) {
         if ($isNotAtApp()) {
             return;
         }
-        var href = location.href;
-        var addr = href.split("?")[1];
         var _referrer = "0x0000000000000000000000000000000000000000";
-        if (addr) {
-            if (chain3Js.isAddress(addr)) {
-                _referrer = addr;
-                this.registerFun(_referrer);
-            }
-            else if (isNaN(Number(addr))) {
-                $alert("請保持瀏覽器地址後綴為正確的賬戶地址或id");
+        if ($chargeEquelAddr($beginAddr, $myAddress)) {
+            this.registerFun(_referrer);
+            return;
+        }
+        $myAddress && $gameContractInstance.pIDxAddr_($myAddress, function (err, id) {
+            if (err) {
+                alert("pIDxAddr_===" + err);
             }
             else {
-                $gameContractInstance.playerxID_(addr, function (err, data) {
-                    if (err) {
-                        $alert(err);
-                    }
-                    else {
-                        _referrer = data[0];
-                        _this.registerFun(_referrer);
-                    }
-                });
+                if (id.toString() == "0") {
+                    $Modal.bandCodeAlert.inviteCode().then(function (ref) {
+                        _this.registerFun(ref);
+                    });
+                }
+                else {
+                    getMyKeyProp().then(function (data) {
+                        if (data[8].toString() == "0") {
+                            $alert("您在投注时未输入推荐码，不能申请成为推荐人");
+                            _this.visible = false;
+                        }
+                        else {
+                            _this.registerFun(_referrer);
+                        }
+                    });
+                }
             }
-        }
-        else {
-            this.registerFun(_referrer);
-        }
+        });
     };
     Register.prototype.registerFun = function (_referrer) {
         var _this = this;
@@ -78,7 +99,7 @@ var Register = (function (_super) {
                             $Content.game.chargeBalance().then(function (coin) {
                                 // alert("我的Token余額為:" + coin);
                                 if (Number(coin) < parseInt(fee)) {
-                                    $alert("\u60A8\u7684CBE\u4F59\u984D\u70BA" + coin + ",\u4E0D\u8DB3\u4EE5\u652F\u4ED8\u672C\u6B21\u6295\u5165");
+                                    $alert("\u60A8\u7684CBE\u4F59\u984D\u70BA" + $toFixedDecimal(coin) + ",\u4E0D\u8DB3\u4EE5\u652F\u4ED8\u672C\u6B21\u4EA4\u6613");
                                     return;
                                 }
                                 _this.moacBuyFun(fee.toString(), _referrer);
@@ -86,7 +107,7 @@ var Register = (function (_super) {
                         }
                         else {
                             // 弹窗去充值额度
-                            if (confirm("您的授权额度为" + parseInt(has + "") / 10000 + ",将为您进行授权")) {
+                            if (confirm("您的授权额度为" + $toFixedDecimal(has) + ",将为您进行授权")) {
                                 $Content.game.approveFun(function () {
                                     $loadingDisplay(true);
                                     var timer = setInterval(function () {
@@ -96,7 +117,7 @@ var Register = (function (_super) {
                                         else {
                                             $loadingDisplay(false);
                                             clearInterval(timer);
-                                            if (confirm("授权成功，将发起投注交易！")) {
+                                            if (confirm("授权成功，将为您发起申请推荐码交易！")) {
                                                 // $Modal.register.moacBuyFun(fee.toString(), _referrer);
                                                 $Modal.register.registerFun(_referrer);
                                             }
@@ -117,12 +138,13 @@ var Register = (function (_super) {
     };
     Register.prototype.moacBuyFun = function (input, _referrer) {
         try {
+            $loadingDisplay(false);
             var data = $gameContractInstance.registerName.getData(input, _referrer);
             var parameters = {
                 data: data,
                 from: moac.selectedAddress,
                 shardingFlag: 0,
-                gasPrice: chain3Js.intToHex(9000000000),
+                gasPrice: chain3Js.intToHex(30000000000),
                 gasLimit: chain3Js.intToHex(2000000),
                 to: $contract,
             };
@@ -135,8 +157,8 @@ var Register = (function (_super) {
                     alert('交易发送失败！' + response.message);
                 }
                 else {
-                    alert('注册交易发送成功，请等待出块！'); // 链上的失败消息也会弹出来
-                    // alert('注册交易发送成功，请等待出块！' + JSON.stringify(response.data)); // 链上的失败消息也会弹出来
+                    $alert('注册交易发送成功，请等待交易完成！'); // 链上的失败消息也会弹出来
+                    // $alert('注册交易发送成功，请等待交易完成！' + JSON.stringify(response.data)); // 链上的失败消息也会弹出来
                 }
                 setTimeout(function () {
                     $closeModalFun($Modal.register, -1360);
@@ -198,8 +220,9 @@ var Register = (function (_super) {
                 $alert(err);
             }
             else {
-                var url = location.href.split("?")[0];
-                _this.data.idUrl = url + "?" + data.toString();
+                // let url = location.href.split("?")[0];
+                // this.data.idUrl = `${url}?${data.toString()}`;
+                _this.data.idUrl = window.btoa(data.toString());
             }
         });
     };
